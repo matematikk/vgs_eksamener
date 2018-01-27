@@ -1,57 +1,40 @@
-% TITTEL: Eksamen i matematikk S2, våren 2017
-% BESKRIVELSE: Et stilrent dokument som samsvarer noe
-%              med stilen til en eksamen, men med
-%              Computer Modern skrift og noen andre forskjeller.
-% FORFATTER: Tommy O.
-% LISENS: Alle kan endre og bruke denne .TeX malen
+% ---------------------------------------------------------------------
+% HEADER
+% Formålet med å legge header til et eget dokument er å garantere at
+% oppsettet av dokumentene er likt for alle løsningsforslagene.
+% I headeren skjer følgende:
+% (1) Dokumentet blir startet
+% (2) Pakker blir importert
+% ---------------------------------------------------------------------
+\input{../../header.tex}
 
-%-----------------------------------------------------------
-% Importering av pakker
-%-----------------------------------------------------------
-\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[norsk]{babel}
-\usepackage{amsmath, amsthm, amsfonts, amssymb}
-\usepackage{mathtools}
-\usepackage{hyperref}
-\usepackage{fancyhdr}
-\usepackage[margin = 3cm]{geometry}
-\usepackage[sharp]{easylist}
-\usepackage{lastpage}
-\usepackage{parskip}
 
-%-----------------------------------------------------------
-% Oppsett av pakker
-%-----------------------------------------------------------
-\rfoot{\small Side \thepage\ av \pageref*{LastPage}}
-\cfoot{}
-\lfoot{\small Eksamen REA3028 Matematikk S2 Våren 2017}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0.5pt}
+% ---------------------------------------------------------------------
+% DOKUMENTVARIABLER
+% ---------------------------------------------------------------------
+\newcommand{\fagkode}{S2}
+\newcommand{\semesteraar}{høsten 2015}
+\newcommand{\forfatter}{Tommy O.}
+\newcommand{\dokumenttittel}{Eksamen S2, våren 2017, skrevet inn fra scan}
 
-%-----------------------------------------------------------
-% Start av selve dokumentet
-%-----------------------------------------------------------
 
-\begin{document}
-	\pagestyle{fancy}
-	{\bfseries \Large Eksamen S2, våren 2017} \\
-	{ \footnotesize Laget av Tommy O. -- Sist oppdatert: \today}
-	\hrule
-	\footnotesize 
-	\textbf{Kommentar:}
-	Dette er en innskriving av S2 eksamen,
-	basert på scan av dokumentet lastet opp
-	av \texttt{matematikk.net}-bruker Viks.
-	Det er en viktig læringsprosess å kunne regne
-	gjennom tidligere eksamener.
-	Dersom du selv er elev/privatist, delta på diskusjon på
-	\texttt{matematikk.net} om eksamener og last gjerne
-	opp nyttig materiale på forumet.
-	\normalsize
-	
-	\hrule
-	
+% Set til 'true' og oppgi logo dersom du vil bruke en logo
+\newboolean{bruklogo}
+\setboolean{bruklogo}{false}
+\newcommand{\logonavn}{figs/metis_akademiet_privatistskole_doclogo.png}
+
+% ---------------------------------------------------------------------
+% SETUP
+% Formålet med å legge setup til et eget dokument å garantere at headers,
+% footers, og øverste del av dokumentet er likt for alle
+% løsningsforslagene.
+% ---------------------------------------------------------------------
+\input{../../setup.tex}
+
+
+% ---------------------------------------------------------------------
+% DOKUMENTSTART - Skriv løsningsforslaget nedenfor
+% ---------------------------------------------------------------------	
 \section*{Del 1 - uten hjelpemidler}
 %-----------------------------------------------------------
 \vspace*{2em}
