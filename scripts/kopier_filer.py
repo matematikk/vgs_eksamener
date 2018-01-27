@@ -12,14 +12,15 @@ Til en egen mappe.
 import os
 import re
 import shutil
+import zipfile
 
 
 if __name__ == '__main__':
     # Path of this script
-    path_here = os.path.dirname(__file__)
+    path_here, _ = os.path.split(os.path.realpath(__file__))
     
     # One directory up from the location of this script
-    path_start, _ = os.path.split(os.path.dirname(__file__))
+    path_start, _ = os.path.split(path_here)
     
     # Directory to move to
     PDF_DIR = 'alle_pdf_filer'
@@ -51,3 +52,45 @@ if __name__ == '__main__':
             copy_to = os.path.join(path_start, PDF_DIR, filename)
             shutil.copy2(copy_from, copy_to)
             print('Copied to:', copy_to)
+            
+    # Create a new zip file
+    file_name = os.path.join(path_start, PDF_DIR, 'alle.zip')
+    file_obj = zipfile.ZipFile(file_name, 'w', zipfile.ZIP_DEFLATED)
+    with file_obj as open_zip_file:
+        
+        # Iterate through every copied file
+        for copied_file in os.listdir(os.path.join(path_start, PDF_DIR)):
+            if not os.path.isfile(os.path.join(path_start, PDF_DIR, copied_file)):
+                continue
+            
+            _, ext = os.path.splitext(copied_file)
+            if not ext == '.pdf':
+                continue
+            
+            # Add the file to the .zip
+            file_to_zip = os.path.join(path_start, PDF_DIR, copied_file)
+            open_zip_file.write(file_to_zip, 
+                                arcname = os.path.basename(file_to_zip))
+            print('Wrote to .zip file:', os.path.basename(file_to_zip))
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            
+    

@@ -51,10 +51,10 @@ def clean(dirpath, dirnames, filenames):
 
 if __name__ == '__main__':
     # Path of this script
-    path_here = os.path.dirname(__file__)
+    path_here, _ = os.path.split(os.path.realpath(__file__))
     
     # One directory up from the location of this script
-    path_start, _ = os.path.split(os.path.dirname(__file__))
+    path_start, _ = os.path.split(path_here)
     
     for dirpath, dirnames, filenames in os.walk(path_start):
         
