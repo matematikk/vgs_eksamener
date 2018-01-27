@@ -1,0 +1,322 @@
+% TITTEL: Eksamen i matematikk S2, våren 2017
+% BESKRIVELSE: Et stilrent dokument som samsvarer noe
+%              med stilen til en eksamen, men med
+%              Computer Modern skrift og noen andre forskjeller.
+% FORFATTER: Tommy O.
+% LISENS: Alle kan endre og bruke denne .TeX malen
+
+%-----------------------------------------------------------
+% Importering av pakker
+%-----------------------------------------------------------
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[margin = 3cm]{geometry}
+\usepackage[sharp]{easylist}
+\usepackage{lastpage}
+\usepackage{parskip}
+
+%-----------------------------------------------------------
+% Oppsett av pakker
+%-----------------------------------------------------------
+\rfoot{\small Side \thepage\ av \pageref*{LastPage}}
+\cfoot{}
+\lfoot{\small Eksamen REA3028 Matematikk S2 Våren 2017}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+%-----------------------------------------------------------
+% Start av selve dokumentet
+%-----------------------------------------------------------
+
+\begin{document}
+	\pagestyle{fancy}
+	{\bfseries \Large Eksamen S2, våren 2017} \\
+	{ \footnotesize Laget av Tommy O. -- Sist oppdatert: \today}
+	\hrule
+	\footnotesize 
+	\textbf{Kommentar:}
+	Dette er en innskriving av S2 eksamen,
+	basert på scan av dokumentet lastet opp
+	av \texttt{matematikk.net}-bruker Viks.
+	Det er en viktig læringsprosess å kunne regne
+	gjennom tidligere eksamener.
+	Dersom du selv er elev/privatist, delta på diskusjon på
+	\texttt{matematikk.net} om eksamener og last gjerne
+	opp nyttig materiale på forumet.
+	\normalsize
+	
+	\hrule
+	
+\section*{Del 1 - uten hjelpemidler}
+%-----------------------------------------------------------
+\vspace*{2em}
+{\bfseries \large Oppgave 1} (5 poeng) \vspace*{1em} \\
+Deriver funksjonene
+\begin{easylist}[enumerate]
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# $f(x) = x^2 - 2/x$
+	# $g(x) = \ln \left(x^2 + 1\right)$
+	# $h(x) = x^2 e^x$
+\end{easylist}
+%-----------------------------------------------------------
+\vfill
+\vspace*{2em}
+{\bfseries \large Oppgave 2} (2 poeng) \vspace*{1em} \\
+Løs likningssystemet
+\begin{align*}
+x + y -z &= 0 \\
+2x + y -z &= 2 \\
+4x + y -2z &= 1 
+\end{align*}
+%-----------------------------------------------------------
+\vfill
+\vspace*{2em}
+{\bfseries \large Oppgave 3} (6 poeng) \vspace*{1em} \\
+I en aritmetisk rekke $a_1 + a_2 + a_3 + \dots + a_n$ 
+er $a_1 = 3$ og $a_6 = 18$.
+\begin{easylist}[enumerate]
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Bestem differansen $d$, og bestem en formel for $a_n$
+	uttrykt ved $n$.
+	# Vis at summen av de $n$ første leddene kan skrives som
+	$$S_n = \frac{3}{2}n (n+1)$$
+	# Hvor mange ledd må vi ha med for at summen skal bli 84?
+\end{easylist}
+\vfill
+%-----------------------------------------------------------
+\clearpage
+{\bfseries \large Oppgave 4} (7 poeng) \vspace*{1em} \\
+Funksjonen $f$ er gitt ved
+$$f(x) = x^3 + 4x^2 + x - 6$$
+\begin{easylist}[enumerate]
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Vi ser at $f(1) = 0$.
+	Bruk blant annet polynomdivisjon til å vise at
+	$$f(x) = (x-1)(x+2)(x+3)$$
+	# Løs ulikheten $f(x) \leq 0$
+	# Forkort brøken mest mulig
+	$$
+	\frac{x^3 + 4x^2 + x - 6}{2x^2 - 2}
+	$$
+	# Bruk blant annet det du viste i oppgave a), til å løse likningen
+	\begin{equation*}
+		e^{3x} + 4e^{2x} + e^x - 6 = 0
+	\end{equation*}
+\end{easylist}
+%-----------------------------------------------------------
+\vfill
+\vspace*{2em}
+{\bfseries \large Oppgave 5} (6 poeng) \vspace*{1em} \\
+Totalkostnaden i kroner ved produksjon av en vare er gitt ved
+\begin{equation*}
+	K(x) = 0.1x^2 + 70x + 4000 \quad , \quad 0 < x < 2000
+\end{equation*}
+Her er $x$ antall produserte enheter per uke.
+
+Inntekten i kroner ved denne produksjonen er gitt ved
+\begin{equation*}
+	I(x) = -0.05x^2 + 280x \quad , \quad 0 < x < 2000
+\end{equation*}
+\begin{easylist}[enumerate]
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Bestem $K'(500)$ og $I'(500)$.
+	Bruk svarene til å vurdere om bedriften bør produsere flere enn 500 enheter.
+	
+	# Bestem den vinningsoptimale produksjonsmengden, det vil si den produksjonsmengden som gir størst overskudd.
+	
+	# Bestem den kostnadsoptimale produksjonsmengden, det vil si den produksjonsmengden som gir lavest kostnad per enhet.
+\end{easylist}
+\vfill
+%-----------------------------------------------------------
+\clearpage
+{\bfseries \large Oppgave 6} (10 poeng) \vspace*{1em} \\
+La $X$ være antall unger som overlever i en tilfeldig
+valgt fuglekasse med kjøttmeis. Sannsynlighetsfordelingen
+til $X$ er gitt i tabellen nedenfor.
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		$k$ & 0 & 1 & 2 & 3 & 4 \\ \hline
+		$P(X = k)$ & 0.2 & 0.1 & 0.3 & 0.3 & 0.1 \\ \hline
+	\end{tabular}
+\end{center}
+\begin{easylist}[enumerate]
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Bestem $P(X \geq 2)$.
+	# Bestem forventningsverdien $\operatorname{E}(X)$,
+	og vis at standardavviket er $\operatorname{SD}(X) = \sqrt{1.6}$\\
+	Hva forteller $\operatorname{E}(X)$ oss?
+\end{easylist}
+
+Et år har biologilærer Peder overvåket 100 
+fuglekasser med kjøttmeis. Kassene er nummerert fra 1 til
+100. La $X_i$ være antall kjøttmeisunger som overlever i kasse
+nummer $i$. Vi antar at $X_i$-ene er uavhengige. 
+Det totale antallet kjøttmeisunger som overlever i de 100
+kassene, er gitt ved den stokastiske variabelen
+\begin{equation*}
+	S = X_1 + X_2 + \dots + X_{100}
+\end{equation*}
+
+\begin{easylist}
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Begrunn at $S$ er tilnærmet normalfordelt.
+	# Bestem $\operatorname{E}(S)$ og $\operatorname{Var}(S)$.
+\end{easylist}
+
+I resten av oppgaven går vi ut i fra at 
+$\operatorname{E}(S) = 200$ og 
+$\operatorname{SD}(S) = 13$.
+Du vil få bruk for standard normalfordelingstabellen i vedlegg 1.
+
+\begin{easylist}
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Bestem sannsynligheten for at 226 eller flere kjøttmeisunger
+	overlever i kassene til Peder dette året.
+	# Bestem $P(187 \leq S \leq 213)$.
+\end{easylist}
+\pagebreak
+%-----------------------------------------------------------
+\section*{Del 2 - med hjelpemidler}
+%-----------------------------------------------------------
+\vspace*{2em}
+{\bfseries \large Oppgave 1} (6 poeng) \vspace*{1em} \\
+En bedrift produserer en vare.
+Bedriften selger alt den produserer.
+Overskuddet $O$ ved salg av $x$ enheter per uke er gitt ved
+\begin{equation*}
+	O(x) = ax^2 + bx + c
+\end{equation*}
+\begin{easylist}[itemize]
+	# Når bedriften produserer 200 enheter per uke,
+	blir overskuddet lik 0.
+	# Overskuddet er størst når bedriften
+	selger 474 enheter.
+	# Når bedriften selger 600 enheter per uke,
+	er grensekostnaden 5 kroner større enn grenseinntekten.
+\end{easylist}
+\begin{easylist}[enumerate]
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Vis at disse opplysningene gir likningssystemet
+	\begin{align*}
+	 40000a + 200b + c &= 0 \\
+	 950 a + b &= 0 \\
+	 1200a + b &= -5
+	\end{align*}
+	
+	# Bruk CAS til å bestemme $a$, $b$ og $c$.
+	
+	# Hva er det største overskuddet bedriften
+	kan får per uke?
+\end{easylist}
+%-----------------------------------------------------------
+\vfill
+\vspace*{2em}
+{\bfseries \large Oppgave 2} (6 poeng) \vspace*{1em} \\
+Ingrid inngår en pensjonsavtale der hun skal spare 20 000
+kroner i året. Den første innbetalingen skjer 1. januar 2018.
+Den siste innbetalingen skjer 1. januar 2052.
+Hun får en fast rente på 3.00 \% per år.
+\begin{easylist}[enumerate]
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Bruk CAS til å vise at Ingrid vil ha
+	1 209 242 kroner på konto rett etter
+	siste innbetaling.
+\end{easylist}
+Ingrid planlegger å ta ut et fast beløp hvert år.
+Det første uttaket vil hun gjøre 1. januar 2053 og
+det siste uttaket 1. januar 2067. Da skal kontoen være tom.
+Hun regner med en rente på 3.00 \% per år.
+\begin{easylist}
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Hvor mye kan hun ta ut per år?
+\end{easylist}
+Ingrid synes det er tilstrekkelig å ta ut 80 000 kroner
+i året fra og med 1. januar 2053.
+\begin{easylist}
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Bruk CAS til å bestemme når kontoen 
+	vil være tom i dette tilfellet.
+\end{easylist}
+\vfill
+%-----------------------------------------------------------
+\clearpage
+{\bfseries \large Oppgave 3} (4 poeng) \vspace*{1em} \\
+En bedrift produserer batterier til hodelykter.
+Bedriften påstår at levetiden for batteriene
+er 30 timer når hodelykten brukes med full lysstyrke.
+
+Vi antar at levetiden for batteriene er normalfordelt
+med $\mu = 30$ timer og $\sigma = 3$ timer.
+\begin{easylist}[enumerate]
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Bestem sannsynligheten for at et tilfeldig valgt
+	batteri har en levetid på mindre enn 27 timer.
+\end{easylist}
+
+Forbrukerrådet har mistanke om at forventet levetid er mindre
+enn 30 timer. Derfor blir ni tilfeldig valgte batterier testet.
+Levetida til batteriene viser seg å være
+$29, 31, 32, 27, 29, 25, 23, 30$ og $26$ timer.
+
+Vi antar at levetiden til batteriene er normalfordelt med
+$\sigma = 3$ timer.
+
+\begin{easylist}
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Sett opp en hypotesetest, og bruk den til å avgjøre
+	om det er grunnlag for å hevde at den forventede levetiden
+	er mindre enn 30 timer. Bruk et signifikansnivå på 5 \%.
+\end{easylist}
+%-----------------------------------------------------------
+\vfill
+\vspace*{2em}
+{\bfseries \large Oppgave 4} (8 poeng) \vspace*{1em} \\
+I et område er det brutt ut en smittsom sykdom.
+Antall personer som blir smittet per uke,
+kan modelleres med en logistisk funksjon $g$ der
+\begin{equation*}
+	g(t) = \frac{N}{1 + ae^{-kt}}
+\end{equation*}
+Her er $N$, $a$ og $k$ reelle tall, og $g(t)$ er antall personer
+som blir smittet per uke, $t$ uker etter at sykdommen
+brøt ut.
+
+Tabellen nedenfor viser $g(t)$ for noen verdier av $t$.
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline 
+		$t$ & 0 & 5 & 12 \\ \hline
+		$g(t)$ & 200 & 2000 & 9000 \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{easylist}[enumerate]
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Bruk regresjon til å bestemme $N$, $a$ og $k$ i uttrykket
+	$g(t)$.
+\end{easylist}
+Nærmere undersøkelser viser at
+\begin{equation*}
+f(t) = \frac{10000}{1 + 50e^{-0.5t}}
+\end{equation*}
+er en god modell for antallet som blir smittet per uke, $t$
+uker etter at sykdommen brøt ut.
+\begin{easylist}
+	\ListProperties(Numbers1=l, FinalMark={)})
+	# Bruk graftegner til å tegne grafen til $f$.
+	Bruk grafen til å bestemme når antall smittede
+	personer per uke er 7000.
+	# Bruk CAS til å bestemme $\int_{0}^{12} f(t) \ dt$.
+	Hva forteller dette svaret oss?
+	# Hvor mange uker vil det gå før det totale antallet 
+	personer som er smittet, overstiger 15 000?
+\end{easylist}
+\vfill
+\end{document}
