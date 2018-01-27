@@ -13,10 +13,14 @@ import shutil
 import os
 
 FIG_FOLDER_NAMES = {'figs', 'figures', 'figurer'}
-FIG_FILETYPES = {'.pdf', '.jpeg', '.jpg', '.png'}
+FIG_FILETYPES = {'.pdf', '.jpeg', '.jpg', '.png', '.tif'}
 
 
 def clean(dirpath, dirnames, filenames):
+    """
+    Delete unused figure files. A file is unused if it's not found
+    in the tex source code.
+    """
     
     # Retrieve all the TeX code written in this directory
     tex_code = ''
