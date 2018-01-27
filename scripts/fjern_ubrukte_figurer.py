@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Fjerner ubrukte figurer, figurer i 'figs' mapper som ikke er i bruk i .tex dokumenter.
+Fjerner ubrukte figurer, dvs. figurer i 'figs' 
+mapper som ikke er i bruk i .tex dokumenter.
 
 Created on Sat Jan 27 12:04:48 2018
 
 @author: tommy
 """
 
-import sys
-import shutil
 import os
 
 FIG_FOLDER_NAMES = {'figs', 'figures', 'figurer'}
 FIG_FILETYPES = {'.pdf', '.jpeg', '.jpg', '.png', '.tif'}
-
 
 def clean(dirpath, dirnames, filenames):
     """
@@ -47,22 +45,23 @@ def clean(dirpath, dirnames, filenames):
         for file in files_in_figdir:
             filename_no_ext, ext = os.path.splitext(file)
             if (ext in FIG_FILETYPES) and (filename_no_ext not in tex_code):
-                #print(file)
                 os.remove(os.path.join(full_path, file))
                 print('Deleted file:', os.path.join(full_path, file))
 
 
-path_here = os.path.dirname(__file__)
-path_start, _ = os.path.split(os.path.dirname(__file__))
-
-for dirpath, dirnames, filenames in os.walk(path_start):
-    if '.git' in dirpath:
-        continue
+if __name__ == '__main__':
+    # Path of this script
+    path_here = os.path.dirname(__file__)
     
-    if any(dirname.lower() in FIG_FOLDER_NAMES for dirname in dirnames):
-        print('---')
-        print(dirpath, dirnames, filenames)
-        print(dirpath)
-        print(os.path.dirname(__file__))
+    # One directory up from the location of this script
+    path_start, _ = os.path.split(os.path.dirname(__file__))
+    
+    for dirpath, dirnames, filenames in os.walk(path_start):
         
-        clean(dirpath, dirnames, filenames)
+        # Skip the .git folder
+        if '.git' in dirpath:
+            continue
+        
+        # If there's a figure directory, send the main folder to cleanup
+        if any(dirname.lower() in FIG_FOLDER_NAMES for dirname in dirnames):
+            clean(dirpath, dirnames, filenames)
