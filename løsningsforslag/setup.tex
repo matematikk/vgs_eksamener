@@ -1,0 +1,57 @@
+% ---------------------------------------------------------------------
+% HEADER
+% Formålet med setup er at dokumentene ser rimelig like ut.
+% ---------------------------------------------------------------------
+
+
+% ---------------------------------------------------------------------
+% Alternativ font. Kommentert ut fordi Computer Modern (default) er pen
+%\usepackage{kmath,kerkis}
+%\usepackage[T1]{fontenc}
+% ---------------------------------------------------------------------
+
+
+% ---------------------------------------------------------------------
+% Sett opp headers og footers
+\ifthenelse{\boolean{bruklogo}}{
+% Dersom logo skal brukes, sett logoen oppe til høyre med bredde 4 cm
+	\rhead{\includegraphics[width=3.5cm]{\logonavn}}
+}{
+% Dersom logo ikke skal brukes, sett tom header
+	\rhead{}
+} 
+\rfoot{\thepage}
+\cfoot{}
+\lhead{}
+\lfoot{{\scriptsize Forbedringsforslag? Bidra på \url{https://github.com/tommyod/matte_eksamener_VGS}.}}
+\renewcommand{\headrulewidth}{0pt}
+% ---------------------------------------------------------------------
+
+
+% ---------------------------------------------------------------------
+% To streker under svaret
+\def\answer#1{\underline{\underline{#1}}}
+% ---------------------------------------------------------------------
+
+
+% ---------------------------------------------------------------------
+% Start selve dokumentet
+% ---------------------------------------------------------------------
+
+\begin{document}
+\pagestyle{fancy}
+{\bfseries \Large \dokumenttittel} \\
+{ \footnotesize Laget av \forfatter 
+	\hfill Sist oppdatert: \today 
+	\hfill Antall sider: \pageref*{LastPage}}
+\hrule
+\vspace{1em}
+\begin{center}
+\fbox{\fbox{\parbox{.875\textwidth}{
+	Dette dokumentet er open-source;
+	alle kan bidra til å gjøre det bedre.
+	Dersom du finner skrivefeil, matematiske feil, eller ser at forklaringene kan være bedre: ikke nøl med å bidra. 
+	Du kan finne siste versjon, og bidra, på GitHub, se:
+	\url{https://github.com/tommyod/matte_eksamener_VGS}
+}}}
+\end{center}

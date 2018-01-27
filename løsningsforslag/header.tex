@@ -1,0 +1,52 @@
+% ---------------------------------------------------------------------
+% HEADER
+% Formålet med header er å importere de samme pakkene i alle dokumentene.
+% ---------------------------------------------------------------------
+
+% Sett opp dokumentet. Her kan 'twoside' brukes for printing
+\documentclass[12pt, a4paper]{article}
+
+% Vi trenger utf-8 for å bruke norske bokstaver: Æ, Ø, Å
+\usepackage[utf8]{inputenc}
+
+% Vi setter babel til norsk, da får dokumentegenskaper norske titler
+\usepackage[norsk]{babel}
+
+% For å kunne bruke grafikk
+\usepackage{graphicx}
+\newcommand{\figwidth}{0.75}
+
+% Matematikkpakker fra AMS - American Mathematical Society
+\usepackage{amsmath, amsthm, amsfonts, amssymb, mathtools}
+
+% For eventuelle linker, e.g. \href{URL}{text}
+\usepackage{hyperref}
+
+% For headers og footers med eventuell logo
+\usepackage{fancyhdr}
+
+% Sett marginer manuelt
+\usepackage[top = 3cm, left = 3cm, right = 3cm, bottom = 3cm]{geometry}
+
+% For enkle lister, nyttig for oppgave a), b), c), ...
+\usepackage[sharp]{easylist}
+
+% Dersom flere kolonner er ønskelig i deler av dokumentet
+\usepackage{multicol}
+
+% For luft mellom paragrafer
+\usepackage{parskip}
+
+% For logikk assosiert med logoer
+\usepackage{ifthen}
+
+% For å finne totalt antall sider
+\usepackage{lastpage}
+
+% Annet
+\usepackage{enumitem}
+
+\usepackage{polynom}% Polynomer
+\polyset{style=C, div=:}
+
+\usepackage{systeme}% Likningssystemer

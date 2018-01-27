@@ -1,73 +1,40 @@
-% Title:
-% 	ARTICLE PLUS
-% ----------------------
-% Description:
-% 	A template for scientific reports/articles.
-%	Most necessary packages are imported,
-%	so this should be a good starting point.
-%
-% Creator: Tommy O.
+% ---------------------------------------------------------------------
+% HEADER
+% Formålet med å legge header til et eget dokument er å garantere at
+% oppsettet av dokumentene er likt for alle løsningsforslagene.
+% I headeren skjer følgende:
+% (1) Dokumentet blir startet
+% (2) Pakker blir importert
+% ---------------------------------------------------------------------
+\input{../../header.tex}
 
-% ----------------------
-% Package imports
-% ----------------------
-\documentclass[12pt, a4paper]
-{article}						% 'twoside' for printing
-\usepackage[utf8]{inputenc}		% Allow input to be UTF-8
-\usepackage[norsk]{babel}		% Alternative: 'norsk'
-\usepackage{graphicx}			% For importing graphics
-\usepackage{amsmath,			% All the useful AMS packages
-	amsthm, amsfonts, amssymb}
-\usepackage{mathtools}			% Fixes a few AMS bugs
-\usepackage{hyperref}			% For \href{URL}{text}
-\usepackage{enumitem}			% For enumeration
-\usepackage{fancyhdr}			% For fancy headers
-\usepackage[top = 3cm, left = 3cm, right = 3cm, bottom = 3cm]{geometry}			% May be used to set margins
-\usepackage[sharp]{easylist}
-\usepackage{multicol}
 
-% ----------------------
-% Package setup
-% ----------------------
-%\usepackage{kmath,kerkis}
-%\usepackage[T1]{fontenc}
+% ---------------------------------------------------------------------
+% DOKUMENTVARIABLER
+% ---------------------------------------------------------------------
+\newcommand{\fagkode}{S2}
+\newcommand{\semesteraar}{våren 2016}
+\newcommand{\forfatter}{Tommy O.}
+\newcommand{\dokumenttittel}{Løsningsforslag -- Eksamen \fagkode, \semesteraar}
 
-% Setup for the fancyhdr package
-% Header and footer stuff
-\rhead{\includegraphics[width=4cm]{figs/metis_akademiet_privatistskole_doclogo.png}}
-\cfoot{\thepage}
-\lhead{\nouppercase{\leftmark}}
-\renewcommand{\headrulewidth}{0pt}
 
-% Answer
-\def\answer#1{\underline{\underline{#1}}}
+% Set til 'true' og oppgi logo dersom du vil bruke en logo
+\newboolean{bruklogo}
+\setboolean{bruklogo}{true}
+\newcommand{\logonavn}{figs/metis_akademiet_privatistskole_doclogo.png}
 
-% ----------------------
-% Misc settings
-% ----------------------
+% ---------------------------------------------------------------------
+% SETUP
+% Formålet med å legge setup til et eget dokument å garantere at headers,
+% footers, og øverste del av dokumentet er likt for alle
+% løsningsforslagene.
+% ---------------------------------------------------------------------
+\input{../../setup.tex}
 
-% Enforce the paragraph styles one sees on the web
-\usepackage{parskip}
 
-\newcommand{\figwidth}{0.75}
-
-% ----------------------
-% Document variables
-% ----------------------
-
-\title{ARTICLE PLUS}
-\author{Tommy O.}
-
-% ----------------------
-% Document start
-% ----------------------
-
-\begin{document}
-\pagestyle{fancy}
-{\bfseries \Large Løsningsforslag -- Eksamen S2, våren 2016} \\
-{ \footnotesize Laget av Tommy O. -- Sist oppdatert: \today}
-\hrule
-
+% ---------------------------------------------------------------------
+% DOKUMENTSTART - Skriv løsningsforslaget nedenfor
+% ---------------------------------------------------------------------	
 \section*{Del 1 - uten hjelpemidler}
 \subsection*{Oppgave 1}
 \begin{easylist}[enumerate]
