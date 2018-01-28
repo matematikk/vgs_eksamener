@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jan  6 13:16:53 2017
-
-@author: Tommy O, for ENT3R 
 """
 
 import numpy as np
@@ -13,8 +11,6 @@ def f(x):
 
 def f_p(x):
     return 3*x**2 + 6*x - 9
-
-
 
 plt.figure(figsize=(5.75, 3.25))
 plt.style.use('seaborn-ticks')

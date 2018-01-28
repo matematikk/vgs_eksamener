@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jan  6 13:16:53 2017
-
-@author: Tommy O, for ENT3R 
 """
 
 import numpy as np
@@ -19,8 +17,6 @@ x = np.linspace(1, 15, num = 500)
 
 def gp(x):
     return (576*np.exp(-0.68*x))/np.power(1 + 211*np.exp(-0.68*x), 2)
-
-
 
 plt.figure(figsize=(8, 4))
 plt.style.use('seaborn-ticks')

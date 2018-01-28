@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jan  6 13:16:53 2017
-
-@author: Tommy O, for ENT3R 
 """
 
 import numpy as np
@@ -28,8 +26,6 @@ def I(x):
 
 def O(x):
     return I(x) - K(x)
-
-
 
 plt.figure(figsize=(8, 4))
 plt.style.use('seaborn-ticks')

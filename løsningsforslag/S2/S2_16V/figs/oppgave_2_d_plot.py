@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jan  6 13:16:53 2017
-
-@author: Tommy O, for ENT3R 
 """
 
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 def P(x):
     return x**3 - 6*x**2 + 32
@@ -22,7 +19,6 @@ plt.rc('text', usetex = True)
 plt.plot(x, P(x), label = 'P(x)', linewidth=1.5)
 plt.plot(x, Pd(x), label = r"P'(x)", linewidth=1)
 plt.grid(True)
-#plt.ylim([-150,900])
 plt.legend(loc = 'best')
 plt.show()
     

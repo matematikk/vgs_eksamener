@@ -21,6 +21,7 @@ Du kan finne alle filer knyttet til dette prosjektet i mappen [alle_pdf_filer](a
 Finner du **skrivefeil**, **matematiske feil**, **uklare setninger** eller har **andre forbedringsforslag**? 
 Du kan bidra til å øke kvaliteten på løsningsforslagene, og både små og store bidrag mottas med stor takk. 
 Du har to muligheter når du skal bidra: du kan lage **Issue** eller sende **Pull Request**.
+
 Les mer om dette i filen [BIDRA.md](BIDRA.md).
 
 

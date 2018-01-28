@@ -1,19 +1,16 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jan  6 13:16:53 2017
-
-@author: Tommy O, for ENT3R 
 """
 
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 def regr(i):
     return 5.37*i +525.2
 
 x = list(range(50,301, 50))
-K = [792,1065,1329,1601,1867,2136]
+K = [792, 1065, 1329, 1601, 1867, 2136]
 
 plt.style.use('seaborn-ticks')
 plt.rc('text', usetex = True)

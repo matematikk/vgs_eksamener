@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jan  6 13:16:53 2017
-
-@author: Tommy O, for ENT3R 
 """
 
 
@@ -13,14 +11,10 @@ from scipy.stats import norm, binom
 matplotlib.rcParams['text.usetex'] = True
 matplotlib.rcParams['text.latex.unicode'] = True
 
-
-
 x = np.linspace(200, 400, num = 2000)
 
 mu = 308
 sigma = 14.6
-
-
 
 plt.figure(figsize=(8, 4))
 plt.style.use('seaborn-ticks')

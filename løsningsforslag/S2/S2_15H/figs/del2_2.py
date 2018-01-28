@@ -1,19 +1,16 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jan  6 13:16:53 2017
-
-@author: Tommy O, for ENT3R 
 """
 
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.optimize as opt
 
-
-menn_aar = [9,13,20,35,60,70,88]
+menn_aar = [9, 13, 20, 35, 60, 70, 88]
 menn_tider = [4.38, 4.51, 4.61, 4.81, 5.2, 5.43, 5.55]
 
-kvinner_aar = [63,67,70,73,75,79,85]
+kvinner_aar = [63, 67, 70, 73, 75, 79, 85]
 kvinner_tider = [3.24, 3.75, 3.85, 4.22, 4.44, 4.77, 4.98]
 
 def func(x, a, b):

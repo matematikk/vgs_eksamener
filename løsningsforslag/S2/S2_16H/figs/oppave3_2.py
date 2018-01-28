@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jan  6 13:16:53 2017
-
-@author: Tommy O, for ENT3R 
 """
 
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 def regr(i):
     return 5.37*i +525.2
