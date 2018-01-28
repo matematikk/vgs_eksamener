@@ -14,7 +14,8 @@ Eksamener med løsningsforslag for matematikkfag på VGS.
 ## Hvor finner jeg eksamener og løsningsforslag?
 
 I dette prosjektet samarbeider vi om å lage løsningsforslag, distribusjon er nok enklest gjennom [matematikk.net](https://matematikk.net/). 
-Se [Eksamensoppgaver](https://matematikk.net/side/Eksamensoppgaver)-siden på [matematikk.net](https://matematikk.net/).
+Se [Eksamensoppgaver](https://matematikk.net/side/Eksamensoppgaver)-siden på [matematikk.net](https://matematikk.net/). 
+Du kan finne alle filer knyttet til dette prosjektet i mappen [alle_pdf_filer](alle_pdf_filer/).
 
 ## Hvordan kan jeg bidra?
 Finner du **skrivefeil**, **matematiske feil**, **uklare setninger** eller har **andre forbedringsforslag**? 

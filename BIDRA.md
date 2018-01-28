@@ -5,7 +5,7 @@ Du har to muligheter når du skal bidra: du kan lage **Issue** eller sende **Pul
 
 ## Lag *Issue*
 Lag en [konto på GitHub](https://github.com/join). Gå til [Issues](https://github.com/tommyod/matte_eksamener_VGS/issues) og skriv en detaljert beskrivelse om hva du mener er feil. 
-Det beste er om du skriver hvilken linje i hvilken ´.tex´ fil feilen ligger i, og hva feilen er.
+Det beste er om du skriver hvilken linje i hvilken `.tex` fil feilen ligger i, og hva feilen er.
 
 ## Fiks feil eller bidra selv ved å lage en *Pull Request*
 Git og GitHub er et kraftig system med bratt læringskurve, så det kan virke vanskelig å komme i gang. 
