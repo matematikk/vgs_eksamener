@@ -1,20 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Kopierer alle .pdf filer som matcher følgende mønster:
+Kjører pdflatex på alle .tex filer som matcher følgende mønster:
+    
+(FAGKODE)_(2 TALL)_(V eller H)_(1-3 bokstaver)_(.tex)
 
-(FAGKODE)_(2 TALL)_(V eller H)_(1-3 bokstaver)_(.pdf)
-
-Til en egen mappe.
 @author: tommy
 """
 
 import os
 import re
-import shutil
-import zipfile
 import subprocess
-
 
 if __name__ == '__main__':
     # Path of this script
