@@ -4,7 +4,7 @@ Du kan bidra til å øke kvaliteten på dokumentene, og både små og store bidr
 Du har to muligheter når du skal bidra: du kan lage **Issue** eller sende **Pull Request**.
 
 ## Lag *Issue* (gjør oss oppmerksomme på feilen)
-Lag en [konto på GitHub](https://github.com/join). Gå til [Issues](https://github.com/tommyod/matte_eksamener_VGS/issues) og skriv en detaljert beskrivelse om hva du mener er feil. 
+Lag en [konto på GitHub](https://github.com/join). Gå til [Issues](https://github.com/matematikk/vgs_eksamener/issues) og skriv en detaljert beskrivelse om hva du mener er feil. 
 Det beste er om du skriver hvilken linje i hvilken `.tex` fil feilen ligger i, og hva feilen er.
 
 ## Send en *Pull Request* (send inn et endringsforslag som fikser feilen)
@@ -45,22 +45,22 @@ Her kommer en detaljert forklaring på hvordan du gjør en endring i prosjektet.
 Dersom du vil ha mer informasjon, kikk i [Git-boka](https://git-scm.com/book/en/v2) eller søk etter en [tutorial på Youtube](https://www.youtube.com/results?search_query=github+tutorial+contributing).
 
 1. **Fork GitHub prosjektet:** 
-  Øverst på [denne siden](https://github.com/tommyod/matte_eksamener_VGS) er det en knapp som heter "*Fork*". 
+  Øverst på [denne siden](https://github.com/matematikk/vgs_eksamener) er det en knapp som heter "*Fork*". 
   Trykk på denne for å ta en kopi av prosjektet til din GitHub konto. 
-  Du har nå tatt en kopi av `tommyod/matte_eksamener_VGS` til `<ditt navn>/matte_eksamener_VGS` på GitHub. 
-  Du finner din egen kopi av prosjektet på `https://github.com/<ditt navn>/matte_eksamener_VGS`.
+  Du har nå tatt en kopi av `matematikk/vgs_eksamener` til `<ditt navn>/vgs_eksamener` på GitHub. 
+  Du finner din egen kopi av prosjektet på `https://github.com/<ditt navn>/vgs_eksamener`.
 2. **Klon (last ned) filene til din PC:** 
   Åpne terminalen på Mac/Ubuntu, eller Git Bash på Windows.
   Åpne terminalen i en mappe der du vil ta en kopi av prosjektet. 
   Du kan enten åpne terminalen i en mappe ved å finne mappen først, høyreklikke og åpne terminalen der, eller du kan bruke terminalkommandoene `ls` (*list directory contents*) og `cd` (*change directory*) for å navigere i filsystemet ditt frem til en passende mappe. 
-  Skriv så `git clone https://github.com/<ditt navn>/matte_eksamener_VGS.git`. 
-  Prosjektet blir lastet ned i en mappe med navn `matte_eksamener_VGS`. 
+  Skriv så `git clone https://github.com/<ditt navn>/vgs_eksamener.git`. 
+  Prosjektet blir lastet ned i en mappe med navn `vgs_eksamener`. 
   Du har nå en lokal kopi av filene.
 3. **Lag en branch og gjør endringer:** 
-  Åpne terminalen, eller Git Bash på Windows, i mappen `matte_eksamener_VGS` som ble laget i forrige steg. 
+  Åpne terminalen, eller Git Bash på Windows, i mappen `vgs_eksamener` som ble laget i forrige steg. 
   Skriv så følgende kommandoer (uten `$`):
   ```
-  $ git remote add upstream https://github.com/tommyod/matte_eksamener_VGS.git
+  $ git remote add upstream https://github.com/matematikk/vgs_eksamener.git
   $ git fetch upstream
   $ git branch <navn på endring> upstream/master
   $ git checkout <navn på endring>
@@ -78,7 +78,7 @@ Når du har gjort alle endringene som du vil gjøre, og *add*et og *commit*et di
 ```
 $ git push origin -f
 ```
-Nå er endringene lagret på `https://github.com/<ditt navn>/matte_eksamener_VGS`. 
+Nå er endringene lagret på `https://github.com/<ditt navn>/vgs_eksamener`. 
 Besøk siden, der vil du se en knapp der det står "*Compare & pull request*". 
 En *pull request* er en forespørsel om at jeg skal ta inn dine foreslåtte endringer i prosjektet. 
 Trykk på knappen, skriv en tittel for dine endringer, og en beskrivelse av hva endringene innebærer. 
@@ -94,8 +94,8 @@ Du har foreslått en endring på et open-source prosjekt!
 Her er en oppsummering av "*(3) Last ned, gjør endringer, og last opp for review*".
 ```
 bruker@home ~$ cd Desktop
-bruker@home ~/Desktop$ git clone https://github.com/<ditt navn>/matte_eksamener_VGS.git
-   Cloning into 'matte_eksamener_VGS'...
+bruker@home ~/Desktop$ git clone https://github.com/<ditt navn>/vgs_eksamener.git
+   Cloning into 'vgs_eksamener'...
    remote: Counting objects: 9, done.
    remote: Compressing objects: 100% (8/8), done.
    Unpacking objects: 100% (9/9), done.
@@ -104,42 +104,42 @@ bruker@home ~/Desktop$ git clone https://github.com/<ditt navn>/matte_eksamener_
 ```
 Setter opp en *branch* for endringer.
 ```
-bruker@home ~/Desktop$ cd matte_eksamener_VGS                                  
-bruker@home ~/Desktop/matte_eksamener_VGS$ git remote add upstream https://github.com/tommyod/matte_eksamener_VGS.git
-bruker@home ~/Desktop/matte_eksamener_VGS$ git fetch upstream
-   From https://github.com/tommyod/matte_eksamener_VGS
+bruker@home ~/Desktop$ cd vgs_eksamener                                  
+bruker@home ~/Desktop/vgs_eksamener$ git remote add upstream https://github.com/matematikk/vgs_eksamener.git
+bruker@home ~/Desktop/vgs_eksamener$ git fetch upstream
+   From https://github.com/matematikk/vgs_eksamener
     * [new branch]      master     -> upstream/master
-bruker@home ~/Desktop/matte_eksamener_VGS$ git branch endring upstream/master
+bruker@home ~/Desktop/vgs_eksamener$ git branch endring upstream/master
    Branch endring set up to track remote branch master from upstream.
-bruker@home ~/Desktop/matte_eksamener_VGS$ git checkout endring
+bruker@home ~/Desktop/vgs_eksamener$ git checkout endring
    Switched to branch 'endring'
    Your branch is up-to-date with 'upstream/master'.
 ```
 Gjør en, eller flere, endringer.
 ```
 << Gjør endringer i en eller flere filer>>
-bruker@home ~/Desktop/matte_eksamener_VGS$ git add -A                   
-bruker@home ~/Desktop/matte_eksamener_VGS$ git commit -m "Endret skrivefeil i S2_V15"
+bruker@home ~/Desktop/vgs_eksamener$ git add -A                   
+bruker@home ~/Desktop/vgs_eksamener$ git commit -m "Endret skrivefeil i S2_V15"
    [endring e5ea83e] Endret skrivefeil i S2_V15
     1 file changed, 1 insertion(+), 1 deletion(-)
 << Gjør flere endringer i en eller flere filer>>
-bruker@home ~/Desktop/matte_eksamener_VGS$ git add -A                   
-bruker@home ~/Desktop/matte_eksamener_VGS$ git commit -m "Endret skrivefeil i S2_V16"
+bruker@home ~/Desktop/vgs_eksamener$ git add -A                   
+bruker@home ~/Desktop/vgs_eksamener$ git commit -m "Endret skrivefeil i S2_V16"
    [endring e5ea83e] Endret skrivefeil i S2_V16
     1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 Dytt endringene opp til GitHub med "*push*" kommandoen.
 ```
-bruker@home ~/Desktop/matte_eksamener_VGS$ git push origin -f              
+bruker@home ~/Desktop/vgs_eksamener$ git push origin -f              
    Counting objects: 3, done.
    Delta compression using up to 4 threads.
    Compressing objects: 100% (3/3), done.
    Writing objects: 100% (3/3), 284 bytes | 0 bytes/s, done.
    Total 3 (delta 2), reused 0 (delta 0)
    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-   To https://github.com/<ditt navn>/matte_eksamener_VGS.git
+   To https://github.com/<ditt navn>/vgs_eksamener.git
     * [new branch]      endring -> endring            
 ```
-Gå til `https://github.com/<ditt navn>/matte_eksamener_VGS`. 
+Gå til `https://github.com/<ditt navn>/vgs_eksamener`. 
 Trykk på "Compare & pull request". 
 Skriv en forklaring og trykk på "*Create pull request*".

@@ -1,5 +1,5 @@
 
-# matte_eksamener_VGS
+# vgs_eksamener
 Eksamener med løsningsforslag for matematikkfag på VGS.
 
 ## Rask introduksjon
