@@ -48,7 +48,7 @@ Vi skriver om til $f(x) = 3x^{-2}$ og deriverer slik
 \end{align*}
 
 
-# Vi skal derivere $g(x) = xe^{-4x}$, og må her bruke produkregelen
+# Vi skal derivere $g(x) = xe^{-4x}$, og bruker produktregelen
 $(uv)' = u'v + uv'$ slik
 \begin{align*}
 	g'(x) &= \left(x \right)' e^{-4x} +x \left( e^{-4x} \right)' \\
@@ -65,9 +65,9 @@ Vi ser på funksjonen
 \end{equation*}
 \begin{easylist}[enumerate]
 \ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-# Vi setter inn $x=2$ i $P(x)$ og får $P(2) = (2)^3 - 3(2)^2 + 4 = 8 - 12 + 4 = \answer{0}$.
+# Vi får $P(2) = (2)^3 - 3(2)^2 + 4 = 8 - 12 + 4 = \answer{0}$.
 # Ettersom $P(2) = 0$, vet vi at $(x-2)$ må være en faktor i $P(x)$.
-Vi utfører divisjonen og får \\
+Vi utfører polynomdivisjon og får \\
 \polylongdiv{x^3 - 3x^2 + 4}{x - 2} \\
 Nå vet vi at $P(x) = (x-2)(x^2 - x - 2)$, og ved hjelp av 
 ABC formelen finner vi ut at $(x^2 - x - 2) = (x-2)(x+1)$,
@@ -92,21 +92,20 @@ En enkel metode for å sjekke om dette svaret er riktig er å gange sammen disse
 		\nonumber 99 &= n-1 \\
 		\nonumber n &= 100. 
 	\end{align}
-	Nå har vi alt vi trenger for å bruke summeformelen for en artimetisk
-	rekke, vi løser slik
+	Vi bruker deretter summeformelen for en aritmetisk rekke, og får
 	\begin{equation*}
 		S = \left(\frac{a_1 + a_n}{2}\right)n 
 		= \left(\frac{3 + 300}{2}\right)100
 		= 303(50) = \frac{30300}{2} = \answer{15150}.
 	\end{equation*}
-	# Dersom $a_1 = 4$ kan vi bruke formelen og finne ut at $a_3 = a_1 + 8 = 4 + 8 = 12$.
-	Vi setter så dette inn i formel \eqref{eqn:ledd_formel} brukt i forrige oppgave, og får at 
+	# Vi bruker $a_1 = 4$ og formelen fra oppgaven til å finne ut at $a_3 = a_1 + 8 = 4 + 8 = 12$.
+	Vi setter så dette inn i formel \eqref{eqn:ledd_formel} fra forrige oppgave, og får at 
 	\begin{equation*}
-		a_3 = a_1 + d(3 -1) \quad \Leftrightarrow 
-		\quad 12 = 4 + d 2  \quad \Leftrightarrow 
+		a_3 = a_1 + d(3 -1) \quad \Rightarrow 
+		\quad 12 = 4 + d 2  \quad \Rightarrow 
 		\quad d = 4,
 	\end{equation*}
-	og da må $a_2 = a_1 + d = 4 + 4 = \answer{8}$.
+	og da må vi ha at $a_2 = a_1 + d(2 - 1) = 4 + 4 = \answer{8}$.
 \end{easylist}
 
 
@@ -116,20 +115,21 @@ Vi bruker følgende variabler: $v$ er antall voksne, $b$ er antall barn og $p$ e
 Hver setning gir oss én likning:
 \begin{easylist}[itemize]
 	%\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# ``Det ble solgt 80 billetter.'' $\quad \Rightarrow \quad v + b + p = 80 \quad \text{(A)}$
-	# ``Billettinntektene var 5000 kroner.'' 
+	# ``Det ble solgt 80 billetter.'' \\$\quad \Rightarrow \quad v + b + p = 80 \quad \text{(A)}$
+	# ``Billettinntektene var 5000 kroner.'' \\ 
 	$\quad \Rightarrow \quad 100v + 50b + 60p = 5000 \quad \text{(B)}$
 	# ``Like mange til barn som til voksne og pensjonister til sammen.'' \\ $\quad \Rightarrow \quad - v + b - p = 0 \quad \text{(C)}$
 \end{easylist}
-Vi legger sammen likning $(A)$ og likning $(C)$, og får at $2b = 80$,
+Både innsettingsmetoden og addisjonsmetoden kan brukes, vi bruker her addisjonsmetoden.
+Først legger vi sammen likning $(A)$ og likning $(C)$, og får at $2b = 80$,
 altså er $\answer{b=40}$.
 Deretter setter vi $b = 40$ inn i likning $(A)$ og $(B)$, og får
 \begin{align*}
 	v + p &= 40 \quad \text{(D)}\\
 	100v  + 60p &= 3000\quad \text{(E)}
 \end{align*}
-Vi regner ut $100 \times \text{(D)} - \text{(E)}$, og får at $40p = 1000$.
-Da er $\answer{p = 25}$, setter vi inn dette i likning $\text{(D)}$ finner vi også ut at $\answer{v = 15}$.
+Vi regner ut $100 \times \text{(D)} - \text{(E)}$, og finner ut at $40p = 1000$.
+Da er $\answer{p = 25}$, og setter vi inn dette i likning $\text{(D)}$ finner vi også ut at $\answer{v = 15}$.
 
 
 
@@ -139,6 +139,14 @@ Da er $\answer{p = 25}$, setter vi inn dette i likning $\text{(D)}$ finner vi og
 # Generelt så har $f'(x)$ topp- og bunnpunkt når $f'(x) = 0$.
 Her er $f'(x) = 0$ når $x = -2$ og når $x = 6$. 
 Vi ser at \answer{$x=-2$ er et toppunkt} og \answer{$x=6$ er et bunnpunkt}. Grafen vokser når $f'(x) > 0$, og minker når $f'(x) < 0$. Vi ser også at \\ \answer{funksjonen vokser når $x < -2$ og når $x > 6$}, og \answer{minker når $ -2 < x < 6$}.
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.85\linewidth]{figs/del1_oppg5}
+	\caption{Funksjonene fra oppgave 5, del 1.}
+	\label{fig:del1_oppg5}
+\end{figure}
+
 # Likningen for tangenten til $f(x)$ i et punkt $x_0$ er gitt ved
 \begin{equation*}
 	y = f(x_0) + f'(x_0) ( x - x_0).
@@ -156,27 +164,20 @@ Med andre ord er $f''(x) < 0$ når $x < 2$, og $f''(x) > 0$ når $x > 2$.
 Vendepunktet oppstår når $f''(x)$ endrer fortegn, altså når $\answer{x=2}$.
 
 # Basert på den deriverte, samt kjennskap til bunnpunkt og toppunkt, burde du klare å lage en skisse som ligner på $f'(x)$ vist i Figur \ref{fig:del1_oppg5}.
-
-\begin{figure}[ht!]
-	\centering
-	\includegraphics[width=0.85\linewidth]{figs/del1_oppg5}
-	\caption{Funksjonene fra oppgave 5, del 1.}
-	\label{fig:del1_oppg5}
-\end{figure}
 \end{easylist}
 
 \subsection*{Oppgave 6}
 \begin{easylist}[enumerate]
 \ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-# Her må vi bruke forventningsverdier og utfallsrom. Både $X_2$ og $X_4$ har $n > 10$, så disse må samsvare med figurene $(1)$ og $(3)$, ettersom disse har positive sannsynligheter for $X > 10$.
+# Her må vi bruke forventningsverdier og utfallsrom. Både $X_2$ og $X_4$ har $n > 10$, så disse må samsvare med figurene $(1)$ og $(3)$, ettersom disse har positive sannsynligheter når $X > 10$.
 Ettersom $\operatorname{E}(X_2) = np = 100(0.06) = 6$ og $\operatorname{E}(X_4) = 5$, så velger vi $\answer{X_2 = (3)}$ og $\answer{X_4 = (1)}$,
-ettersom dette samsvarer best med høyeste stolpe på figurene.
+fordi dette samsvarer best med høyeste stolpe på figurene.
 Basert på forventningsverdiene til $X_1$ og $X_3$ så velger vi $\answer{X_1 = (2)}$ og $\answer{X_3 = (4)}$.
 # Det må være $\answer{X_2}$ (figur $(3)$), fordi alle andre arealer er for små.
 Ettersom det er satt tall på aksene er det mulig å gjøre en grov utregning av arealet ved å lese av søylene, og da ser man at de andre er for små.
 # Variabelen med størst standardavvik er den som har størst varians, ettersom
 $\operatorname{SD}(X) = \sqrt{\operatorname{Var}(X)}$, og $a > b$ impliserer at $\sqrt{a} > \sqrt{b}$.
-Når $X$ er binomisk fordelt er $\operatorname{Var}(X) = np(1-p)$, vi regner ut alle variansene (det er Del 1, så vi trenger ikke å regne nøye):
+Når $X$ er binomisk fordelt er $\operatorname{Var}(X) = np(1-p)$, vi regner ut alle variansene (det er Del 1, så vi trenger ikke å regne nøye---vi har ikke kalkulator tilgjengelig):
 \begin{align*}
 \operatorname{Var}(X_1) &= np(1-p) = 10 (0.6) 0.4 = 2.4 \\ 
 \operatorname{Var}(X_2) &= np(1-p) = 100 (0.06) 0.94 \approx 6 \\
@@ -203,7 +204,7 @@ Vi ser at
 	\vdots &= \vdots \\
 	O_n &=  \frac{(r/2^{n-2})}{2} \pi = r \pi / 2^{n-1},
 \end{align*}
-og summer blir en uendelig geometrisk rekke fordi
+og dette blir en uendelig geometrisk rekke fordi
 \begin{equation}
 \label{eqn:geometrisk}
 	S = O_1 + O_2  + \dots =  r \pi \left( 1 + \frac{1}{2} + 
@@ -217,7 +218,7 @@ S =  r \pi \left( 1 + \frac{1}{2} +
 =  r \pi \left( \frac{1}{\frac{1}{2}} \right)
  = \answer{2 \pi r}.
 \end{equation*}
-I Geogebra kan du skrive \verb|S := r * (pi) * Sum(1/2^i, i, 0, |$\infty$\verb|)|.
+I Geogebra kan vi skrive \verb|S := r * (pi) * Sum(1/2^i, i, 0, |$\infty$\verb|)|.
 \end{easylist}
 
 \subsection*{Oppgave 2}
@@ -233,7 +234,10 @@ I Geogebra kan du skrive \verb|S := r * (pi) * Sum(1/2^i, i, 0, |$\infty$\verb|)
 
 \begin{easylist}[enumerate]
 \ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-# Her virker en lineær modell best, basert på hvordan linjen passer til datene, se Figur \ref{fig:del2_oppg2}.
+# Basert på plottet i Figur \ref{fig:del2_oppg2} velger vi en lineær modell.\footnote{Et annet løsningsforslag bruker et andregradspolynom $y=ax^2 + bx + c$
+	istedet for en lineær modell $y=ax + b$.
+	I pensum er fokuset på lineære, eksponentielle og logistiske modeller. 
+	Jeg er ikke villig til å anta et andregradspolynom basert på bare 5 datapunkter---det enkleste er det beste, dette er \emph{Ockhams barberkniv}. Et 4. gradspolynom vil passe perfekt til dataene, men er ikke riktig.}
 # Evaluer funksjonen $y(x) = 5.06x - 5.2$ i punktet
 $x = 24$. Vi får $y(24) = 5.06(24) - 5.2 = 116.24$.
 Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
@@ -246,30 +250,46 @@ Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
 \end{figure}
 
 
-# Vi kan løse på 2 forskjellige måter
-## \verb|f(x) := 5.06*x - 5.2| \verb|Sum(f(x), x, 0, 24)| gir 1388
+# Vi kan løse på 2 forskjellige måter.
+## Vi kan finne summen ved å regne den ut som en sum.
+Da skriver vi først \verb|f(x) := 5.06*x - 5.2| i CAS,
+og regner deretter summen med \verb|Sum(f(x), x, 0, 24)|, som gir \answer{1388}. Det er uheldig at $f(0)$ er negativ, ettersom
+det ikke gir mening å ha negativt antall døde jerv.
+
+## Vi kan finne summen ved å approksimere den som et integral.
+For å korrigere for at vi går fra en sum til et integral,
+bør vi legge til $1/2$ på hver ende, se Figur \ref{fig:del2_oppg2_c}
+for en grafisk forklaring.
+Vi skriver \verb|Integral(f(x), x, -0.5, 24.5)| inn i Geogebra, som gir \answer{1388} som svar.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.85\linewidth]{figs/del2_oppg2_c}
+\caption{En illustrasjon av at vi må utvide endepunktene når vi approksimerer en sum ved hjelp av et integral. For et mindre antall stolper viser vi $x=0$ til $x=10$.}
+\label{fig:del2_oppg2_c}
+\end{figure}
 \end{easylist}
 
 
 \subsection*{Oppgave 3}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# Vi legger dataene inn i regnearket i Geogebra, og velger en lineære regresjonsmodell. Vi får $p(x) = -0.224x +2219.17$.
-	Inntekten er prisen ganget med antall varger solgt, vi får
+	# Vi legger dataene inn i regnearket i Geogebra, og velger en lineær regresjonsmodell. Vi får $p(x) = -0.224x +2219.17$.
+	Inntekten er prisen ganget med antall varger solgt, så vi får
 	\begin{equation*}
 		\answer{I(x) = p(x) \times x = -0.224x^2 +2219.17x}.
 	\end{equation*}
-	# Definer $I(x)$ og $K(x)$ i CAS ved å skrive inn \\
-	\verb|I(x) := -0.22421189 * x^2 + 2219.1684 * x| (se notat\footnote{Her er det viktig å ta med rikelig med desimaler. Tar du med for få desimaler vil svarene i de neste oppgavene ikke bli like nøyaktige.})
+	# Vi definerer $I(x)$ og $K(x)$ i CAS ved å skrive inn \\
+	\verb|I(x) := -0.22421189 * x^2 + 2219.1684 * x| (mange desimaler\footnote{Her er det viktig å ta med rikelig med desimaler. Tar du med for få desimaler vil svarene i de neste oppgavene ikke bli like nøyaktige. Generelt bør vi ta med mange desimaler i mellomregninger.})
 	og  \\
 	\verb|K(x) := 0.03 * x^2 + 15 * x + 605000|.
 	Bruker deretter CAS til å regne ut:
 	\begin{align*}
 		I'(3000) &= 873.9\\
-		K'(3000) &= 195\\
+		K'(3000) &= 195
 	\end{align*}
 	Ettersom overskuddet $O(x) = I(x)  - K(x)$, vil overskuddet øke
-	dersom $I'(x) > K'(x)$ og vi produserer mer.
+	dersom $I'(x) > K'(x)$ og vi produserer da mer.
 	\answer{Vi bør øke produksjonen}.
 	# Skriv inn \verb|Løs[I'(x) > K'(x), x]| i CAS, svaret blir
 	\answer {$x < 4335.3$}.
@@ -289,7 +309,7 @@ Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
 		10 &= h  \times x \times 2x \\
 		h &= \frac{5}{x^2}
 	\end{align*}
-	# Den totale kostnaden er summen av kostnad per kvadratmeter, ganget med areal i kvadratmeter, for alle sidene. Her er en detaljert forklaring.
+	# Den totale kostnaden er summen av kostnad per kvadratmeter, ganget med areal i kvadratmeter, for alle sidene. Her er en detaljert utledning.
 	\begin{align*}
 		\text{Total kostnad} &=  
 		\underbrace{\frac{\text{Kostnad}}{m^2} \times m^2}_{\text{Sider}} + 
@@ -311,14 +331,14 @@ Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
 		200x^2
 	\end{align*}
 	
-	# Definer funksjon med \verb|K(x) := 200x^2 + 1800/x| i CAS i Geogebra.
+	# Definer funksjon med \verb|K(x) := 200 * x^2 + 1800/x| i CAS i Geogebra.
 	Bruk deretter \verb|Ekstremalpunkt(K, 0.1, 10)| til å finne den minimale prisen. 
-	Vi finner at $\answer{x = \text{bredde} = 1.64 \text{m}}$, 
-	$\answer{2x = \text{lengde} = 3.3 \text{m}}$ og
-	 $\answer{h = 5/x^2 = \text{høyde} = 1.83 \text{m}}$.
+	Vi finner at $\answer{x = \text{bredde} = 1.64 \text{ m}}$, 
+	$\answer{2x = \text{lengde} = 3.3 \text{ m}}$ og
+	 $\answer{h = 5/x^2 = \text{høyde} = 1.83 \text{ m}}$.
 	 Den minste kostnaden ved å produsere containeren er
 	 \answer{1635 kr}. Se Figur \ref{fig:del2_oppg4} for et skjembilde
-	 av CAS-utregning.
+	 av CAS-utregningen.
 	
 \begin{figure}[ht!]
 \centering
@@ -338,7 +358,7 @@ Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
 		P(X = x) = \binom{n}{x} p^x (1-p)^{n-p} = 
 		\binom{3}{3} 0.1^3 (1-0.1)^{3 -3} = 0.1^3 = \answer{0.001 = 0.1 \%}.
 	\end{equation*}
-	Det er enda enklere å tenke at tre personer må trekkes på rad, og at sannsynligheten for at én blir trukket er $p = 0.1$, så da er sannsynligheten for at tre blir trukket på rad lik $p^3 = 0.1^3 = 0.001 = 0.1 \%$.
+	Det er kanskje enklere å tenke at tre personer må trekkes på rad, og at sannsynligheten for at én blir trukket er $p = 0.1$, så da er sannsynligheten for at tre blir trukket på rad lik $p^3 = 0.1^3 = 0.001 = 0.1 \%$.
 	# Den stokastiske variabelen $X$ er binomisk fordelt med $n=1000$ og $p = 0.1$. Vi bruker formlene for forventning og standardavvik for binomisk fordeling.
 	\begin{align*}
 		\operatorname{E}(X) &= np = 1000 (0.1) = \answer{100}\\
@@ -350,7 +370,7 @@ Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.85\linewidth]{figs/del2_oppg5}
-\caption{Fordelingen til $X \sim \text{Binom}(n =1000, p=0.1)$, normalapproksimasjonen $X \sim \text{Normal}(\mu = np, \sigma^2 = np(1-p))$
+\caption{Fordelingen til $X \sim \text{Binom}(n =1000, p=0.1)$, normalapproksimasjonen $X \sim \text{Normal} \left(  \mu = np, \sigma = \sqrt{np(1-p)}\right)$
 	og arealet under grafen når $X\geq 110$.}
 \label{fig:del2_oppg5}
 \end{figure}
@@ -358,27 +378,28 @@ Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
 	# Vi setter opp hypotesene
 	\begin{align*}
 		H_0 &: \quad p = 0.1\\ 
-		H_1 &: \quad p > 0.1\\ 
+		H_1 &: \quad p > 0.1
 	\end{align*}
-	og bruker signifikansnivå $5 \%$. 
+	og bruker signifikansnivå $5 \, \%$. 
 	Vi forkaster nullhypotesen dersom sannsynligheten for å få
-	$x_\text{obs}$ er  mindre enn $5 \%$, gitt at $p = 0.1$.
+	$x_\text{obs}$ er  mindre enn $5 \, \%$, gitt at $p = 0.1$.
 	I vårt tilfelle er $x_\text{obs} = 110$.
 	Vi må finne sannsynligheten for at $X \geq x_\text{obs}$,
 	gitt at $p = 0.1$.
 	Med andre ord må vi finne $P(X \geq 110 \mid p = 0.1)$.
+	Vi kan gjøre det på to måter.
 	
 	## Det enkleste er å se på $X$ som binomisk fordelt med
 	$n = 1000$ og $p = 0.1$, da gir sannsynlighetskalkulatoren
-	i Geogebra oss at $P(X \geq 110) = 0.1583 = 15.5 \%$.
+	i Geogebra oss at $P(X \geq 110) = 0.1583 = 15.5 \, \%$.
 	Vi kan med andre ord \answer{ikke forkaste $H_0$}.
 	
 	## Her er også både $np$ og $n(p-1)$ større enn 5, så vi kan alternativt bruke
-	normalapproksimasjon med $\mu =np=100 $ og $\sigma = \sqrt{1000 (0.1) (0.9)} = \sqrt{90}$. Normalapproksimasjonen er plottet i Figur \ref{fig:del2_oppg5}, og som du ser stemmer den veldig godt overens
+	normalapproksimasjon med $\mu =np=100$ og $\sigma = \sqrt{1000 (0.1) (0.9)} = \sqrt{90}$. Normalapproksimasjonen er plottet i Figur \ref{fig:del2_oppg5}, og som du ser stemmer den veldig godt overens
 	med den binomiske fordelingen.
 	På eksamen ville jeg svart med binomisk fordeling, men jeg viser normalapproksimasjonen her.
 	
-	Vi regner ut $P(X \geq 110) \cong P(X_\text{norm} \geq 109.5) = 0.1583 = 15.5 \%$ i Geogebra. Legg merke til ``halvkorreksjon'', som brukes når vi går fra en diskret fordeling med søyler til en glatt, kontinuerlig fordeling. De første 4 desimalene er helt like, og konklusjonen er selvsagt den samme---vi forkaster $H_0$.
+	Vi regner ut $P(X \geq 110) \cong P(X_\text{norm} \geq 109.5) = 0.1583 = 15.5\,  \%$ i Geogebra. Legg merke til ``halvkorreksjon'', som brukes når vi går fra en diskret fordeling med søyler til en glatt, kontinuerlig fordeling. De første 4 desimalene er helt like, og konklusjonen er den samme---vi forkaster $H_0$.
 	
 \end{easylist}
 
@@ -389,7 +410,7 @@ Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
 	
 	\begin{center}
 		\begin{tabular}{lll}
-			Måned & Innbetaling & Nåverdi av innbetaling \\ \hline
+			Måned & Innbetaling & Nåverdi av innbetalingen \\ \hline
 			1 & $x$ & $\frac{x}{1.016}$ \\
 			2 & $x$ & $\frac{x}{1.016^2}$ \\
 			3 & $x$ & $\frac{x}{1.016^3}$ \\
@@ -397,9 +418,9 @@ Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
 			36 & $x$ & $\frac{x}{1.016^{36}}$ \\
 		\end{tabular}
 	\end{center}
-	Vi setter nåverdiene av innbetalingene lik dagens betaling, for får likning som vist i oppgaven.
+	Vi setter nåverdiene av innbetalingene lik dagens betaling, og får likningen
 	\begin{equation*}
-		7995 + 30 = \frac{x}{1.016} + \frac{x}{1.016^2} + \dots + \frac{x}{1.016^{36}}
+		7995 + 30 = \frac{x}{1.016} + \frac{x}{1.016^2} + \dots + \frac{x}{1.016^{36}}.
 	\end{equation*}
 	For å løse likningen på papir kan vi gange begge sider med $1.016^{36}$
 	og bruke summeformelen for en geometrisk rekke.
@@ -407,7 +428,7 @@ Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
 	\verb|NLøs({8025 = Sum(x/1.016^i, i, 1, 36)}, {x})|,
 	da får du at $\answer{x = 294.98 \text{ kr}}$.
 
-	# Dette er samme problem som i forrige oppgaven, men nå er terminbeløpet kjent og renten er ukjent. Vi må løse
+	# Dette er samme problem som i forrige oppgave, men nå er terminbeløpet kjent og renten er ukjent. Vi må løse
 	\begin{equation*}
 		7995 = \frac{289}{r} + \frac{289}{r^2} + \dots + \frac{289}{r^{36}},
 	\end{equation*}
@@ -441,6 +462,7 @@ Ifølge modellen kan vi forvente \answer{116} døde jerv registrert i 2014.
 \subsection*{Oppgave 7}
 Halveringstiden er 6 timer, men pasienten får én tablett hver 12. time.
 Da rekker kroppen å halvere to ganger---med andre ord reduseres mengden med stoffet med $1/4$ hver 12. time.
+Vi setter opp en tabell og leter etter et mønster.
 
 \begin{center}
 	\begin{tabular}{ll}
@@ -459,7 +481,7 @@ Vi bruker formelen $1 + k + k^2 + \dots = 1 /(1 - k)$ til å regne ut summen $S$
 	&= 60 \left(  \frac{1}{1 - \frac{1}{4}}\right) = 60 \left(  \frac{1}{ \frac{3}{4}}\right)= 60 \left(  \frac{4}{ 3}\right)  = \answer{80}\\
 \end{align*}
 Du kan også skrive
-\verb|Sum(60/4^i, i, 0, | $\infty$ \verb|)| inn i CAS. Du får samme svar.
+\verb|Sum(60/4^i, i, 0, | $\infty$\verb|)| inn i CAS. Du får samme svar.
 På eksamen er det lurt å gjøre så mye som mulig i Geogebra,
 men jeg prøver å vise at det er mulig å løse uten Geogebra også.
 
