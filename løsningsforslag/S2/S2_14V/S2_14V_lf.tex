@@ -96,13 +96,13 @@ En enkel metode for å sjekke om dette svaret er riktig er å gange sammen disse
 	\begin{equation*}
 		S = \left(\frac{a_1 + a_n}{2}\right)n 
 		= \left(\frac{3 + 300}{2}\right)100
-		= 303(50) = \frac{30300}{2} = \answer{15150}.
+		= \frac{303 \cdot 100}{2} = \frac{30300}{2} = \answer{15150}.
 	\end{equation*}
 	# Vi bruker $a_1 = 4$ og formelen fra oppgaven til å finne ut at $a_3 = a_1 + 8 = 4 + 8 = 12$.
 	Vi setter så dette inn i formel \eqref{eqn:ledd_formel} fra forrige oppgave, og får at 
 	\begin{equation*}
 		a_3 = a_1 + d(3 -1) \quad \Rightarrow 
-		\quad 12 = 4 + d 2  \quad \Rightarrow 
+		\quad 12 = 4 + 2d   \quad \Rightarrow 
 		\quad d = 4,
 	\end{equation*}
 	og da må vi ha at $a_2 = a_1 + d(2 - 1) = 4 + 4 = \answer{8}$.
@@ -118,7 +118,7 @@ Hver setning gir oss én likning:
 	# ``Det ble solgt 80 billetter.'' \\$\quad \Rightarrow \quad v + b + p = 80 \quad \text{(A)}$
 	# ``Billettinntektene var 5000 kroner.'' \\ 
 	$\quad \Rightarrow \quad 100v + 50b + 60p = 5000 \quad \text{(B)}$
-	# ``Like mange til barn som til voksne og pensjonister til sammen.'' \\ $\quad \Rightarrow \quad - v + b - p = 0 \quad \text{(C)}$
+	# ``Like mange til barn som til voksne og pensjonister til sammen.'' \\ $\quad \Rightarrow \quad b = v + p \quad \Rightarrow \quad - v + b - p = 0 \quad \text{(C)}$
 \end{easylist}
 Både innsettingsmetoden og addisjonsmetoden kan brukes, vi bruker her addisjonsmetoden.
 Først legger vi sammen likning $(A)$ og likning $(C)$, og får at $2b = 80$,
@@ -137,8 +137,9 @@ Da er $\answer{p = 25}$, og setter vi inn dette i likning $\text{(D)}$ finner vi
 \begin{easylist}[enumerate]
 \ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
 # Generelt så har $f'(x)$ topp- og bunnpunkt når $f'(x) = 0$.
-Her er $f'(x) = 0$ når $x = -2$ og når $x = 6$. 
-Vi ser at \answer{$x=-2$ er et toppunkt} og \answer{$x=6$ er et bunnpunkt}. Grafen vokser når $f'(x) > 0$, og minker når $f'(x) < 0$. Vi ser også at \\ \answer{funksjonen vokser når $x < -2$ og når $x > 6$}, og \answer{minker når $ -2 < x < 6$}.
+Her er $f'(x) = 0$ når $x = -2$ og når $x = 6$. Ut fra observasjonen under ser vi at \answer{$x=-2$ er et toppunkt} og \answer{$x=6$ er et bunnpunkt}. 
+
+Grafen vokser når $f'(x) > 0$, og minker når $f'(x) < 0$. Vi ser derfor at \answer{funksjonen vokser når $x < -2$ og når $x > 6$}, og \answer{minker når $ -2 < x < 6$}.
 
 \begin{figure}[ht!]
 	\centering
@@ -156,7 +157,7 @@ ser vi at $f'(x_0) = f'(4) = -3$. Vi får altså følgende tangentlinje:
 \begin{align*}
 	y &= f(x_0) + f'(x_0) ( x - x_0) \\
 	y &= f(4) + f'(4) ( x - 4) \\
-	y &= 3 + -3 ( x - 4) \\
+	y &= 3 + (-3) ( x - 4) \\
 	& \answer{y = -3x + 15 }
 \end{align*}
 # Funksjonen $f''(x)$ er positiv når $f'(x)$ stiger, og negativ når $f'(x)$ synker.
@@ -179,10 +180,10 @@ Ettersom det er satt tall på aksene er det mulig å gjøre en grov utregning av
 $\operatorname{SD}(X) = \sqrt{\operatorname{Var}(X)}$, og $a > b$ impliserer at $\sqrt{a} > \sqrt{b}$.
 Når $X$ er binomisk fordelt er $\operatorname{Var}(X) = np(1-p)$, vi regner ut alle variansene (det er Del 1, så vi trenger ikke å regne nøye---vi har ikke kalkulator tilgjengelig):
 \begin{align*}
-\operatorname{Var}(X_1) &= np(1-p) = 10 (0.6) 0.4 = 2.4 \\ 
-\operatorname{Var}(X_2) &= np(1-p) = 100 (0.06) 0.94 \approx 6 \\
-\operatorname{Var}(X_3) &= np(1-p) = 10 (0.4) 0.6 = 2.4 \\
-\operatorname{Var}(X_4) &= np(1-p) = 50 (0.1) 0.9 = 4.5
+\operatorname{Var}(X_1) &= np(1-p) = 10 \cdot 0.6 \cdot 0.4 = 2.4 \\ 
+\operatorname{Var}(X_2) &= np(1-p) = 100 \cdot 0.06 \cdot 0.94 \approx 6 \\
+\operatorname{Var}(X_3) &= np(1-p) = 10 \cdot 0.4 \cdot 0.6 = 2.4 \\
+\operatorname{Var}(X_4) &= np(1-p) = 50 \cdot 0.1 \cdot 0.9 = 4.5
 \end{align*}
 Vi ser at  \answer{$X_2$} har størst varians, og derfor også størst standardavvik.
 \end{easylist}
@@ -201,7 +202,7 @@ Vi ser at
 	O_1 &=  \frac{(2r)}{2} \pi = r \pi \\
 	O_2 &=  \frac{(r)}{2} \pi = r \pi /2 \\
 	O_3 &=  \frac{(r/2)}{2} \pi = r \pi / 2^2 \\
-	\vdots &= \vdots \\
+	 &\ \ \ \qquad \vdots \\
 	O_n &=  \frac{(r/2^{n-2})}{2} \pi = r \pi / 2^{n-1},
 \end{align*}
 og dette blir en uendelig geometrisk rekke fordi
@@ -275,7 +276,7 @@ Vi skriver \verb|Integral(f(x), x, -0.5, 24.5)| inn i Geogebra, som gir \answer{
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
 	# Vi legger dataene inn i regnearket i Geogebra, og velger en lineær regresjonsmodell. Vi får $p(x) = -0.224x +2219.17$.
-	Inntekten er prisen ganget med antall varger solgt, så vi får
+	Inntekten er prisen ganget med antall varer solgt, så vi får
 	\begin{equation*}
 		\answer{I(x) = p(x) \times x = -0.224x^2 +2219.17x}.
 	\end{equation*}
@@ -399,7 +400,7 @@ Vi skriver \verb|Integral(f(x), x, -0.5, 24.5)| inn i Geogebra, som gir \answer{
 	med den binomiske fordelingen.
 	På eksamen ville jeg svart med binomisk fordeling, men jeg viser normalapproksimasjonen her.
 	
-	Vi regner ut $P(X \geq 110) \cong P(X_\text{norm} \geq 109.5) = 0.1583 = 15.5\,  \%$ i Geogebra. Legg merke til ``halvkorreksjon'', som brukes når vi går fra en diskret fordeling med søyler til en glatt, kontinuerlig fordeling. De første 4 desimalene er helt like, og konklusjonen er den samme---vi forkaster $H_0$.
+	Vi regner ut $P(X \geq 110) \cong P(X_\text{norm} \geq 109.5) = 0.1583 = 15.5\,  \%$ i Geogebra. Legg merke til ``halvkorreksjon'', som brukes når vi går fra en diskret fordeling med søyler til en glatt, kontinuerlig fordeling. De første 4 desimalene er helt like, og konklusjonen er identisk---vi forkaster ikke $H_0$.
 	
 \end{easylist}
 
