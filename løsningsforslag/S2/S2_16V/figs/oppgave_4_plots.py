@@ -21,7 +21,7 @@ def func2(x):
         return func2(x-1)*r
 
 def func3(x):
-    b = 3725.01
+    b = 3712.01
     r = 1.025
     o = 1.02
     if x < 18:
