@@ -394,15 +394,18 @@ I denne oppgaven ser vi på funksjonen
 \subsection*{Oppgave 4}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# Vi løser likningen $b\times (1,025)^{18} = 100000$ for beløpet $b$, svaret blir:
+	# Vi løser likningen $b\times (1.025)^{18} = 100000$ for beløpet $b$, svaret blir:
 	\begin{equation*}
-		b = \frac{100000}{(1,025)^{18}} = 64116,591 \approx \answer{64117}
+		b = \frac{100000}{(1.025)^{18}} = 64116.591 \approx \answer{64117}
 	\end{equation*}
-	# Vi må gjøre noen valg når vi tolker denne oppgaven. Jeg velger å tolke den med følgende antagelser:
+	# Vi tolker oppgaven som følger:
 	\begin{easylist}
 		## Ole Magnus får første beløp på dagen han blir født. 
-		## På 18 årsdagen får han siste innbetaling fra foreldrene, pluss renter fra forrige år.
-	\end{easylist}
+		## Han får 18 beløp til sammen. 
+		Da får han siste beløp når han fyller 17. 
+		Vi regner med at han får renter fra 17 årsdagen til 18 årsdagen,
+		men har får ikke et beløp på 18 årsdagen---da ville han fått 19 beløp til sammen.
+	\end{easylist} 
 	La oss se på litt generell teori.
 	Pengene $T$ etter $n$ år kan skrives slik, der $r$ er rente og $b$ er årlig beløp:
 	\begin{align*}
@@ -414,19 +417,28 @@ I denne oppgaven ser vi på funksjonen
 		T_n &= b  \left( \frac{r^{n+1}-1}{r-1} \right)   
 	\end{align*}
 	Fra nest siste til siste linje bruker vi summeformelen for geometriske rekker.
-	Dersom Ole Magnus får en innbetaling og en renteavkastning på 18 årsdagen, setter vi $T_{18} = 100000$ og løser for $b$:
+	
+	Etter 17 år har Ole Magnus $T_{17}$, deretter får han renter én gang, og etterpå skal han ha 100000 kroner. 
+	Dette gir likningen $T_{17}r = 100000$. Vi kan skrive og løse den slik
 	\begin{equation*}
-		b = \frac{T_{n}\left(r-1\right)}{\left(r^{n+1}-1\right)} = \frac{100000\left(1,025-1\right)}{\left(1,025^{18+1}-1\right)} \approx \answer{4176} 
+		T_{17}r = 100000 
+		\quad \Rightarrow \quad
+		b  \left( \frac{r^{17+1}-1}{r-1} \right) r = 100000
+		\quad \Rightarrow \quad
+		b = \frac{100000(r-1)}{r(r^{17+1}-1)}
 	\end{equation*}
+	Setter vi inn tallene og løser får vi $\answer{b = 4358.06}$.
+	
 	Denne oppgaven kan løses uten PC, men oppgaven ber oss om å løse i CAS i Geogebra. For å løse i CAS skriver vi inn følgende: \\
-	\texttt{NLøs[Sum[b*1.025\textasciicircum x, x, 0, 18] = 100000]} \\
+	\texttt{NLøs[Sum[b * 1.025\textasciicircum x, x, 0, 17] * 1.025 = 100000]} \\
 	Som løser følgende likning for oss:
 	\begin{equation*}
-		100000 = b \sum_{x=0}^{18} (1,025)^x
+		100000 = \underbrace{\left( b \sum_{x=0}^{18} (1,025)^x \right)}_{T_{17} = \text{penger etter 17 år}} \times r
 	\end{equation*}
+	Svaret blir det samme. På eksamen er det lurt å kladde litt på ark først, men det er raskere å løse i CAS enn å bruke summeformelen for en geometrisk rekke.
 	
-	# Igjen antar vi at første innbetaling $b$ blir gjort når Ole Magnus blir født, samt at det blir gjort en innbetaling på 18 årsdagen.
-	Vi begynner med år 0 og lager en tabell, der vi setter økningen i beløpet til $o = 1,02$.
+	# Igjen antar vi at første innbetaling $b$ blir gjort når Ole Magnus blir født, samt at siste innbetaling blir gjort på 17 årsdagen.
+	Vi begynner med år 0 og lager en tabell, der vi setter økningen i beløpet til $o = 1.02$.
 	Den rekursive formelen er $T_n = T_{n-1}r + bo^n$, altså ``forrige verdi ganget med rente, pluss et nytt beløp som øker hvert år.''
 	Vi kan sette opp en tabell og undersøke situasjonen slik:
 	\begin{center}
@@ -444,8 +456,8 @@ I denne oppgaven ser vi på funksjonen
 	Igjen blir vi bedt om å løse problemet i CAS i Geogebra, så vi skriver inn: \\
 	\texttt{o := 1.02} \\
 	\texttt{r := 1.025} \\
-	\texttt{Nløs[b*Sum[o\textasciicircum x*r\textasciicircum (18-x), x, 0, 18]=100000]} \\
-	Løsningen blir $b = \answer{3525}$. I figur \eqref{fig:oppgave4plot2} ser vi grafer for hele oppgave 4, legg merke til at etter 18 år har Ole Magnus 100000 kroner i alle tilfellene. Det er spennende å se hva som skjer videre også, så grafen fortsetter scenarioene til $x=25$.
+	\texttt{Nløs[b * Sum[o\textasciicircum x * r\textasciicircum(17 - x), x, 0, 17] * r = 100000]} \\
+	Løsningen blir $b = \answer{3725.01}$. I figur \eqref{fig:oppgave4plot2} ser vi grafer for hele oppgave 4, legg merke til at etter 18 år har Ole Magnus 100000 kroner i alle tilfellene. 
 	\begin{figure}[th!]
 		\centering
 		\includegraphics[width=\figwidth\linewidth]{figs/oppgave4_plot2}
