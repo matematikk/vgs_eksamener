@@ -13,34 +13,40 @@ def func1(x):
     return 64116.591*(1.025)**x
 
 def func2(x):
-    b = 4176
+    b = 4358.06
     r = 1.025
-    return b * ((r**(x+1)-1)/(r-1))
+    if x < 18:
+        return b * ((r**(x+1)-1)/(r-1))
+    else:
+        return func2(x-1)*r
 
 def func3(x):
-    b = 3525
+    b = 3712.01
     r = 1.025
     o = 1.02
-    return b * sum(r**i * o**(x-i) for i in range(0, x+1))
+    if x < 18:
+        return b * sum(r**i * o**(x-i) for i in range(0, x+1))
+    else:
+        return func3(x-1)*r
 
 
 start = 0
-end = 25
-func3 = np.vectorize(func3)
+end = 18
 
-plt.figure(figsize=(8, 4))
+plt.figure(figsize=(8/1.25, 4/1.25))
 x = np.arange(start, end+1)
 
 plt.style.use('seaborn-ticks')
 plt.rc('text', usetex = False)
 lw = 1.5
-plt.plot(x, func1(x), '-o', label='4a)', linewidth = lw, markersize = 4)
-plt.plot(x, func2(x), '-o', label='4b)', linewidth = lw, markersize = 4)
-plt.plot(x, func3(x), '-o', label='4c)', linewidth = lw, markersize = 4)
+plt.plot(x, [func1(k) for k in x], '-o', label='4a)', linewidth = lw, markersize = 5, markeredgecolor='k')
+plt.plot(x, [func2(k) for k in x], '-o', label='4b)', linewidth = lw, markersize = 5, markeredgecolor='k')
+plt.plot(x, [func3(k) for k in x], '-o', label='4c)', linewidth = lw, markersize = 5, markeredgecolor='k')
 
 plt.grid(True)
-plt.ylim([0,150000])
+plt.ylim([0, 120000])
 plt.legend(loc = 'best')
+plt.xticks(x)
 plt.savefig('{}.pdf'.format('oppgave4_plot2'), bbox_inches='tight')
 plt.show()
 
