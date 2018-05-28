@@ -42,17 +42,19 @@
 # Vi skal derivere $f(x) = 2x^3 - 4x + 1$, og må bruke regelen $\left(x^n\right)' = nx^{n-1}$.
 Vi får $f'(x) = 2(3)x^{3-1} - 4 x ^{1-1} + 0 = \answer{6x^2 - 4}$ som svar.
 
-# Vi skal derivere $g(x) = x / e^x$. Det er fullt mulig å bruke brøkregelen for derivasjon, men man kan også skrive om funksjonen til produktet $g(x) = x e^{-x}$ og bruke produktregelen $(uv)' = u'v + uv'$ slik som dette
+# Vi skal derivere $g(x) = x / e^x$. Det er fullt mulig å bruke brøkregelen for derivasjon, men man kan også skrive om funksjonen til produktet $g(x) = x e^{-x}$ og bruke produktregelen $(uv)' = u'v + uv'$.
+Fordelen er at man slipper å huske brøkregelen.
+Utregningen blir
 \begin{align*}
 	g'(x) =& \left(x \right)' e^{-x} + \left( e^{-x} \right)' x \\
 	=& 1 e^{-x} + (-1)e^{-x}  x \\
 	=& e^{-x} + -1e^{-x}  x \\
-	=& \answer{e^{-x}(1 - x)  }
+	=& \answer{e^{-x}(1 - x)}
 \end{align*}
 # Vi skal derivere $h(x) = \ln \left( x^2 + 4x\right)$, og må bruke kjernereglen $h'(x) = h'(u) \times u'(x)$, der $u$ er en kjerne.
-Vi velger $u =x^2 + 4x$, da er $h(u) = \ln(u)$ og $h'(u) = 1/u)$, slik at vi får
+Vi velger $u =x^2 + 4x$, da er $h(u) = \ln(u)$ og $h'(u) = 1/u$, slik at vi får
 \begin{align*}
-	g'(x) =& h'(u) \times u'(x) \\
+	h'(x) =& h'(u) \times u'(x) \\
 	=& \left( \frac{1}{u}  \right) \times \left( 2x + 4 \right) \\
 	=& \frac{2x + 4}{u} =  \answer{\frac{2x + 4}{x^2 + 4x}}
 \end{align*}
@@ -71,39 +73,145 @@ For å kvitte oss med variabelen $z$ regner vi ut to nye likninger $(\text{D}) =
 	x - 5y  &= -6 \quad (\text{D})\\
 	11 x + 5 y  &= -6 \quad (\text{E})
 \end{align*}
-Ved å legge disse sammen kvitter vi oss med $y$, får likningen $12x = -12$ og ser at $\answer{x = -1}$.
+Ved å legge disse sammen kvitter vi oss med $y$, får likningen $12x = -12$, og ser at $\answer{x = -1}$.
 For å løse for $y$ setter vi $x=-1$ inn i likning $(\text{D})$ eller $(\text{E})$ og ser at $\answer{y = 1}$.
-Nå vet vi $x$ og $y$, og kan sette dette inn i $(\text{A})$, $(\text{B})$ eller $(\text{C})$ og finne ut at $\answer{z = 2}$.
+Nå vet vi verdiene til $x$ og $y$, og kan sette dette inn i $(\text{A})$, $(\text{B})$ eller $(\text{C})$ for å finne ut at $\answer{z = 2}$.
 På eksamen bør du sette en prøve å svaret---det går fort og du vet umiddelbart om du har regnet riktig.
 
 \subsection*{Oppgave 3}
+I denne oppgaven ser vi på polynomet
+\begin{equation*}
+	P(x) = x^3 - 3x^2 - 13x + 15
+\end{equation*}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# asdf
-	# asdf
+	# Generelt er et polynom $P(x)$ delelig på $(x-a)$ dersom $P(a) = 0$.
+	Her er $P(x)$ delelig på $(x-1)$ ettersom 
+	\begin{equation*}
+	P(1) = (1)^3 - 3(1)^2 - 13(1) + 15 = 1 - 3 - 13 + 15 = \answer{0}.
+	\end{equation*}
+	# For å løse $P(x) > 0$ må vi først faktorisere $P(x)$.
+	Vi vet at $(x-1)$ er en faktor, så vi utfører polynomdivisjonen \\
+	\polylongdiv{x^3 - 3x^2 - 13x + 15}{x - 1} \\
+	Vi kan bruke ABC-formelen eller en annen metode for å finne ut at $x^2 - 2x -15 = (x - 5)(x + 3)$. 
+	Med andre ord er $P(x) = (x - 1)(x - 5)(x + 3)$, vi setter opp en fortegnslinje og kommer frem til at \answer{$P(X)> 0$ når $-3 < x < 1$ og når $x > 5$}.
 \end{easylist}
+
+\begin{center}
+	\includegraphics[width=0.8\linewidth]{figs/fortegn.pdf}
+\end{center}
 
 \subsection*{Oppgave 4}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# asdf
-	# asdf
+	# Vi bruker formelen $a_n = a_1 + d(n-1)$ og informasjonen fra oppgaven.
+	\begin{equation*}
+		a_n = a_1 + d(n-1) \quad \Rightarrow \quad 
+		a_4 = a_1 + d(3) \quad \Rightarrow \quad 
+		14 = 2 + d(3) \quad \Rightarrow \quad
+		d = 4
+	\end{equation*}
+	Nå vet vi at differansen $d=4$ i den artimetiske rekken, vi setter inn og får
+	\begin{equation*}
+		a_n = a_1 + d(n-1) \quad \Rightarrow \quad  
+		a_n = 2 + 4(n-1) \quad \Rightarrow \quad
+		\answer{a_n = 4n - 2}.
+	\end{equation*}
+	# Vi bruker summeformelen for en aritmetisk rekke til å regne ut summen for en generell $n$, og løser deretter når $n = 100$.
+	For en generell $n$ har vi at
+	\begin{equation*}
+		S_n = \left(\frac{a_1 + a_n}{2}\right) n 
+		= \left(\frac{2 + 4n - 2}{2}\right) n
+		= \left( 2n\right) n = 2n^2.
+	\end{equation*}
+	Når $n= 100$, blir $S_n = S_{100} = 2 (100)^2 = \answer{20000}$.
 \end{easylist}
 
 \subsection*{Oppgave 5}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# asdf
-	# asdf
+	# En geometrisk rekke $a_1(1 + k + k^2 + k^3 + \dots)$ konvergerer dersom $-1 < k < 1$.
+	Her er $a_1 = 3$, $a_2 = 3/4$ og $a_3 = 3/16$, og $k = 1/4$ fordi hvert ledd er lik $1/4$ ganget med det foregående leddet.
+	\answer{Rekken konvergerer fordi $k = 1/4$.}
+	Summen av den uendelige geometriske rekken regner vi ut som
+	\begin{equation*}
+		S_{\infty} = a_1 \left(\frac{1}{1 - k}\right) 
+		= 3 \left(\frac{1}{1 - \frac{1}{4}}\right) 
+		= 3 \left(\frac{1}{\frac{3}{4}}\right)
+		=  3 \left(\frac{4}{3}\right)
+		=  \answer{4}
+	\end{equation*}
+	# Desimaltallet $0.242424\dots$ kan skrives som 
+	$\frac{24}{100} + \frac{24}{100^2} + \frac{24}{100^3} + \dots$
+	fordi desimalene 24 gjentar seg, og å dele på $100$ flytter desimalene to plasser til høyre. 
+	Første ledd blir $0.42$, andre ledd blir $0.0042$, tredje ledd blir $0.000042$ og så videre---da blir summen $0.424242\dots$.
+	For å skrive $0.242424\dots$ som en brøk bruker vi formelen for sum av en uendelig geometrisk rekke. 
+	Vi vet at
+	\begin{equation*}
+		a_1 (1 + k + k^2 + \dots) = a_1 \left(\frac{1}{1 - k}\right),
+	\end{equation*}
+	og ved å trekke fra $a_1$ på begge sider ser vi at
+	\begin{equation*}
+		a_1 (k + k^2 + \dots) = a_1 \left(\frac{1}{1 - k} - 1\right).
+	\end{equation*}
+	Venstresiden likner nå på summen. 
+	Vi setter inn $a_1 = 24$ og $k = 1/100$ og får
+	\begin{equation*}
+		a_1 \left(\frac{1}{1 - k} - 1\right) =
+		24 \left(\frac{1}{1 - \frac{1}{100}} - 1\right) = 
+		24 \left(\frac{1}{\frac{99}{100}} - 1\right) = 
+		24 \left(\frac{100}{99} - \frac{99}{99}\right) = \answer{\frac{24}{99}}
+	\end{equation*}
 \end{easylist}
 
 \subsection*{Oppgave 6}
+I denne oppgaven ser vi på funksjonen
+\begin{equation*}
+	f(x) = \frac{6}{1 + e^{-x}} = 6 \left( 1 + e^{-x} \right)^{-1}.
+\end{equation*}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# asdf
-	# asdf
-	# asdf
-	# asdf
+	# Grafen til $f(x)$ er alltid stigende dersom den deriverte er positiv for alle verdier av $x$.
+	Vi deriverer funksjonen ved hjelp av kjerneregelen. Vi velger $u = 1 + e^{-x}$ som kjerne, da er $f(u) = 6u^{-1}$, og vi får at
+	\begin{align*}
+		f'(x) =& f'(u) \times u'(x) \\
+		=& 6(-1)u^{-2} \times \left((-1) e^{-x}\right) \\
+		=& \frac{6e^{-x}}{u^2} = \frac{6e^{-x}}{\left(1 + e^{-x}\right)^2}
+	\end{align*}
+	La os nå undersøke $f'(x)$.
+	Telleren er alltid positiv fordi $e^{-x}$ alltid er positiv, nevneren er alltid positiv fordi $(1 + e^{-1})$ alltid er større enn 1, og å ta et tall som er større enn 1 i andre gir alltid i et positivt resultat.
+	Både telleren og nevneren er positive for alle $x$, og da må $f'(x)$ alltid være positiv, og da stiger $f(x)$ alltid.
+
+	# Vi ser på nevneren $(1 + e^{-x})$.
+	Funksjonen $e^{-x}$ er alltid positiv, så da vet vi at
+	\begin{equation*}
+		1 < 1 + e^{-x} < \infty.
+	\end{equation*}
+	Når $1 + e^{-x}$ blir stor, går $f(x)$ mot $0$.
+	Når $1 + e^{-x}$ går mot $1$, går $f(x)$ mot $6$.
+	Da vet vi at $\answer{0 < f(x) < 6}$ for alle verdien av $x$.
+	# En funksjon har ventepunkt når den dobbelderiverte skifter fortegn.
+	Vi regner ut den dobbelderiverte fra $f'(x) = \frac{6e^{-x}}{\left(1 + e^{-x}\right)^2} = 6e^{-x} \left(1 + e^{-x}\right)^{-2} $ ved hjelp av produktregelen og kjerneregelen slik
+	\begin{align*}
+		f''(x) &= \left[ 6e^{-x} \right]' \left(1 + e^{-x}\right)^{-2} + 6e^{-x} \left[ \left(1 + e^{-x}\right)^{-2} \right]' \\
+		&=  -6e^{-x}  \left(1 + e^{-x}\right)^{-2} + 6e^{-x} (-2)  \left(1 + e^{-x}\right)^{-3} (-1) e^{-x}  \\
+		&=  \frac{-6e^{-x}}{\left(1 + e^{-x}\right)^{2}}  + \frac{12\left(e^{-x}\right)^2}{\left(1 + e^{-x}\right)^{3}} =
+		 \frac{-6e^{-x} \left(1 + e^{-x}\right)}{\left(1 + e^{-x}\right)^{3}} 
+		  + \frac{12\left(e^{-x}\right)^2}{\left(1 + e^{-x}\right)^{3}}\\
+		 &=  \frac{-6e^{-x} \left(1 + e^{-x}\right) + 12\left(e^{-x}\right)^2}{\left(1 + e^{-x}\right)^{3}}
+	\end{align*}
+	Nevnerer er alltid positiv, så vi undersøker når telleren er lik null.
+	Vi ser at
+	\begin{equation*}
+		-6e^{-x} \left(1 + e^{-x}\right) + 12\left(e^{-x}\right)^2 = 
+		-6e^{-x} - 6\left(e^{-x}\right)^2 + 12\left(e^{-x}\right)^2 = 
+		e^{-x} \left(-6 + 6 e^{-x}\right).
+	\end{equation*}
+	Med andre ord er $f''(x) = 0$ når $\left(-6 + 6 e^{-x}\right) = 0$,
+	og dette skjer når $x = 0$, da bytter også $f''(x)$ fortegn og vi har et vendepunkt.
+	For å finne $y$-verdien regner vi ut at $y = f(3) = 6 / (1 + e^{-0}) = 3$,
+	da er \answer{$(0, 3)$ et vendepunkt}.
+	# SKISSE HER.
 \end{easylist}
 
 \subsection*{Oppgave 7}
