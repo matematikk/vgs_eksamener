@@ -419,10 +419,34 @@ Da har vi at \answer{$(3, 23)$ er et toppunkt} til $g(x)$.
 \subsection*{Oppgave 3}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# asdf
-	# asdf
-	# asdf
-	# asdf
+	# La $X$ være vekten på en flaske, da er $X$ normalfordelt med $\mu = 250$ og $\sigma = 3$.
+	Sannsynligheten for at en flaske veier for lite er $P(X< 245)$.
+	Dette regner vi enkelt ut i sannsynlighetskalkulatoren i Geogebra, vi får
+	\begin{equation*}
+		\answer{P(X < 245) = 0.0478 \approx 4.8 \%}
+	\end{equation*}
+	# La $Y$ være antall flasker som veier for lite,
+	da er $Y$ binomisk fordelt med $n = 15$ og $p = 0.0478$.
+	Sannsynligheten for at én eller flere flasker veier for lite er $P(Y \geq 1)$, vi kan regne dette ut på følgende måte
+	\begin{equation*}
+		P(Y \geq 1) = 1 - P(Y = 0) = 1 - \binom{15}{0}p^0(1-p)^{15} = 1 - (1 - p)^{15} = 0.5203 = \answer{52.0\%}
+	\end{equation*}
+	Det er nok enda enklere å bruke sannsynlighetskalkulatoren. Vi får samme svar uansett, men denne formelen er grei å ha til neste oppgave.
+	# Sannsynligheten for at en flaske veier for lite er $P(Y \geq 1) = 1 -  (1-p)^{15}$, vi ønsker å finne $p$ slik at $P(Y \geq 1) < 0.1$, da får vi ulikheten
+	\begin{align*}
+	1  - (1-p)^{15} & < 0.1 \\
+	0.9 & < (1-p)^{15} \\
+	p & < 1 - 0.9^{1/15} \approx \answer{0.007}
+	\end{align*}
+	Vi ser at sannsynligheten for at én flaske veier for lite kan maksimalt være 0.7\% dersom sannsynligheten for at en eske inneholder flasker som veier for lite maksimalt skal være høyst 10\%.
+	# Vi må finne $\mu$ slik at $P(X \leq 245) = 0.007$. Vi standardiserer og sammenligner med $z$ slik at $P(Z < z) = 0.007$, enten via tabell eller via sannsynlighetskalkulatoren i Geogebra.
+	\begin{align*}
+		P(X \leq 245) &= 0.007 \\
+		P\left(Z \leq \frac{245 - \mu}{3} \right) &= 0.007 \\
+		P\left(Z \leq - 2.457 \right) &= 0.007 
+	\end{align*}
+	Dette gir oss likningen $(245 - \mu)/3 = - 2.457$, som vi løser for \answer{$\mu = 252.37$}.
+	Dette svaret kan vi dobbelsjekke ved å lage en fordeling med $\mu = 252.37$ og $\sigma = 3$ i sannsynlighetskalkulatoren i Geogebra, og verifisere at $P(X < 245) = 0.007$.
 \end{easylist}
 
 
