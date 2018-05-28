@@ -221,7 +221,7 @@ I denne oppgaven ser vi på funksjonen
 	# Gitt $p = 6/10 = 0.6$ og $n = 10$ regner vi slik
 	\begin{align*}
 		\operatorname{E}(X) &= np = 10 \left(\frac{6}{10}\right) = \answer{6} \\
-		\operatorname{Var}(X) &= np(1-p) = 10 \left(\frac{6}{10}\right) \frac{4}{10} = \frac{24}{10} = \answer{6} 
+		\operatorname{Var}(X) &= np(1-p) = 10 \left(\frac{6}{10}\right) \frac{4}{10} = \frac{24}{10} = \answer{2.4} 
 	\end{align*}
 \end{easylist}
 
@@ -265,18 +265,23 @@ I denne oppgaven ser vi på funksjonen
 
 \subsection*{Oppgave 9}
 La oss først se på noen generelle egenskaper til funksjonen $g(x) = a f(x) + b$ før vi setter inn $a=-5$ og $b=3$ og løser oppgaven.
-Den deriverte av $g(x)$ er gitt ved
+Den deriverte til $g(x)$ er gitt ved
 \begin{equation*}
 	g'(x) = \left[ a f(x) + b \right]' = a f'(x),
 \end{equation*}
-og da er $g'(x) = 0$ når $f'(x) = 0$ og motsatt.
+og da er $g'(x) = 0$ når $f'(x) = 0$, og motsatt.
 Med andre ord har bunn- og toppunktene til $g(x)$ og $f(x)$ de samme $x$-verdiene. Dette gir mening, fordi å plusse på $b$ flytter grafen opp langs $y$-aksen, mens å gange med $a$ skalerer grafen---ingen av regneoperasjonene flytter grafen langs $x$-aksen.\footnote{Transformasjonen som flytter en funksjon er $g(x) = f(x - a)$, som flytter $f$ med $a$ mot høyre.}
-Vi må derimot passe oss for $a < 0$, dersom $a$ er negativ snur grafen seg om $x$-aksen slik at toppunkter blir til bunnpunkter og motsatt.
+Vi må derimot passe oss for $a < 0$; dersom $a$ er negativ snur grafen seg om $x$-aksen slik at toppunkter blir til bunnpunkter og motsatt.
 
 La oss gå bort fra generell teori og løse oppgaven. \\
-I toppunktet $(2, 3)$ er $f'(x) = 0$, da er $g'(x) = -5 f'(x) = -5 \times 0 = 0$, så $g(x)$ har et bunnpunkt når $x = 2$. Da er $y = -5 f(2) + 3 = -5 (3) +3 = -12$. Da vet vi at \answer{$(2, -12)$ er et bunnpunkt} til $g(x)$.
+I toppunktet $(2, 3)$ er $f'(x) = 0$, da er $g'(x) = -5 f'(x) = -5 \times 0 = 0$, så $g(x)$ har et bunnpunkt når $x = 2$. 
+Legg merke til at multiplikasjon med $-5$ gjør toppunkt til bunnpunkt og motsatt. 
+I punktet $x=2$ er $y = g(2) = -5 f(2) + 3 = -5 (3) +3 = -12$. 
+Da vet vi at \answer{$(2, -12)$ er et bunnpunkt} til $g(x)$.
 
-I bunnpunkt $(3, -4)$ er $f'(x) = 0$, da er $g'(x) = -5 f'(x) = -5 \times 0 = 0$, så $g(x)$ har et toppunkt når $x = 3$. Da er $y = -5 f(3) + 3 = -5 (-4) + 3 = 23$. Da har vi at \answer{$(3, 23)$ er et toppunkt} til $g(x)$.
+I bunnpunktet $(3, -4)$ er $f'(x) = 0$, da er $g'(x) = -5 f'(x) = -5 \times 0 = 0$, så $g(x)$ har et toppunkt når $x = 3$. 
+Videre er $y = g(3) = -5 f(3) + 3 = -5 (-4) + 3 = 23$. 
+Da har vi at \answer{$(3, 23)$ er et toppunkt} til $g(x)$.
 
 
 
@@ -291,19 +296,124 @@ I bunnpunkt $(3, -4)$ er $f'(x) = 0$, da er $g'(x) = -5 f'(x) = -5 \times 0 = 0$
 \subsection*{Oppgave 1}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# asdf
-	# asdf
-	# asdf
-	# asdf
+	# Vi legger punktene for $K(x)$ inn i Geogebra, velger ``Regresjonsanalyse'' og undersøker et tredjegradspolynom, som vist i Figur \ref{fig:del2_oppg1a}.
+	Vi får forslaget $K(x) = 0.05x^3 - 1.97x^2 + 39.42x + 501.02$.
+	Inntekten er $I(x) = 80x$ fra oppgaveteksten, da blir overskuddet
+	\begin{align*}
+		O(x) &= I(x) - K(x) \\
+		&= 80x -\left[ 0.05x^3 - 1.97x^2 + 39.42x + 501.02 \right] \\
+		&= - 0.05x^3 + 1.97x^2 + 40.58x - 501.02
+	\end{align*}
+	Dette stemmer godt overens med $O(x)$ som gitt i oppgaveteksten.
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{figs/del2_oppg1a}
+		\caption{Løsning på oppgave 1 a, del 2. Koeffisientene passer godt med $O(x)$.}
+		\label{fig:del2_oppg1a}
+	\end{figure}
+	# Se Figur \ref{fig:del2_oppg1bc} for et plott av $O(x)$.
+	
+	# Ettersom $O(x) = I(x) - K(x)$, er $I'(x) = K'(x)$ når $O'(x) = 0$.
+	Da har vi et ekstremalpunkt, vi finner dette med Geogebra-kommandoen\\
+	\verb|Ekstremalpunkt(O, 0, 60)|. \\
+	Punktet er $(34.57, 1240.84)$.
+	Verdien av $x$ som maksimerer $O(x)$ er den vinningsoptimale produksjonsmengden, det vil si produksjonsmengden som gir størst overskudd.
+	Ettersom $O(34) = 1239.8$ og $O(35)=1240.25$, er den \answer{vinningsoptimale produksjonsmengden lik $x = 35$}.
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{figs/del2_oppg1bc}
+		\caption{Løsning på oppgave 1 a og b, del 2. }
+		\label{fig:del2_oppg1bc}
+	\end{figure}
+	# La inntekten være $I(x) = px$, der $p$ er en ukjent pris.
+	Vi må finne minste $O(x) = I(x) - K(x) = px - K(x)$ slik at $O(x)$ er større enn eller lik null, for minst én $x$-verdi.
+	Vi får en overskuddsfunksjon som blir
+	\begin{align*}
+		O(x) &= I(x) - K(x) \\
+		&= px -\left[ 0.05x^3 - 2x^2 + px + 501 \right] \\
+		&= - 0.05x^3 + 2x^2 + (80 - p)x - 501
+	\end{align*}
+	Ved å lage en glider for $p$ i Geogebra, ser vi at $O(x) \geq 0$ når $p \leq 79$. Høyeste pris blir \answer{$p = 79$}, og da må bedriften produsere \answer{$x = 27$} varer per dag.
 \end{easylist}
+
 
 \subsection*{Oppgave 2}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# asdf
-	# asdf
-	# asdf
-	# asdf
+	# La oss oppsummere oppgaven i en tabell.
+	Vi lar $b = 40000$ være det årlige beløpet, og $r = 1.05$ være rentefaktoren.
+	La $P_n$ være pengene etter $n$ år, da er $P_n = P_{n-1} r + b$ fordi vi får renter på forrige års sum, og deretter setter vi inn et nytt beløp.
+	En tabell som viser 15 år med sparing er vist nedenfor.
+	\begin{center}
+		\begin{tabular}{lll}
+			\textbf{Innskudd} & \textbf{Dato} & \textbf{Penger} \\ \hline
+			1 & 1. juli 2018 & $b$ \\
+			2 & 1. juli 2019 & $br + b$ \\
+			3 & 1. juli 2020 & $br^2 + br + b$ \\
+			$\, \vdots$ & $\qquad \vdots$ & $\qquad \vdots$ \\
+			15 & 1. juli 2032 & $br^{14} + br^{13} + \dots + br + b$ \\
+			 & 1. juli 2033 & $\left(br^{14} + br^{13} + \dots + br + b\right) r$ \\
+		\end{tabular}
+	\end{center}
+	Ett år etter siste innbetaling får Eirik renter på forrige beløp,
+	da ender han opp med
+	\begin{equation*}
+		\left(br^{14} + \dots + br + b\right)r = b\left(\frac{1 - r^{15}}{1 - r}\right)r 
+		= 40000\left(\frac{1 - 1.05^{15}}{1 - 1.05}\right)1.05 = \answer{906299.67}
+	\end{equation*}
+	For å gjøre utregningen i CAS taster vi inn \\
+	\verb|Sum(b * r^i, i, 0, 14) * r| \\
+	etter å ha definert \verb|b| og \verb|r| i CAS. Vi får samme svar som ovenfor.
+	# La $T = 906299.67$ være løsningen på forrige deloppgave, og la $u$ være det ukjente årlige uttaket.
+	Da har Eirik $T-u$ kroner 1. juli 2033, $Tr - ur - u$ kroner 1. juli 2034, og så videre. Vi setter opp tabell.
+	\begin{center}
+		\begin{tabular}{lll}
+			\textbf{Uttak} & \textbf{Dato} & \textbf{Penger} \\ \hline
+			0 & 1. juli 2033 & $T - u$ \\
+			1 & 1. juli 2034 & $Tr - ur - u$ \\
+			2 & 1. juli 2035 & $Tr^2 -ur^2 - ur - u$ \\
+			$\, \vdots$ & $\qquad \vdots$ & $\qquad \vdots$ \\
+			14 & 1. juli 2047 & $Tr^{14} - u \left(r^{14} + \dots + r + 1\right)$  
+		\end{tabular}
+	\end{center}
+	 Den 1. juli 2047 skal han ha $0$ kroner igjen. Vi får da likningen 
+	 \begin{equation*}
+	 	Tr^{14} - u \left(r^{14} + \dots + r + 1\right) = 0
+	 \end{equation*}
+	 som vi løser i CAS med \\
+	 \verb|NLøs({T * r^14 - u * Sum(r^i, i, 0, 14) = 0}, {u})| \\
+	 og får \answer{$83157.13$ kroner} som svar.
+	# For at fondet skal kunne betale ut i all fremtid, må utbetalingen og rentene kansellere hverandre.
+	Vi ønsker at han har det samme på konto før utbetaling hvert år.
+	Den 1. juli 2033 har Eirik $T$ kroner før utbetaling. 
+	Så kommer en utbetaling, og han har $T - u$ kroner.
+	Neste år får han renter og har $(T-u)r$ kroner før utbetaling.
+	Vi ønsker at han skal ha like mye før utbetaling hvert år, da får vi likningen $(T - u)r = T$, som vi kan løse for den ukjente $u$ slik
+	\begin{equation*}
+		(T - u)r = T \quad \Rightarrow \quad u = \frac{T(r-1)}{r}
+		 = \frac{906299.67(1.05-1)}{1.05} = \answer{43157.13}
+	\end{equation*}
+	# Vi setter uttaket til $u = 30000$ og lar $k = 1.1$ være vekstfaktoren til uttaksbeløpet.
+	Eirik tar ut $u$ kroner i 2033, $uk$ i 2034, $uk^2$ i 2035, og så videre.
+	Vi setter opp en tabell med penger på kontoen rett etter uttak.
+	\begin{center}
+	\begin{tabular}{lll}
+		\textbf{Uttak} & \textbf{Dato} & \textbf{Penger} \\ \hline
+		0 & 1. juli 2033 & $T - u$ \\
+		1 & 1. juli 2034 & $(T-u)r - uk = Tr - u(r + k)$ \\
+		2 & 1. juli 2035 & $((T-u)r - uk)r - uk^2 = Tr^2 - u(r^2 +rk + k^2)$ \\
+		$\, \vdots$ & $\qquad \vdots$ & $\qquad \vdots$ \\
+		14 & 1. juli 2047 & $Tr^n - u \sum_{i=0}^{n} r^{n-i} k^i$  
+	\end{tabular}
+	\end{center}
+	Vi løser med følgende Geogebra kommando i CAS \\
+	\verb|NLøs({T * r^n - u * Sum(r^(n - i) * k^i, i, 0, n) = 0}, {n})| \\
+	og får $n = 18.16$.
+	Når $n = 18$ er det omtrent 27.7 tusen kroner på konto etter uttak, mens når $n = 19$ er det $-154.3$ tusen kroner på konto etter uttak.
+	Med andre ord går kontoen tom når $n=19$, altså \answer{1. juli 2052}, da tar vi ut 27.7 tusen og tømmer kontoen.
+	
+	TODO: Vis hvordan man kan bruke nårverdi til å løse denne. 
 \end{easylist}
 
 \subsection*{Oppgave 3}
