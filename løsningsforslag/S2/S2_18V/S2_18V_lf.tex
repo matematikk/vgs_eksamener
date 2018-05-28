@@ -211,25 +211,74 @@ I denne oppgaven ser vi på funksjonen
 	og dette skjer når $x = 0$, da bytter også $f''(x)$ fortegn og vi har et vendepunkt.
 	For å finne $y$-verdien regner vi ut at $y = f(3) = 6 / (1 + e^{-0}) = 3$,
 	da er \answer{$(0, 3)$ et vendepunkt}.
-	# SKISSE HER.
+	# TODO: SKISSE HER.
 \end{easylist}
 
 \subsection*{Oppgave 7}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# asdf
-	# asdf
+	# Den stokastiske variabelen $X$ er binomisk fordelt med $p = \text{gunstige} / \text{mulige} =  6/10 = 0.6$ og $n = 10$ fordi å trekke kuler med tilbakelegging er en serie uavhengige deleksperimenter med konstant sannsynlighet $p$.
+	# Gitt $p = 6/10 = 0.6$ og $n = 10$ regner vi slik
+	\begin{align*}
+		\operatorname{E}(X) &= np = 10 \left(\frac{6}{10}\right) = \answer{6} \\
+		\operatorname{Var}(X) &= np(1-p) = 10 \left(\frac{6}{10}\right) \frac{4}{10} = \frac{24}{10} = \answer{6} 
+	\end{align*}
 \end{easylist}
 
 \subsection*{Oppgave 8}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# asdf
-	# asdf
+	# La $X$ være vekten til et rugbrød.
+	Da er $X$ normalfordelt med forventningsverdi $\mu = 1.00$ og standardavvik $\sigma = 0.05$.
+	For å regne ut $P(0.9 < X < 1.1)$ må vi først gjøre om slik at vi får to ``mindre enn'' sannsynligheter (fordi det er dette som finnes i tabellen), og deretter standardisere ved formelen $Z = (X - \mu) / \sigma$.
+	Vi regner slik
+	\begin{align*}
+		P(0.9 < X < 1.1) &= P(X < 1.1) - P(X < 0.90) \\
+		&= P\left( \frac{X - \mu}{\sigma} <  \frac{1.1 - 1}{0.05} \right) -
+		P\left( \frac{X - \mu}{\sigma} <  \frac{0.9 - 1}{0.05} \right) \\
+		&= P\left( Z <  \frac{0.1}{0.05} \right) -
+		P\left( Z <  \frac{-0.1}{0.05} \right) \\
+		&= P\left( Z <  2 \right) -
+		P\left( Z <  -2 \right) \\
+		&= 0.9772 - 0.0228 \qquad (\text{fra tabell}) \\
+		&= \answer{0.9544 = 95.4 \%}
+	\end{align*}
+	# La $S = X_1 + X_2 + \dots + X_{100}$ være summen av 100 rugbrød.
+	Når alle $X$'ene er normalfordelte vil summen være normalfordelt.
+	Selv om $X$'ene ikke hadde vært normalfordelte, ville summen vært tilnærmet normalfordelt på grunn av sentralgrenseteoremet.
+	For en sum av stokastiske variabler regner vi forventningen $\mu_S$ og standardavviket $\sigma_S$ til summen $S$ slik
+	\begin{align*}
+		\operatorname{E}(S) &= \mu_S = n \mu = 100 (1) = 100 \\
+		\operatorname{SD}(S) &= \sigma_S = \sqrt{n} \sigma = \sqrt{100} (0.05) = 5 \\
+	\end{align*}
+	Når regner vi ut på samme måte som i forrige deloppgave.
+	\begin{align*}
+		P(99.5 < S < 100.5) &= P(X < 100.5) - P(X < 99.5) \\
+		&= P\left( \frac{S - \mu}{\sigma} <  \frac{100.5 - 100}{0.5} \right) -
+		P\left( \frac{S - \mu}{\sigma} <  \frac{99.5 - 100}{0.5} \right) \\
+		&= P\left( Z <  1 \right) -
+		P\left( Z <  -1 \right) \\
+		&= 0.8413 - 0.1587 \qquad (\text{fra tabell}) \\
+		&= \answer{0.6826 = 68.3 \%}
+	\end{align*}
 \end{easylist}
 
 \subsection*{Oppgave 9}
-sdf
+La oss først se på noen generelle egenskaper til funksjonen $g(x) = a f(x) + b$ før vi setter inn $a=-5$ og $b=3$ og løser oppgaven.
+Den deriverte av $g(x)$ er gitt ved
+\begin{equation*}
+	g'(x) = \left[ a f(x) + b \right]' = a f'(x),
+\end{equation*}
+og da er $g'(x) = 0$ når $f'(x) = 0$ og motsatt.
+Med andre ord har bunn- og toppunktene til $g(x)$ og $f(x)$ de samme $x$-verdiene. Dette gir mening, fordi å plusse på $b$ flytter grafen opp langs $y$-aksen, mens å gange med $a$ skalerer grafen---ingen av regneoperasjonene flytter grafen langs $x$-aksen.\footnote{Transformasjonen som flytter en funksjon er $g(x) = f(x - a)$, som flytter $f$ med $a$ mot høyre.}
+Vi må derimot passe oss for $a < 0$, dersom $a$ er negativ snur grafen seg om $x$-aksen slik at toppunkter blir til bunnpunkter og motsatt.
+
+La oss gå bort fra generell teori og løse oppgaven. \\
+I toppunktet $(2, 3)$ er $f'(x) = 0$, da er $g'(x) = -5 f'(x) = -5 \times 0 = 0$, så $g(x)$ har et bunnpunkt når $x = 2$. Da er $y = -5 f(2) + 3 = -5 (3) +3 = -12$. Da vet vi at \answer{$(2, -12)$ er et bunnpunkt} til $g(x)$.
+
+I bunnpunkt $(3, -4)$ er $f'(x) = 0$, da er $g'(x) = -5 f'(x) = -5 \times 0 = 0$, så $g(x)$ har et toppunkt når $x = 3$. Da er $y = -5 f(3) + 3 = -5 (-4) + 3 = 23$. Da har vi at \answer{$(3, 23)$ er et toppunkt} til $g(x)$.
+
+
 
 
 
