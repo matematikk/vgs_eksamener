@@ -40,7 +40,7 @@
 \begin{easylist}[enumerate]
 \ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
 # Vi skal derivere $f(x) = 2x^3 - 4x + 1$, og må bruke regelen $\left(x^n\right)' = nx^{n-1}$.
-Vi får $f'(x) = 2(3)x^{3-1} - 4 x ^{1-1} + 0 = \answer{6x^2 - 4}$ som svar.
+Vi får $f'(x) = 3\cdot2x^{3-1} - 4 x ^{1-1} + 0 = \answer{6x^2 - 4}$ som svar.
 
 # Vi skal derivere $g(x) = x / e^x$. Det er fullt mulig å bruke brøkregelen for derivasjon, men man kan også skrive om funksjonen til produktet $g(x) = x e^{-x}$ og bruke produktregelen $(uv)' = u'v + uv'$.
 Fordelen er at man slipper å huske brøkregelen.
@@ -48,7 +48,7 @@ Utregningen blir
 \begin{align*}
 	g'(x) =& \left(x \right)' e^{-x} + \left( e^{-x} \right)' x \\
 	=& 1 e^{-x} + (-1)e^{-x}  x \\
-	=& e^{-x} + -1e^{-x}  x \\
+	=& e^{-x} - e^{-x}  x \\
 	=& \answer{e^{-x}(1 - x)}
 \end{align*}
 # Vi skal derivere $h(x) = \ln \left( x^2 + 4x\right)$, og må bruke kjernereglen $h'(x) = h'(u) \times u'(x)$, der $u$ er en kjerne.
@@ -76,7 +76,7 @@ For å kvitte oss med variabelen $z$ regner vi ut to nye likninger $(\text{D}) =
 Ved å legge disse sammen kvitter vi oss med $y$, får likningen $12x = -12$, og ser at $\answer{x = -1}$.
 For å løse for $y$ setter vi $x=-1$ inn i likning $(\text{D})$ eller $(\text{E})$ og ser at $\answer{y = 1}$.
 Nå vet vi verdiene til $x$ og $y$, og kan sette dette inn i $(\text{A})$, $(\text{B})$ eller $(\text{C})$ for å finne ut at $\answer{z = 2}$.
-På eksamen bør du sette en prøve å svaret---det går fort og du vet umiddelbart om du har regnet riktig.
+På eksamen bør du sette en prøve på svaret---det går fort og du vet umiddelbart om du har regnet riktig.
 
 \subsection*{Oppgave 3}
 I denne oppgaven ser vi på polynomet
@@ -88,7 +88,7 @@ I denne oppgaven ser vi på polynomet
 	# Generelt er et polynom $P(x)$ delelig på $(x-a)$ dersom $P(a) = 0$.
 	Her er $P(x)$ delelig på $(x-1)$ ettersom 
 	\begin{equation*}
-	P(1) = (1)^3 - 3(1)^2 - 13(1) + 15 = 1 - 3 - 13 + 15 = \answer{0}.
+	P(1) = (1)^3 - 3\cdot(1)^2 - 13\cdot(1) + 15 = 1 - 3 - 13 + 15 = \answer{0}.
 	\end{equation*}
 	# For å løse $P(x) > 0$ må vi først faktorisere $P(x)$.
 	Vi vet at $(x-1)$ er en faktor, så vi utfører polynomdivisjonen \\
@@ -107,8 +107,9 @@ I denne oppgaven ser vi på polynomet
 	# Vi bruker formelen $a_n = a_1 + d(n-1)$ og informasjonen fra oppgaven.
 	\begin{equation*}
 		a_n = a_1 + d(n-1) \quad \Rightarrow \quad 
-		a_4 = a_1 + d(3) \quad \Rightarrow \quad 
-		14 = 2 + d(3) \quad \Rightarrow \quad
+%		a_4 = a_1 + d(3) \quad \Rightarrow \quad 
+		a_4 = a_1 + 3d \quad \Rightarrow \quad 
+		14 = 2 + 3d \quad \Rightarrow \quad
 		d = 4
 	\end{equation*}
 	Nå vet vi at differansen $d=4$ i den artimetiske rekken, vi setter inn og får
@@ -124,7 +125,7 @@ I denne oppgaven ser vi på polynomet
 		= \left(\frac{2 + 4n - 2}{2}\right) n
 		= \left( 2n\right) n = 2n^2.
 	\end{equation*}
-	Når $n= 100$, blir $S_n = S_{100} = 2 (100)^2 = \answer{20000}$.
+	Når $n= 100$, blir $S_n = S_{100} = 2 \cdot (100)^2 = \answer{20000}$.
 \end{easylist}
 
 \subsection*{Oppgave 5}
@@ -209,7 +210,7 @@ I denne oppgaven ser vi på funksjonen
 	\end{equation*}
 	Med andre ord er $f''(x) = 0$ når $\left(-6 + 6 e^{-x}\right) = 0$,
 	og dette skjer når $x = 0$, da bytter også $f''(x)$ fortegn og vi har et vendepunkt.
-	For å finne $y$-verdien regner vi ut at $y = f(3) = 6 / (1 + e^{-0}) = 3$,
+	For å finne $y$-verdien regner vi ut at $y = f(0) = 6 / (1 + e^{-0}) = 3$,
 	da er \answer{$(0, 3)$ et vendepunkt}.
 	# TODO: SKISSE HER.
 \end{easylist}
@@ -248,8 +249,8 @@ I denne oppgaven ser vi på funksjonen
 	Selv om $X$'ene ikke hadde vært normalfordelte, ville summen vært tilnærmet normalfordelt på grunn av sentralgrenseteoremet.
 	For en sum av stokastiske variabler regner vi forventningen $\mu_S$ og standardavviket $\sigma_S$ til summen $S$ slik
 	\begin{align*}
-		\operatorname{E}(S) &= \mu_S = n \mu = 100 (1) = 100 \\
-		\operatorname{SD}(S) &= \sigma_S = \sqrt{n} \sigma = \sqrt{100} (0.05) = 5 \\
+		\operatorname{E}(S) &= \mu_S = n \mu = 100 \cdot 1 = 100 \\
+		\operatorname{SD}(S) &= \sigma_S = \sqrt{n} \sigma = \sqrt{100} \cdot 0.05 = 0.5 \\
 	\end{align*}
 	Når regner vi ut på samme måte som i forrige deloppgave.
 	\begin{align*}
@@ -276,11 +277,11 @@ Vi må derimot passe oss for $a < 0$; dersom $a$ er negativ snur grafen seg om $
 La oss gå bort fra generell teori og løse oppgaven. \\
 I toppunktet $(2, 3)$ er $f'(x) = 0$, da er $g'(x) = -5 f'(x) = -5 \times 0 = 0$, så $g(x)$ har et bunnpunkt når $x = 2$. 
 Legg merke til at multiplikasjon med $-5$ gjør toppunkt til bunnpunkt og motsatt. 
-I punktet $x=2$ er $y = g(2) = -5 f(2) + 3 = -5 (3) +3 = -12$. 
+I punktet $x=2$ er $y = g(2) = -5 f(2) + 3 = -5 \cdot 3 +3 = -12$. 
 Da vet vi at \answer{$(2, -12)$ er et bunnpunkt} til $g(x)$.
 
 I bunnpunktet $(3, -4)$ er $f'(x) = 0$, da er $g'(x) = -5 f'(x) = -5 \times 0 = 0$, så $g(x)$ har et toppunkt når $x = 3$. 
-Videre er $y = g(3) = -5 f(3) + 3 = -5 (-4) + 3 = 23$. 
+Videre er $y = g(3) = -5 f(3) + 3 = -5 \cdot (-4) + 3 = 23$. 
 Da har vi at \answer{$(3, 23)$ er et toppunkt} til $g(x)$.
 
 
@@ -385,8 +386,8 @@ Da har vi at \answer{$(3, 23)$ er et toppunkt} til $g(x)$.
 	 \verb|NLøs({T * r^14 - u * Sum(r^i, i, 0, 14) = 0}, {u})| \\
 	 og får \answer{$83157.13$ kroner} som svar.
 	# For at fondet skal kunne betale ut i all fremtid, må utbetalingen og rentene kansellere hverandre.
-	Vi ønsker at han har det samme på konto før utbetaling hvert år.
-	Den 1. juli 2033 har Eirik $T$ kroner før utbetaling. 
+	Vi ønsker at Eirik har det samme på konto før utbetaling hvert år.
+	Den 1. juli 2033 har han $T$ kroner før utbetaling. 
 	Så kommer en utbetaling, og han har $T - u$ kroner.
 	Neste år får han renter og har $(T-u)r$ kroner før utbetaling.
 	Vi ønsker at han skal ha like mye før utbetaling hvert år, da får vi likningen $(T - u)r = T$, som vi kan løse for den ukjente $u$ slik
@@ -413,7 +414,7 @@ Da har vi at \answer{$(3, 23)$ er et toppunkt} til $g(x)$.
 	Når $n = 18$ er det omtrent 27.7 tusen kroner på konto etter uttak, mens når $n = 19$ er det $-154.3$ tusen kroner på konto etter uttak.
 	Med andre ord går kontoen tom når $n=19$, altså \answer{1. juli 2052}, da tar vi ut 27.7 tusen og tømmer kontoen.
 	
-	TODO: Vis hvordan man kan bruke nårverdi til å løse denne. 
+	TODO: Vis hvordan man kan bruke nåverdi til å løse denne. 
 \end{easylist}
 
 \subsection*{Oppgave 3}
@@ -421,7 +422,7 @@ Da har vi at \answer{$(3, 23)$ er et toppunkt} til $g(x)$.
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
 	# La $X$ være vekten på en flaske, da er $X$ normalfordelt med $\mu = 250$ og $\sigma = 3$.
 	Sannsynligheten for at en flaske veier for lite er $P(X< 245)$.
-	Dette regner vi enkelt ut i sannsynlighetskalkulatoren i Geogebra, vi får
+	Dette regner vi enkelt ut i sannsynlighetskalkulatoren i Geogebra, og får
 	\begin{equation*}
 		\answer{P(X < 245) = 0.0478 \approx 4.8 \%}
 	\end{equation*}
