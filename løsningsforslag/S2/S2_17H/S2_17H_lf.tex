@@ -142,30 +142,21 @@ Vi ser at $d = 4$, så vi får
 På eksamen er det lurt å verifisere at svaret stemmer med å regne ut $a_1$, $a_2$ og $a_3$. 
 Vi kan sjekke at vi får $a_1 = 3$, $a_2 = 7$ og $a_3 = 11$---da kan vi være rimelig sikre på at svaret er riktig.
 
-# Bruker formelen for summen av en aritmetisk rekke, som er
+# Vi ønsker å bruke summeformelen for en artimetisk rekke.
+For å bruke denne må vi finne $a_1$, $a_n$ og $n$.
+Vi vet allerede at $a_1 = 3$ og $a_n = 119$.
+For å finne $n$ bruker vi formelen $a_n = a_1 + d(n-1)$.
+Vi får at
 \begin{equation*}
-	S_n = \frac{(a_1 + a_n) n}{2}.
+	a_n = a_1 + d(n-1) \quad \Rightarrow  \quad
+	119 = 3 + 4(n-1) \quad \Rightarrow \quad n = 30.
 \end{equation*}
-Vi setter inn at $a_1 = 3$ og at $a_n = 4n - 1$ og får da
-\begin{align*}
-S_n &= \frac{(a_1 + a_n) n}{2} \\
-&= \frac{(3  + 4n - 1) n}{2} \\
-&= \frac{(4n + 2) n}{2} =  \answer{(2n + 1)n}
-\end{align*}
-På eksamen er det lurt å sjekke om man har funnet riktig formel ved å sette opp følgende tabell og gjøre noen enkle utregninger.
-Dersom vi får samme svar er det stor sannsynlighet for at vi har gjort rett.
-
-\begin{center}
-	\begin{tabular}{lll}
-		$n$ & Sum regnet manuelt & Sum fra formel \\ \hline
-		$1$ & $3$ & $S_1 = (2 (1) + 1)1 = (3)1 = 3$ \\
-		$2$ & $3+ 7 = 10$ & $S_2 = (2 (2) + 1)2 = (5)2 = 10$ \\
-		$3$ & $3 + 7 + 11 = 21$ & $S_3 = (2 (3) + 1)3 = (7)3 = 21$ \\
-	\end{tabular}
-\end{center}
-
-
+Deretter er det bare å sette inn i formelen for sum av en artimetisk rekke og regne ut.
+\begin{equation*}
+	S_n = \frac{(a_1 + a_n) n}{2} = \frac{(3 + 119) 30}{2} = \frac{122 \cdot 30}{2} = 61 \cdot 30 = \answer{1830}.
+\end{equation*}
 \end{easylist}
+
 
 \subsection*{Oppgave 6}
 Vi ser på funksjonen $K(x) = x^2 + 50x + 6400$.
