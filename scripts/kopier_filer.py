@@ -94,6 +94,7 @@ if __name__ == '__main__':
             relevant_files = sorted((f for f in relevant_files if fagkode in f),
                                     reverse=True)
             
+            print(relevant_files)
             for lf, problem in more_itertools.chunked(relevant_files, 2):
                 link_name, _ = os.path.splitext(problem)
                 print(os.path.splitext(lf))
@@ -103,7 +104,7 @@ if __name__ == '__main__':
             
             html_file = html_file.replace(f'CONTENT_{fagkode}', html_code + '</ul>')
             
-            print(html_file)
+            #print(html_file)
         with open(out_path, 'w') as out_file:
             out_file.write(html_file)
         
@@ -111,7 +112,7 @@ if __name__ == '__main__':
                 #<a href="https://github.com/tommyod/matte_eksamener_VGS/blob/master/alle_pdf_filer/S2_15H_lf.pdf" target="_blank">S2_15H_lf.pdf</a>
             #for file in relevant_files:
             #    print(' ', file)
-    print(html_code)
+    #print(html_code)
             
             
         
