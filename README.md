@@ -24,4 +24,6 @@ Finner du **skrivefeil**, **matematiske feil**, **uklare setninger** eller har *
 Du kan bidra til å øke kvaliteten på løsningsforslagene, og både små og store bidrag mottas med stor takk.
 Du har to muligheter når du skal bidra: du kan lage **Issue** eller sende **Pull Request**. Du kan også bidra med å lage egne løsningsforslag, eller oppsummeringsnotater og annet som kan være nyttig for andre og er av høy kvalitet.
 
-For mer informasjon kan du enten lese filen [BIDRA.md](BIDRA.md), eller se videoen "[Hvordan bidra til løsningsforslag i matematikkeksamener](https://vimeo.com/278554162).
+For mer informasjon om hvordan du kan bidra kan du
+- lese filen [BIDRA.md](BIDRA.md)
+- se videoen "[Hvordan bidra til løsningsforslag i matematikkeksamener](https://vimeo.com/278554162)
