@@ -42,26 +42,26 @@
 # Vi flytter over på én side av likningen, slik at vi får en andregradslikning som vi kan faktorisere med ABC-formelen (eller en annen metode).
 \begin{align*}
 	2x^2 - 5x + 1 &= x - 3 \\
-	2x^2 - 6x + 4 &= 0 \\
-	2 \left( x^2 - 3x + 2 \right) &= 0 \\
-	2 (x-1)(x-2) &= 0 \\
+	2x^2 - 6x + 4 &= 0 \qquad \text{(flytter over)}\\
+	2 \left( x^2 - 3x + 2 \right) &= 0 \qquad \text{(trekker ut 2)} \\
+	2 (x-1)(x-2) &= 0 \qquad \text{(faktoriserer)}\\
 	\answer{x = 1 \text{ eller } x = 2} &	
 \end{align*}
-# Her flytter vi over slik at vi får logaritmen på alene, og deretter tar vi 10 opphøyd i begge sider av likningen for å bli kvitt logaritmen, fordi $10^{\lg x} = x$.
+# Her flytter vi over slik at vi får logaritmen på alene, og deretter tar vi 10 opphøyd i begge sider av likningen for å bli kvitt logaritmen, fordi $10^{\lg a} = a$.
 \begin{align*}
 	2 \lg \left(x + 7\right) &= 4 \\
-	\lg \left(x + 7\right) &= 2 \\
-	10^{\lg \left(x + 7\right)} &= 10^2 \\
-	x + 7 &= 100 \\
+	\lg \left(x + 7\right) &= 2  \qquad \text{(deler på 2)}\\
+	10^{\lg \left(x + 7\right)} &= 10^2  \qquad \text{(opphøyer i 10)}\\
+	x + 7 &= 100 \qquad \text{(bruker at } 10^{\lg a} = a \text{ )} \\
 	\answer{x = 93}
 \end{align*}
 # Vi samler sammen så mye som mulig med samme grunntall, også bruker vi at dersom $2^x = 2^y$, så må $x=y$.
 \begin{align*}
 	3 \cdot 2^{3x+ 2} &= 12 \cdot 2^6 \\
-	3 \cdot 2^{3x+ 2} &= 3 \cdot 2 \cdot 2 \cdot 2^6 \\
+	3 \cdot 2^{3x+ 2} &= 3 \cdot 2 \cdot 2 \cdot 2^6 \qquad \text{(faktoriserer 12)} \\
 	3 \cdot 2^{3x+ 2} &= 3 \cdot 2^8 \\
 	 2^{3x+ 2} &= 2^8 \\
-	  {3x+ 2} &= 8 \\
+	  {3x+ 2} &= 8 \qquad \text{(bruker } 2^x = 2^y \Leftrightarrow x = y \text{ )} \\
 	  \answer{x = 3}
 \end{align*}
 \end{easylist}
@@ -72,8 +72,8 @@ Vi skal løse likningssystemet
 	(1) \quad & x^2 + 3y = 7 \\	
 	(2) \quad & 3x - y = 1.
 \end{align*}
-Vi løser likning $(2)$ for $y$ og får $y = 3x - 1$.
-Dette setter vi inn i likning $(1)$, som gir oss
+Vi løser først likning $(2)$ for $y$ og får $y = 3x - 1$.
+Dette setter vi inn i likning $(1)$:
 \begin{align*}
 	x^2 + 3 \left( 3x - 1\right) &= 7 \\
 	x^2 + 9x - 3 &= 7 \\
@@ -81,32 +81,32 @@ Dette setter vi inn i likning $(1)$, som gir oss
 	(x + 10)(x - 1) &= 0 \\
 	x = -10 \text{ eller } x = 1.
 \end{align*}
-Vi bruker disse to $x$-verdiene til å finne $y$-verdier, vet å sette inn i likningen $y = 3x - 1$. Vi får da
+Vi bruker $x$-verdiene til å finne $y$-verdier, ved å bruke likningen $y = 3x - 1$. Vi får
 \begin{align*}
 	x = -10 & \Rightarrow y = 3(-10) - 1 = -31 \\
 	x = 1 \quad \ & \Rightarrow y = 3(1) - 1 = 2
 \end{align*}
-Løsningene er altså $(x, y) = (-10, -31)$ og $(x, y) = (1, 2)$.
+Løsningene er altså \answer{$(x, y) = (-10, -31)$} og \answer{$(x, y) = (1, 2)$}. Som en kommentar nevner jeg at dersom man plotter likningene som kurver i et koordinatsystem, vil løsningene være skjæringspunktene mellom kurvene. Se figuren nedenfor.
 
-
-TODO: Lag en figur som viser.
+\begin{center}
+	\includegraphics[width=0.55\linewidth]{figs/del1_oppg2}
+\end{center}
 
 \subsection*{Oppgave 3}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
 	# Her ganger vi bare ut og kansellerer
 	\begin{gather*}
-		\left( 2x - 3\right)^2 - 2x \left(2x - 6\right) \\
-		4x^2 - 12x + 9 - \left[ 4x^2 - 12x\right] \\
-		4x^2 - 12x + 9 -  4x^2 + 12x \\
-	9 \\
+		\left( 2x - 3\right)^2 - 2x \left(2x - 6\right) =\\
+		4x^2 - 12x + 9 - \left[ 4x^2 - 12x\right] =\\
+		4x^2 - 12x + 9 -  4x^2 + 12x = \answer{9}
 	\end{gather*}
 	# Her må vi huske logaritmesetningene, altså at $\lg (a^x) = x \lg (a)$ og at $\lg \left(a b\right) = \lg (a) + \lg (b)$.
 	\begin{gather*}
-		\lg (2a) + \lg (4a) + \lg (8a) - \lg (16a) \\
-		\lg (2) + \lg (a) + \lg (4) + \lg (a) + \lg (8) +\lg (a) - \left[\lg (16) + \lg (a)\right] \\ 
-		\lg (2) + \lg (a) + 2\lg (2) + \lg (a) + 3\lg (2) +\lg (a) - \left[4 \lg (2) + \lg (a)\right] \\
-		\lg (2) + \lg (a) + 2\lg (2) + \lg (a) + 3\lg (2) +\lg (a) - 4 \lg (2) - \lg (a) \\
+		\lg (2a) + \lg (4a) + \lg (8a) - \lg (16a) =\\
+		\lg (2) + \lg (a) + \lg (4) + \lg (a) + \lg (8) +\lg (a) - \left[\lg (16) + \lg (a)\right] =\\ 
+		\lg (2) + \lg (a) + 2\lg (2) + \lg (a) + 3\lg (2) +\lg (a) - \left[4 \lg (2) + \lg (a)\right] =\\
+		\lg (2) + \lg (a) + 2\lg (2) + \lg (a) + 3\lg (2) +\lg (a) - 4 \lg (2) - \lg (a) =\\
 		\answer{3 \lg (a) + 2 \lg (2)}
 	\end{gather*}
 	# Vi må finne fellesnevner for å legge sammen brøkene. Fellesnevneren er $ab$, så vi ganger den første bøken med $b$ og den andre med $b$ både i teller og nevner.
@@ -151,23 +151,34 @@ Vi bruker ABC-formelen eller en annen metode for å faktorisere andregradspolyno
 		= \frac{\binom{4}{3} \cdot \binom{3}{0}}{\binom{7}{3}} = 
 		\frac{4 \cdot 1}{35} = \answer{\frac{4}{35}}
 	\end{equation*}
-	# Sannsynligheten for at det er minst én blå og minst én rød kan uttrykkes på følgende måte:
-	\begin{align*}
-		P(\text{minst én rød} \cap \text{minst én blå}) = 1 -
-		& (P(\text{ingen røde} \cap \text{ingen blå}) + \\
-		& P(\text{minst én rød} \cap \text{ingen blå}) + \\
-		& P(\text{ingen røde} \cap \text{minst én blå}))
-	\end{align*}
-	TODO: Lag en figur som viser dette.
+	
+	# \textbf{Alternativ 1}
+	\begin{center}
+		\includegraphics[width=0.4\linewidth]{figs/del1_oppg5_1}
+	\end{center}
+	Dersom vi skal trekke 3 kuler, og vi må minst ha én av hver farge, er det to måter å gjøre dette på. Enten ved å trekke 1 rød og 2 blå, eller ved å trekke 2 røde og 1 blå. Vi kan legge sammen sannsynlighetene slik:
+	\begin{equation*}
+		P(\text{1 rød, 2 blå}) + P(\text{2 røde, 1 blå}) = \frac{\binom{3}{1}\binom{4}{2}}{\binom{7}{3}}
+		+
+		\frac{\binom{3}{2}\binom{4}{1}}{\binom{7}{3}} = \frac{3 \cdot 6 + 3 \cdot 4}{35}  = \answer{\frac{6}{7}}
+	\end{equation*}
+	
+	\textbf{Alternativ 2}
+	
+	La $R$ være antall røde, og $B$ være antall blå.
+	En annen måte å tenke på for å finne sannsynligheten for at det er minst én blå ($B \geq 1$) og minst én rød ($R \geq 1$) er å dele opp hendelsesrommet som vist i figuren nedenfor, og regne ut alle sannsynlighetene. Summen av disse sannsynlighetene må være 1.
+	\begin{center}
+		\includegraphics[width=0.25\linewidth]{figs/del1_oppg5}
+	\end{center}
 	Vi ser at
 	\begin{align*}
-		P(\text{ingen røde} \cap \text{ingen blå}) &= 0 \\
-		P(\text{minst én rød} \cap \text{ingen blå}) &= \frac{1}{35} \\
-		P(\text{ingen røde} \cap \text{minst én blå}) &= \frac{4}{35}
+		P(R = 0 \cap B = 0) &= 0  \quad \text{(umulig, fordi vi må trekke 3)}\\
+		P(R \geq 1 \cap B = 0) &= \frac{1}{35} \quad \text{(kun én måte å velge ingen blå på)}\\
+		P(R = 0 \cap B \geq 1) &= \frac{4}{35} \quad \text{(dette er svaret på forrige deloppgave)}
 	\end{align*}
-	og da blir 
+	og ettersom summen av alle sannsynligheten må være 1, kan vi regne ut at
 	\begin{equation*}
-		P(\text{minst én rød} \cap \text{minst én blå}) = 1 -
+		P(R \geq 1 \cap B \geq 1) = 1 -
 		\left( 0 + 
 		\frac{1}{35} + 
 		\frac{4}{35}\right) = \frac{30}{35} = \answer{\frac{6}{7}}
@@ -175,32 +186,82 @@ Vi bruker ABC-formelen eller en annen metode for å faktorisere andregradspolyno
 \end{easylist}
 
 \subsection*{Oppgave 6}
-TODO: Lag figur som viser dette.
+Ulikhetene $x \geq 0$ og $y \leq 8$ burde være greie.
+Ulikheten $x + y \leq 10$ sier at summen må være mindre enn eller lik 10, og burde også være rimelig enkel. Den siste ulikheten kan vi skrive om til $y \geq 1 + \frac{3}{2}x$, og da er det nok enklere å tegne linja.
+I figuren nedenfor er det grå området avgrenset av alle ulikhetene.
+
+\begin{center}
+	\includegraphics[width=0.5\linewidth]{figs/del1_oppg6}
+\end{center}
+
 
 \subsection*{Oppgave 7}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
+	# Vi ser av funksjonsuttrykket at $x = -2$ er en vertikal asymptote, og at $y = 2$ er en horisontal asymptote. Deretter kan vi gjøre noen stikkprøver av f.eks. $f(0)$ og $f(-4)$, og dette gir oss nok informasjon til å skissere grafen.
+	\begin{center}
+		\includegraphics[width=0.55\linewidth]{figs/del1_oppg7}
+	\end{center}
+	
+	# Vi setter $f(x)$ lik $x-2$ og løser slik
+	\begin{align*}
+		\frac{2x - 1}{x + 2} = x - 2 &\quad \Rightarrow \quad 2x - 1 = (x-2)(x+2) \quad \Rightarrow \quad 2x - 1 = x^2 - 2^2 \\
+		x^2 - 2x - 3  &\quad \Rightarrow \quad (x+1)(x-3) = 0 \quad \Rightarrow \quad
+		\answer{x = -1 \text{ eller } x=3}
+	\end{align*}
 \end{easylist}
 
 \subsection*{Oppgave 8}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
-	# sdf
-	# sdf
+	# Her må vi bruke derivasjonsregelen $\left(x^n\right)' = n x^{n-1}$, vi får at
+	\begin{equation*}
+		g'(x) = 2 \cdot 3 x^{3-2} + 3 \cdot 2 x^{2-1} - 12 = \answer{6x^2 + 6x - 12}.
+	\end{equation*}
+	# Dersom vi har toppunkt eller bunnpunk, må $g'(x)= 0$ i disse punktene. Vi setter $g'(x) = 0$, og får
+	\begin{equation*}
+		g'(x) = 6x^2 + 6x - 12 = 6(x^2 + x - 2) = 6(x+2)(x-1)= 0.
+	\end{equation*}
+	Fra dette ser vi at $f'(x) = 0$ når $x = -3$ og når $x = 2$. Vi må finne ut om dette er toppunkt eller bunnpunkt. Dette kan vi gjøre med en fortegnslinje.
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{figs/del1_oppg8_fortegn}
+	\end{center}
+	Ettersom funksjonen stiger før $x=-2$ og synker etterpå, må $x=-2$ være assosiert med ett toppunkt. Tilsvarende logikk sier oss at $x=1$ er et bunnpunkt.
+	\begin{align*}
+		x = -2 \quad \Rightarrow& \quad y = g(-2) = 2(-2)^3 + 3 (-2)^2 - 12(-2) = -16 + 12 + 24 = 20 \\
+		x = 1 \quad \Rightarrow& \quad y = g(1) = 2(1)^3 + 3 (1)^2 - 12(1) = 2 + 3 - 12 = -7
+	\end{align*}
+	Altså er \answer{$(-2, 20)$ et toppunkt} og \answer{$(1, -7)$ er et bunnpunkt}.
+	# Den gjennomsnittlige vekstfarten er 
+	\begin{equation*}
+		\frac{\Delta y}{\Delta x} = \frac{\Delta g(x)}{\Delta x} = \frac{g(2) - g(0)}{2 - 0} = \frac{g(2) - g(0)}{2 - 0} = \frac{4 - 0}{2} = \answer{2}.
+	\end{equation*}
+	# Den momentane vekstfarten er verdien til den deriverte.
+	Den den momentane vekstfaren er 24, er $g'(x) = 24$. 
+	Vi løser denne likningen slik
+	\begin{align*}
+		g'(x) = 6x^2 + 6x - 12 &= 24 \\
+		6(x^2 + x - 6) &= 0 \\
+		6(x + 3)(x - 2) &= 0.
+	\end{align*}
+	Vi ser at $x$-verdiene er $-3$ og $2$. Vi renger ut $y$-verdiene
+	\begin{align*}
+	x = 2 \quad \Rightarrow& \quad y = g(2) = 2(2)^3 + 3 (2)^2 - 12(2) = 16 + 12 - 24 = 4\\
+	x = -3 \quad \Rightarrow& \quad y = g(-3) = 2(-3)^3 + 3 (-3)^2 - 12(-3) = -54 + 27 + 36 = 9
+	\end{align*}
+	Den momentane vekstfaren er $24$ i punktene \answer{$(2, 4)$} og \answer{$(-3, 9)$}.
 \end{easylist}
 
 \subsection*{Oppgave 9}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
+	# Grafen stiger når $f'(x) > 0$, og synker når $f'(x) < 0$.
+	Vi ser fra fortegnslinjen at \answer{$f(x)$ stiger når $x < -2$ og $-2 < x <1$, og at $f(x)$ synker når $x > 1$}.
+	# Her må vi skissere en funksjon som stiger, stopper å stige, stiger videre og deretter synker. Basert på fortegnslinjen kan vi anta at den deriverte er $f'(x) = (x+2)^2 (1-x)$. Både en skisse av en funksjon $f'(x)$ og dens deriverte er skissert.
+	\begin{center}
+		\includegraphics[width=0.55\linewidth]{figs/del1_oppg9b}
+	\end{center}
 \end{easylist}
-
-
 
 
 
