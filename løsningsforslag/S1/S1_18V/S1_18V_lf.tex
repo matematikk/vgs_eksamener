@@ -48,7 +48,7 @@
 	\answer{x = 1 \text{ eller } x = 2} &	
 \end{align*}
 
-# Her flytter vi over slik at vi får logaritmen på alene, og deretter tar vi 10 opphøyd i begge sider av likningen for å bli kvitt logaritmen.
+# Her flytter vi over slik at vi får logaritmen på en side alene, og deretter tar vi 10 opphøyd i begge sider av likningen for å bli kvitt logaritmen.
 \begin{align*}
 	2 \lg \left(x + 7\right) &= 4 \\
 	\lg \left(x + 7\right) &= 2  \qquad \text{(deler på 2)}\\
@@ -56,7 +56,7 @@
 	x + 7 &= 100 \qquad \text{(bruker at } 10^{\lg a} = a \text{ )} \\
 	\answer{x = 93}
 \end{align*}
-# Vi samler først sammen så mye som mulig med samme grunntall, også bruker vi egenskapen at dersom $a^x = a^y$, så må $x=y$.
+# Vi samler først sammen så mye som mulig med samme grunntall, og så bruker vi egenskapen at dersom $a^x = a^y$, så må $x=y$.
 \begin{align*}
 	3 \cdot 2^{3x+ 2} &= 12 \cdot 2^6 \\
 	3 \cdot 2^{3x+ 2} &= 3 \cdot 2 \cdot 2 \cdot 2^6 \qquad \text{(faktoriserer 12)} \\
@@ -320,12 +320,12 @@ og vi finner at \answer{$t = 24.5$ og $s = 20.5$}.
 	## Uavhengige delforsøk -- Om én enkeltperson møter opp eller ikke, påvirker ikke de andre personene.
 	## Binært utfall -- Det er kun to muligheter: enten møter man opp med sannsynlighet $p$, eller ikke med sannsynlighet $1 - p$.
 	## Samme sannsynlighet -- Alle har lik sannsynlighet $p$ for å møte opp.
-	# Dette er binomisk med $n = 122$ og sannsynlighet $p = 0.94$, som er sannsynligheten for at en tilfeldig person møter opp. La $X$ være antall personer som møter opp totalt. Dersom flere enn 116 personer møter, får ikke alle plass. Dersom $X \leq 116$ får derimot alle plass.
+	# Dette er binomisk forsøk med $n = 122$ og sannsynlighet $p = 0.94$, som er sannsynligheten for at en tilfeldig person møter opp. La $X$ være antall personer som møter opp totalt. Dersom flere enn 116 personer møter, får ikke alle plass. Dersom $X \leq 116$ får derimot alle plass.
 	Fra sannsynlighetskalkulatoren i Geogebra finner vi at
 	\begin{equation*}
 		P(X \leq 116) = 0.7466 \approx \answer{74.7 \%}.
 	\end{equation*}
-	# La $X_n$ antall personer som møter opp totalt, når $n$ billetter er solgt. Vi ønsker å finne den største $n$ slik at $P(X_n \leq 116) \geq 0.95$, med andre ord største antall personer vi kan selge til, slik at sannsynligheten for at alle får plass er minst 95 \%.
+	# La $X_n$ være antall personer som møter opp totalt, når $n$ billetter er solgt. Vi ønsker å finne den største $n$ slik at $P(X_n \leq 116) \geq 0.95$, med andre ord største antall personer vi kan selge til, slik at sannsynligheten for at alle får plass er minst 95 \%.
 	Vi prøver oss frem med forskjellige $n$-verdier i Geogebra, og får
 	\begin{align*}
 		P(X_{116} \leq 116) &= 1 \\
@@ -345,7 +345,7 @@ og vi finner at \answer{$t = 24.5$ og $s = 20.5$}.
 \subsection*{Oppgave 3}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# Vi bruker setningene fra oppgaven til å sette opp ulikheter. Dersom Frode bruker 10 minutter på en kasse av type A, og det blir produsert $x$ av disse, bruker han totalt $10x$ minutter på kasser av denne typen. Ettersom han har totalt $15 \cdot 60 = 900$ minutter å bruke på én uke, og også produserer kasser av type B, får i vi ulikheten
+	# Vi bruker setningene fra oppgaven til å sette opp ulikheter. Dersom Frode bruker 10 minutter på en kasse av type A, og det blir produsert $x$ av disse, bruker han totalt $10x$ minutter på kasser av denne typen. På samme måte, dersom han bruker 30 minutter på en kasse av type B, og det blir produsert $y$ av disse, bruker han totalt $30y$ minutter på kasser av denne typen. Ettersom han har totalt $15 \cdot 60 = 900$ minutter å bruke på én uke, får vi ulikheten
 	\begin{equation*}
 		10x + 30 y \leq 900.
 	\end{equation*}
@@ -378,17 +378,17 @@ og vi finner at \answer{$t = 24.5$ og $s = 20.5$}.
 	\begin{center}
 		\includegraphics[width=0.8\linewidth]{figs/del2_oppg4a}
 	\end{center}
-	# Vi brunker \verb|Funksjon(<Funksjon>, <Start>, <Slutt>)|--kommandoen
+	# Vi bruker \verb|Funksjon(<Funksjon>, <Start>, <Slutt>)|--kommandoen
 	for å begrensen funksjonen til $0 \leq x \leq 9$, setter navn på funksjonen i grafikkfeltet og gir navn til aksene.
 	\begin{center}
 		\includegraphics[width=0.8\linewidth]{figs/del2_oppg4b}
 	\end{center}
-	# La $L_1$ være total lønn når Arne får lønn per pumpe, den totale lønnen blir
+	# La $L_1$ være total lønn når Arne får lønn per pumpe. Den totale lønnen blir
 	\begin{equation*}
 		L_1(x) = \text{antall pumper} \times \frac{\text{lønn}}{\text{pumpe}}
 		= f(x) \times 9.
 	\end{equation*}
-	La så $L_2$ være total lønn når han får lønn per time, den totalt lønnen blir da 
+	La så $L_2$ være total lønn når han får lønn per time. Den totalt lønnen blir da 
 	\begin{equation*}
 	L_2(x) = \text{antall timer} \times \frac{\text{lønn}}{\text{time}}
 	= x \times 190.
