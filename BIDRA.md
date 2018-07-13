@@ -4,13 +4,12 @@ Du kan bidra til å øke kvaliteten på dokumentene, og både små og store bidr
 Du har to muligheter når du skal bidra: du kan lage **Issue** eller sende **Pull Request**.
 
 ## Lag *Issue* (gjør oss oppmerksomme på feilen)
-Lag en [konto på GitHub](https://github.com/join). Gå til [Issues](https://github.com/matematikk/vgs_eksamener/issues) og skriv en detaljert beskrivelse om hva du mener er feil. 
-Det beste er om du skriver hvilken linje i hvilken `.tex` fil feilen ligger i, og hva feilen er.
+Lag en [konto på GitHub](https://github.com/join). Gå til [Issues](https://github.com/matematikk/vgs_eksamener/issues) og skriv en detaljert beskrivelse om hva du mener er feil. Skriv gjerne også hva du mener svaret skal være. 
 
 ## Send en *Pull Request* (send inn et endringsforslag som fikser feilen)
 Git og GitHub er et kraftig system med bratt læringskurve, kan muligens virke vanskelig. 
 Dersom du allikevel har muligheten til å lære litt om Git/GitHub og rette opp i feil selv, så settes det veldig pris på, og du får lært hvordan du kan bidra til open-source prosjekter.
-Jeg har nedenfor skrevet en detaljert guide til hvordan du kan bidra. 
+Nedenfor har jeg skrevet en detaljert guide til hvordan du kan bidra. 
 Dersom du støter på problemer kan du lage *Issue*, så skal du få hjelp.
 
 ### (1) Installer LaTeX
@@ -27,32 +26,33 @@ Her er forslag til oppsett for vanlige operativsystemer:
   * Editor: [TeXStudio](http://texstudio.sourceforge.net/). Skriv `sudo apt-get install texstudio` i terminalen.
   
 ### (2) Installer Git og GitHub
-Du både [Git](https://git-scm.com/downloads) og en [GitHub-konto](https://github.com/join) for å bidra til GitHub prosjekter. 
+Du trenger både [Git](https://git-scm.com/downloads) og en [GitHub-konto](https://github.com/join) for å bidra til GitHub prosjekter. 
 *Git* er et program for versjonskontroll av filer, og kjøres fra terminalen. 
-*GitHub* er en nettside som gjør at folk kan samarbeide om prosjekter som er versjonskontrollert av Git. 
+*GitHub* er en nettside som gjør at folk kan samarbeide om prosjekter som er versjonskontrollert ved hjelp av Git. 
 Med andre ord: vi bruker Git for å holde styr på endringene i filene (hvem/hva/når/hvorfor), og vi bruker GitHub for å samarbeide.
 
-* Last ned [Git](https://git-scm.com/downloads) og installer programmet. 
-  På Windows får du et eget program som heter "Git Bash". 
-  Det er et terminal-program som du kan kjøre Git kommandoer fra. 
-  På Mac og Ubuntu åpner du terminalen ved å søke etter "*terminal*", og skriver git-kommandoer her.
+* Dersom du ikke har [Git](https://git-scm.com/downloads), last det ned og installer programmet. 
+  Har du Mac eller Ubuntu har du nok Git installert fra før, skriv `git --version` i terminalen for å sjekke dette.
+  Er du på Windows har du nok ikke Git, last ned og installer [Git](https://git-scm.com/downloads).
+  Du får da et eget program som heter "Git Bash", dette er et terminal-program som du kan kjøre Git-kommandoer fra. 
+  På Mac og Ubuntu åpner du terminalen ved å søke etter "*terminal*", og skriver git-kommandoer der direkte.
 * Lag en gratis konto på [GitHub](https://github.com/join).
 
 ### (3) Last ned, gjør endringer, og last opp til prosjektet
 Dersom du har følgt stegene ovenfor så har du nå LaTeX installert, slik at du kan åpne og endre `.tex` filer. 
-Du har også Git installert, og en GitHub-konto, slik at du kan ta kopi av prosjektet. 
-Her kommer en detaljert forklaring på hvordan du gjør en endring i prosjektet.
+Du har også Git installert, og en GitHub-konto, slik at du kan ta en kopi av prosjektet. 
+Her kommer en detaljert forklaring på hvordan du kan gjøre en endring i prosjektet.
 Dersom du vil ha mer informasjon, kikk i [Git-boka](https://git-scm.com/book/en/v2) eller søk etter en [tutorial på Youtube](https://www.youtube.com/results?search_query=github+tutorial+contributing).
 
 1. **Fork GitHub prosjektet:** 
   Øverst på [denne siden](https://github.com/matematikk/vgs_eksamener) er det en knapp som heter "*Fork*". 
-  Trykk på denne for å ta en kopi av prosjektet til din GitHub konto. 
+  Trykk på denne for å ta en kopi av prosjektet til din egen GitHub konto. 
   Du har nå tatt en kopi av `matematikk/vgs_eksamener` til `<ditt navn>/vgs_eksamener` på GitHub. 
   Du finner din egen kopi av prosjektet på `https://github.com/<ditt navn>/vgs_eksamener`.
 2. **Klon (last ned) filene til din PC:** 
   Åpne terminalen på Mac/Ubuntu, eller Git Bash på Windows.
   Åpne terminalen i en mappe der du vil ta en kopi av prosjektet. 
-  Du kan enten åpne terminalen i en mappe ved å finne mappen først, høyreklikke og åpne terminalen der, eller du kan bruke terminalkommandoene `ls` (*list directory contents*) og `cd` (*change directory*) for å navigere i filsystemet ditt frem til en passende mappe. 
+  Du kan enten åpne terminalen i en mappe ved å finne mappen først, høyreklikke og åpne terminalen der, eller du kan bruke terminalkommandoene `ls` (*list directory contents*) (`dir` på Windows) og `cd` (*change directory*) for å navigere i filsystemet ditt frem til en passende mappe. 
   Skriv så `git clone https://github.com/<ditt navn>/vgs_eksamener.git`. 
   Prosjektet blir lastet ned i en mappe med navn `vgs_eksamener`. 
   Du har nå en lokal kopi av filene.
@@ -80,7 +80,7 @@ $ git push origin -f
 ```
 Nå er endringene lagret på `https://github.com/<ditt navn>/vgs_eksamener`. 
 Besøk siden, der vil du se en knapp der det står "*Compare & pull request*". 
-En *pull request* er en forespørsel om at jeg skal ta inn dine foreslåtte endringer i prosjektet. 
+En *pull request* er en forespørsel om at vi skal ta inn dine foreslåtte endringer i prosjektet. 
 Trykk på knappen, skriv en tittel for dine endringer, og en beskrivelse av hva endringene innebærer. 
 Trykk så på "*Create pull request*". 
 
