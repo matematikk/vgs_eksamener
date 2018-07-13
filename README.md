@@ -1,7 +1,7 @@
 # [vgs_eksamener](https://matematikk.github.io/vgs_eksamener/)
 Eksamener med løsningsforslag for matematikkfag på VGS.
 
-[![](vimeo.png)](https://vimeo.com/278554162)
+[![](annet/vimeo.png)](https://vimeo.com/278554162)
 
 ## Rask introduksjon
 
