@@ -1,8 +1,8 @@
 <!-- page_number: true -->
 <!-- $size: 16:9 -->
 
-:bulb: vgs_eksamener - Hvordan lage PR
-======================================
+:bulb: vgs_eksamener - Hvordan lage PR.
+=======================================
 
 ## En lengre introduksjon
 
