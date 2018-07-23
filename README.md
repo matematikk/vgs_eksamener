@@ -1,6 +1,10 @@
 # [vgs_eksamener](https://matematikk.github.io/vgs_eksamener/)
 Eksamener med løsningsforslag for matematikkfag på VGS.
 
+## Video-introduksjon til prosjektet
+
+[![GitHub Logo](/annet/yt_thumb.png)](https://www.youtube.com/watch?v=nokcv30vcec)
+
 **Ønsker du å bidra?** Se videoer, eller les [BIDRA.md](annet/BIDRA.md).
 
 - :tv: [Hvordan lage Issue (melde fra om feil)](https://www.youtube.com/watch?v=lewovyAJiKg)
