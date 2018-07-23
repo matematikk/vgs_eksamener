@@ -1,7 +1,11 @@
 # [vgs_eksamener](https://matematikk.github.io/vgs_eksamener/)
 Eksamener med løsningsforslag for matematikkfag på VGS.
 
-[![](annet/vimeo.png)](https://vimeo.com/278554162)
+**Ønsker du å bidra?** Se videoer, eller les [BIDRA.md](annet/BIDRA.md).
+
+- :tv: [Hvordan lage Issue (melde fra om feil)](https://www.youtube.com/watch?v=lewovyAJiKg)
+- :tv: [Intro: hvordan lage PR (bidra til prosjektet)](https://www.youtube.com/watch?v=qnRwdgOPYI0)
+- :tv: [Avansert: hvordan lage PR (bidra til prosjektet)](https://www.youtube.com/watch?v=Qyr2z7QoGaI)
 
 ## Rask introduksjon
 
@@ -25,4 +29,7 @@ Du har to muligheter når du skal bidra: du kan lage **Issue** eller sende **Pul
 
 For mer informasjon om hvordan du kan bidra kan du:
 - Lese filen [BIDRA.md](annet/BIDRA.md).
-- Se videoen "[Hvordan bidra til løsningsforslag i matematikkeksamener](https://vimeo.com/278554162)".
+- Se video: [Hvordan lage Issue (melde fra om feil)](https://www.youtube.com/watch?v=lewovyAJiKg)
+- Se video: [Intro: hvordan lage PR (bidra til prosjektet)](https://www.youtube.com/watch?v=qnRwdgOPYI0)
+- Se video: [Avansert: hvordan lage PR (bidra til prosjektet)](https://www.youtube.com/watch?v=Qyr2z7QoGaI)
+- Se (eldre) video: [Hvordan bidra til løsningsforslag i matematikkeksamener](https://vimeo.com/278554162)
