@@ -3,7 +3,7 @@ Eksamener med løsningsforslag for matematikkfag på VGS.
 
 ## Video-introduksjon til prosjektet
 
-[![GitHub Logo](/annet/yt_thumb.png)](https://www.youtube.com/watch?v=nokcv30vcec)
+[![GitHub Logo](/annet/yt_thumb_small.png)](https://www.youtube.com/watch?v=nokcv30vcec)
 
 **Ønsker du å bidra?** Se videoer, eller les [BIDRA.md](annet/BIDRA.md).
 
