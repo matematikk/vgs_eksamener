@@ -1,0 +1,177 @@
+% ---------------------------------------------------------------------
+% HEADER
+% Formålet med å legge header til et eget dokument er å garantere at
+% oppsettet av dokumentene er likt for alle løsningsforslagene.
+% I headeren skjer følgende:
+% (1) Dokumentet blir startet
+% (2) Pakker blir importert
+% ---------------------------------------------------------------------
+\input{../../header.tex}
+
+
+% ---------------------------------------------------------------------
+% DOKUMENTVARIABLER
+% ---------------------------------------------------------------------
+\newcommand{\fagkode}{R1}
+\newcommand{\semesteraar}{våren 2018}
+\newcommand{\forfatter}{Anita G.}
+\newcommand{\dokumenttittel}{Løsningsforslag -- Eksamen \fagkode, \semesteraar}
+
+
+% Set til 'true' og oppgi logo dersom du vil bruke en logo
+\newboolean{bruklogo}
+\setboolean{bruklogo}{false}
+\newcommand{\logonavn}{}
+
+% ---------------------------------------------------------------------
+% SETUP
+% Formålet med å legge setup til et eget dokument å garantere at headers,
+% footers, og øverste del av dokumentet er likt for alle
+% løsningsforslagene.
+% ---------------------------------------------------------------------
+\input{../../setup.tex}
+
+
+% ---------------------------------------------------------------------
+% DOKUMENTSTART - Skriv løsningsforslaget nedenfor
+% ---------------------------------------------------------------------	
+\section*{Del 1 - uten hjelpemidler}
+\subsection*{Oppgave 1}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# Vi skal derivere $f(x) = x^4 - x +2$. Vi bruker regelen $f(x) = x^n \Rightarrow f'(x) = nx^{n-1}$. Vi får da at $f'(x) = 4x^3 - 1$.
+	
+	# Her ser vi at funksjonen g er sammensatt av to funksjoner som er multiplisert sammen, nemlig $x^3$ og $ln(x)$. Vi bruker derfor produktregelen: $f(x) = uv \Rightarrow f'(x) = u'v + uv'$. Vi får da 
+	\begin{equation*}
+		\begin{aligned}
+			g'(x) &= 3x^2 \cdot ln(x) + x^3 \cdot \frac{1}{x}\\
+					&= 3x^2ln(x) + x^2\\
+					&= x^2(3ln(x)+1)\\
+		\end{aligned}
+	\end{equation*}
+	
+	# Her får vi bruk for kjerneregelen, der vi velger at kjernen vår er $u = 2x^2 + x$. Vi har at 
+	\begin{equation*}
+		\begin{aligned}
+				h(x) = e^{u(x)} \Rightarrow h'(x) &= (e^{u(x)})' \cdot u'(x) \\
+																  &= e^{u(x)} \cdot (4x + 1) \\
+																  &= (4x +1)e^{2x^2 + x}
+		\end{aligned}
+	\end{equation*}
+\end{easylist}
+
+
+\subsection*{Oppgave 2}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# 
+	\begin{equation*}
+		\frac{1}{2x-2} + \frac{2}{x-3} - \frac{x-2}{x^2 - 4x +3}
+	\end{equation*}
+	Først faktoriserer vi nevnerene for å finne ut hva fellesnevneren til brøkene er. Nevneren i det første leddet faktoriseres slik: $2x-2 = 2(x-1)$. Nevneren i andre legg kan ikke faktoriseres, mens nevneren i det tredje leddet kan vi faktorisere for eksempel ved bruk av abc-formelen. Etter faktoriseringen ser uttrykket ut slik
+	
+	\begin{equation*}
+		\begin{aligned}
+			\frac{1}{2(x-1)} + \frac{2}{x-3} - \frac{x-2}{(x-1)(x-3)}
+		\end{aligned}
+	\end{equation*}
+	
+	Vi ser dermed at fellesnevneren er $2(x-1)(x-3)$. Vi ganger første ledd med $(x-3)$ i både teller og nevner, andre ledd med $2(x-1)$ og tredje ledd med $2$.
+	
+	\begin{equation*}
+		\begin{aligned}
+			&\frac{1(x-3)}{2(x-1)(x-3)} + \frac{2 \cdot 2(x-1)}{2(x-1)(x-3)} - \frac{2(x-3)}{2(x-1)(x-3)} \\
+			& = \frac{x - 3 +4x - 4 - 2x + 4}{2(x-1)(x-3)} \\
+													& = \frac{3x-3}{2(x-1)(x-3)}\\
+													& = \frac{3(x-1)}{2(x-1)(x-3)} \\
+													& = \frac{3}{2(x-3)}
+		\end{aligned}
+	\end{equation*}
+	
+	# Her må vi ta i bruk logaritmesetningene. Disse er: $ln(ab) = ln(a) + ln(b)$, $ln\big(\frac{a}{b}\big) = ln(a) - ln(b)$ og $ln(a^x) = x \cdot ln(a)$.
+	\begin{equation*}
+		\begin{aligned}
+		&2ln(x\cdot y^3) - \frac{1}{2}ln\bigg(\frac{x^4}{y^2}\bigg) \\
+		& = 2(ln(x) + ln(y^3) - \frac{1}{2}(ln(x^4) - ln(y^2)) \\
+		& = 2(ln(x) + 3ln(y)) - \frac{1}{2}(4ln(x) - 2ln(y))\\
+		& = 2ln(x) + 6ln(y) - 2ln(x) + ln(y)\\
+		& = \answer{7ln(y)}
+		\end{aligned}
+	\end{equation*}
+	
+\end{easylist}
+
+\subsection*{Oppgave 3}
+
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# Vektoren mellom to punkter $(x_1,y_1)$ og $(x_2,y_2)$ er gitt ved $[x_2 - x_1, y_2 -y_1]$. Vi får da: \newline
+	$\vec{AB} = [-1-(-2), -3-(-1)] = [1,-2]$\newline
+	$\vec{BC} = [3-(-1),-1-(-3)] = [4,2]$
+	
+	# Vi har at de to vektorene står vinkelrett på hverandre dersom $\vec{AB} \cdot \vec{BC} = 0$\newline
+	$\vec{AB} \cdot \vec{BC} = [1,-2] \cdot [4,2] = 1 \cdot 4 + (-2) \cdot 2 = 4 + (-4) = 0$
+	\newline \newline
+	Vektorene står vinkelrett på hverandre.
+	
+	# Vektorene $\vec{CD}$ og $\vec{AB}$ er parallelle dersom $\vec{CD} = k \cdot \vec{AB}$ der $k$ er et tall. Vi finner først $\vec{CD}$ på samme måte som vi fant vektorene i oppgave a. \newline
+	$\vec{CD} = [t-3,t^2 + 2- (-1)] = [t-3,t^2 + 3]$\newline \newline
+	\begin{equation*}
+		\begin{aligned}
+		\vec{CD} & = k \cdot \vec{AB}\\
+		[t-3,t^2 + 3] & = k \cdot [1,-2] &  = [k,-2k]\\
+		\end{aligned}
+	\end{equation*}
+	
+	For at to vektorer skal være like må x-koordinatene være like hverandre og y-koordinatene være like hverandre i de to vektorene. Vi får altså to likninger med to ukjente: 
+	
+	\begin{equation*}
+		\begin{aligned}
+		t-3 = k &\:\:\: \vee & t^2 + 3 = -2k \\
+		\end{aligned}
+	\end{equation*}
+	
+	Likning nr 1 gir oss et uttrykk for $k$. Dette setter vi inn for $k$ i likning nr 2 og løser for $t$.
+	
+	\begin{equation*}
+		\begin{aligned}
+			&t^2 + 3  = -2(t-3)\\
+			&t^2 + 3  = -2t + 6\\
+			&t^2 +2t -3 = 0   \\ \\
+			&\textnormal{vi bruker abc-formelen og får}\\
+			&t = 1 \:\:\: eller \:\:\: t=-3
+		\end{aligned}
+	\end{equation*}
+	
+	Vi har altså at $\vec{CD}$ og $\vec{AB}$ er parallelle hvis $t = 1$ eller hvis $t = -3$.
+	
+\end{easylist}
+
+\section*{Oppgave 4}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	
+	# En divisjon $P(x) : (x-a)$, der $P(x)$ er et polynom, går opp dersom $P(a) = 0$. Vi må altså sjekke for hvilke verdier av k som gjør at $f(1)= 0$.\newline
+	
+	\begin{equation*}
+		\begin{aligned}
+		f(1) = 1^3 + k \cdot 1 + 12 &= 0 \\
+		1+k+12 & =0 \\
+		k + 13 & = 0 \\
+		k & = -13 
+		\end{aligned}
+	\end{equation*}
+	
+	# Vi har nå at $f(x) = x^3 - 13x + 12$. Vi vet at $f(x)$ er delelig med $(x-1)$, derfor gjør vi en polynomdivisjon med dette for å faktorisere $f$. Vi vil få et andregradspolynom etter polynomdivisjonen som vi kan faktorisere videre ved hjelp av abc-formelen. \newline
+	\polylongdiv{x^5 +x^4 + x^3 -13x+12}{x - 1} \\ \newline
+	
+	Ved hjelp av abc-formelen får vi at $(x^2 + x -12 )$ kan faktoriseres til $(x+4)(x-3)$. Når vi nå setter sammen alle de lineære faktorene vi har funnet, har vi at $f(x)$ kan faktoriseres slik: $f(x) = x^3 - 13x + 12 = \answer{(x-1)(x+4)(x-3)}$.
+	
+	# $\frac{x^2 + x -12}{x-1}$
+	
+	hei
+	
+	
+	
+\end{easylist}
+\end{document}
