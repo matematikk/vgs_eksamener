@@ -1,13 +1,20 @@
-
 # [vgs_eksamener](https://matematikk.github.io/vgs_eksamener/)
 Eksamener med løsningsforslag for matematikkfag på VGS.
 
-[![](vimeo.png)](https://vimeo.com/278554162)
+## Video-introduksjon til prosjektet
+
+[![Se video!](/annet/yt_thumb_small.png)](https://www.youtube.com/watch?v=nokcv30vcec)
+
+**Ønsker du å bidra?** Se videoer, eller les [BIDRA.md](annet/BIDRA.md).
+
+- :tv: [Hvordan lage Issue (melde fra om feil)](https://www.youtube.com/watch?v=lewovyAJiKg)
+- :tv: [Intro: hvordan lage PR (bidra til prosjektet)](https://www.youtube.com/watch?v=qnRwdgOPYI0)
+- :tv: [Avansert: hvordan lage PR (bidra til prosjektet)](https://www.youtube.com/watch?v=Qyr2z7QoGaI)
 
 ## Rask introduksjon
 
 - **Formål:** Effektivt samarbeid om å lage gode løsningsforslag til eksamener i matematikk.
-- **Open-source:** Alle kan bidra. **Du** kan komme med løsningsforslag, rette feil, etc.
+- **Open-source:** Desto flere som samarbeider, desto bedre blir det.
 - **Kildefiler:** Vi tar vare på kildekode i `.tex` filer for fremtiden, istedet for å kun ta vare på `.pdf`.
 - **Kvalitet:** Ved effektiv bruk av LaTeX får vi veldig høy kvalitet på løsningsforslagene.
 - **Alle kan bidra:** Både lærere, elever og andre kan bidra. Alle bidrag mottas med takk.
@@ -24,6 +31,9 @@ Finner du **skrivefeil**, **matematiske feil**, **uklare setninger** eller har *
 Du kan bidra til å øke kvaliteten på løsningsforslagene, og både små og store bidrag mottas med stor takk.
 Du har to muligheter når du skal bidra: du kan lage **Issue** eller sende **Pull Request**. Du kan også bidra med å lage egne løsningsforslag, eller oppsummeringsnotater og annet som kan være nyttig for andre og er av høy kvalitet.
 
-For mer informasjon om hvordan du kan bidra kan du
-- lese filen [BIDRA.md](BIDRA.md)
-- se videoen "[Hvordan bidra til løsningsforslag i matematikkeksamener](https://vimeo.com/278554162)
+For mer informasjon om hvordan du kan bidra kan du:
+- Lese filen [BIDRA.md](annet/BIDRA.md).
+- Se video: [Hvordan lage Issue (melde fra om feil)](https://www.youtube.com/watch?v=lewovyAJiKg)
+- Se video: [Intro: hvordan lage PR (bidra til prosjektet)](https://www.youtube.com/watch?v=qnRwdgOPYI0)
+- Se video: [Avansert: hvordan lage PR (bidra til prosjektet)](https://www.youtube.com/watch?v=Qyr2z7QoGaI)
+- Se (eldre) video: [Hvordan bidra til løsningsforslag i matematikkeksamener](https://vimeo.com/278554162)
