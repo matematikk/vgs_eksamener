@@ -41,12 +41,12 @@
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
 	# Vi skal derivere $f(x) = x^4 - x +2$. Vi bruker regelen $f(x) = x^n \Rightarrow f'(x) = nx^{n-1}$. Vi får da at $f'(x) = 4x^3 - 1$.
 	
-	# Her ser vi at funksjonen g er sammensatt av to funksjoner som er multiplisert sammen, nemlig $x^3$ og $ln(x)$. Vi bruker derfor produktregelen: $f(x) = uv \Rightarrow f'(x) = u'v + uv'$. Vi får da 
+	# Her ser vi at funksjonen g er sammensatt av to funksjoner som er multiplisert sammen, nemlig $x^3$ og $\ln(x)$. Vi bruker derfor produktregelen: $f(x) = uv \Rightarrow f'(x) = u'v + uv'$. Vi får da 
 	\begin{equation*}
 		\begin{aligned}
-			g'(x) &= 3x^2 \cdot ln(x) + x^3 \cdot \frac{1}{x}\\
-					&= 3x^2ln(x) + x^2\\
-					&= x^2(3ln(x)+1)\\
+			g'(x) &= 3x^2 \cdot \ln(x) + x^3 \cdot \frac{1}{x}\\
+					&= 3x^2\ln(x) + x^2\\
+					&= x^2(3\ln(x)+1)\\
 		\end{aligned}
 	\end{equation*}
 	
@@ -88,14 +88,14 @@
 		\end{aligned}
 	\end{equation*}
 	
-	# Her må vi ta i bruk logaritmesetningene. Disse er: $ln(ab) = ln(a) + ln(b)$, $ln\big(\frac{a}{b}\big) = ln(a) - ln(b)$ og $ln(a^x) = x \cdot ln(a)$.
+	# Her må vi ta i bruk logaritmesetningene. Disse er: $\ln(ab) = \ln(a) + \ln(b)$, $\ln\left(\frac{a}{b}\right) = \ln(a) - \ln(b)$ og $\ln(a^x) = x \cdot \ln(a)$.
 	\begin{equation*}
 		\begin{aligned}
-		&2ln(x\cdot y^3) - \frac{1}{2}ln\bigg(\frac{x^4}{y^2}\bigg) \\
-		& = 2(ln(x) + ln(y^3) - \frac{1}{2}(ln(x^4) - ln(y^2)) \\
-		& = 2(ln(x) + 3ln(y)) - \frac{1}{2}(4ln(x) - 2ln(y))\\
-		& = 2ln(x) + 6ln(y) - 2ln(x) + ln(y)\\
-		& = \answer{7ln(y)}
+		&2\ln(x\cdot y^3) - \frac{1}{2} \ln \left (\frac{x^4}{y^2} \right) \\
+		& = 2(\ln(x) + \ln(y^3) - \frac{1}{2}(\ln(x^4) - \ln(y^2)) \\
+		& = 2(\ln(x) + 3\ln(y)) - \frac{1}{2}(4\ln(x) - 2\ln(y))\\
+		& = 2\ln(x) + 6\ln(y) - 2\ln(x) + \ln(y)\\
+		& = \answer{7\ln(y)}
 		\end{aligned}
 	\end{equation*}
 	
