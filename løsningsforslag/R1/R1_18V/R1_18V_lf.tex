@@ -23,6 +23,8 @@
 \setboolean{bruklogo}{false}
 \newcommand{\logonavn}{}
 
+
+
 % ---------------------------------------------------------------------
 % SETUP
 % Formålet med å legge setup til et eget dokument å garantere at headers,
@@ -163,14 +165,154 @@
 	\end{equation*}
 	
 	# Vi har nå at $f(x) = x^3 - 13x + 12$. Vi vet at $f(x)$ er delelig med $(x-1)$, derfor gjør vi en polynomdivisjon med dette for å faktorisere $f$. Vi vil få et andregradspolynom etter polynomdivisjonen som vi kan faktorisere videre ved hjelp av abc-formelen. \newline
-	\polylongdiv{x^5 +x^4 + x^3 -13x+12}{x - 1} \\ \newline
+	\polylongdiv{x^3 -13x+12}{x - 1} \\ \newline
 	
 	Ved hjelp av abc-formelen får vi at $(x^2 + x -12 )$ kan faktoriseres til $(x+4)(x-3)$. Når vi nå setter sammen alle de lineære faktorene vi har funnet, har vi at $f(x)$ kan faktoriseres slik: $f(x) = x^3 - 13x + 12 = \answer{(x-1)(x+4)(x-3)}$.
 	
-	# $\frac{x^2 + x -12}{x-1}$
+	# $$\frac{x^2 + x -12}{x-1}$$
+	Fra forrige oppgave vet vi at telleren kan faktoriseres til $(x+4)(x-3)$, som vil si at vi kan skrive brøken som $$\frac{(x+4)(x-3)}{x-1}$$
+	
+	Vi lager fortegnsskjema. 
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.85\linewidth]{figs/del1_oppg4c.pdf}
+		\label{fig:del1_oppg4c}
+	\end{figure}
+	
+	Vi ser dermed at $$\frac{(x+4)(x-3)}{x-1} \geq 0$$ når \answer{$-4 \leq x < 1$ og når $x \geq 3$}.
+	
+\end{easylist}
+
+\section*{Oppgave 5}
+
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+
+
+\end{easylist}
+
+
+	
+\section*{Oppgave 6}
+
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	
+	# Vi finner nullpunktene til en funksjon ved å sette funksjonsuttrykket lik $0$: $f(x) = 0$, og løser likningen.
+	
+	\begin{equation*}
+	\begin{aligned}
+		e^{2x} - 4e^{x} + 3 &= 0 \qquad \textnormal{vi setter $e^x = u$}\\ 
+		u^2 - 4u + 3 &= 0\\	
+	\end{aligned}
+	\end{equation*}
+	
+	Vi bruker abc-formelen for å løse denne andregradslikningen, og får at $u = 3$ og $u = 1$. Dette gir oss to likninger som vi nå kan løse for $x$.
+	
+	\begin{equation*}
+		\begin{aligned}
+		u = 3 & \qquad u = 1 \\
+		e^x = 3 & \qquad e^x = 1 \\
+		\ln e^x = \ln 1 & \qquad \ln e^x = \ln 3\\
+		x = 0 & \qquad x = \ln 3 \approx 1.10
+		\end{aligned}
+	\end{equation*}
+	
+	Nullpunktene til $f(x)$ er altså $	\answer{x = 0}$ og $\answer{x = \ln 3 \approx 1.10}$.
+	
+	# For å bestemme eventuelle topp- og bunnpunkter til funksjonen, deriverer vi funksjonen og ser når den deriverte er lik $0$. Det er blant løsningene vi får til $f'(x) = 0$, vi vil finne de eventuelle topp- og bunnpunktene.
+	
+	\begin{equation*}
+		\begin{aligned}
+		f'(x) &= 2e^{2x} - 4e^x \\
+		& = 2e^x(e^x - 2)
+		\end{aligned}
+	\end{equation*}
+	
+	Så løser vi likningen $f'(x) = 0$
+	
+	\begin{equation*}
+		\begin{aligned}
+		f'(x) & = 0 \\
+		2e^x(e^x - 2) & = 0 \qquad \textnormal{$2e^x > 0$ alltid, så vi får}\\
+		e^x - 2 & = 0 \\
+		e^x & = 2 \\
+		\ln e^x &=  \ln 2\\
+		x & = \ln 2
+		\end{aligned}
+	\end{equation*}
+	
+	Vi lager fortegnslinje for å sjekke om dette punktet er et topp- eller bunnpunkt, eller ingen av delene.
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.85\linewidth]{figs/del1_oppg6b.pdf}
+		\label{fig:del1_oppg6b}
+	\end{figure}
+	
+	Vi ser av fortegnslinjen at vi har et bunnpunkt i $x = \ln 2$. Funksjonsverdien for denne $x$-verdien er
+	
+	\begin{equation*}
+		\begin{aligned}
+		f(\ln 2) & = e^{2\ln2} - 4e^{\ln 2} + 3\\
+		& = e^{\ln 2^2} - 4e^{\ln 2} + 3 \\
+		& = 4 - 8 + 3 \\
+		& = -1
+		\end{aligned}
+	\end{equation*}
+	
+	Bunnpunktet er altså $\answer{(\ln 2, -1)}$.
 	
 	
+	# Når vi skal bestemme eventuelle vendepunkt, kan vi undersøke hvor den dobbeltderiverte av funksjonen endrer fortegn. Vi deriverer derfor den deriverte vi fant i forrige deloppgave. 
+	
+	\begin{equation*}
+		\begin{aligned}
+		f''(x) & = 4e^{2x} - 4e^x \\
+		& = 4e^x(e^x -1)
+		\end{aligned}
+	\end{equation*}
+	
+	Deretter setter vi den dobbeltderiverte lik $0$, og lager igjen fortegnslinje som i oppgaven over.
+	
+	\begin{equation*}
+		\begin{aligned}
+		f''(x) & = 0 \\
+		4e^x(e^x-1) & = 0 \qquad \textnormal{$4e^x > 0$ alltid, så vi får}\\ 
+		e^x -1 & = 0 \\
+		e^x & = 1 \\
+		\ln e^x & = \ln 1 \\
+		x & = 0
+		\end{aligned}
+	\end{equation*}
+	
+	Fortegnslinjen vil se slik ut:
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.85\linewidth]{figs/del1_oppg6c.pdf}
+		\label{fig:del1_oppg6c}
+	\end{figure}
+	
+	Vi ser altså at den dobbeltderiverte skifter fortegn når $x=0$. Den tilhørende funksjonsverdien er: 
+	
+	\begin{equation*}
+	\begin{aligned}
+	f(0) & = e^{2 \cdot 0} - 4e^0 + 3\\
+	& = 1 -4 +3\\
+	& = 0\\
+	\end{aligned}
+	\end{equation*}	
+	
+	Vendepunktet for funksjonen er altså i punktet $\answer{(0,0)}$.
+	
+	# Når vi lager en skisse av grafen til funksjonen, er det veldig lurt å tegne inn de punktene vi har funnet i oppgavene over. Disse punktene gir oss god informasjon om hvordan grafen omtrent kan se ut. 
 	
 	
 \end{easylist}
+
+
+
+
+
 \end{document}
