@@ -2,6 +2,10 @@
 Eksamener med løsningsforslag for matematikkfag på VGS.
 Du finner [løsningsforslagene her](https://matematikk.github.io/vgs_eksamener/).
 
+## Video-introduksjon til prosjektet
+
+[![Se video!](/annet/yt_thumb_small.png)](https://www.youtube.com/watch?v=nokcv30vcec)
+
 **Ønsker du å bidra?** Se videoer, eller les [BIDRA.md](annet/BIDRA.md).
 
 - :tv: [Hvordan lage Issue (melde fra om feil)](https://www.youtube.com/watch?v=lewovyAJiKg)
