@@ -345,11 +345,11 @@
 	Deretter sjekker vi om trekant 2 og 3 er formlike
 	
 	\begin{equation*}
-	\begin{aligned}
-	\frac{b^2}{ab} & = \frac{b}{a} \\
-	\frac{ab}{a^2} & = \frac{b}{a} \\
-	\frac{cb}{ac} & = \frac{b}{a} \\			
-	\end{aligned}
+		\begin{aligned}
+			\frac{b^2}{ab} & = \frac{b}{a} \\
+			\frac{ab}{a^2} & = \frac{b}{a} \\
+			\frac{cb}{ac} & = \frac{b}{a} \\			
+		\end{aligned}
 	\end{equation*}
 	
 	Vi ser altså at trekant 1 er formlik med trekant 2 og at trekant 2 er formlik med trekant 3. Da må også trekant 1 og 3 være formlike. 
@@ -373,7 +373,23 @@
 \section*{Del 2 - med hjelpemidler}
 
 \subsection*{Oppgave 1}
-
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	
+	# Først husker vi at vinkelen i en sirkel er $\ang{360}$. Vi har en sentralvinkel i figuren, nemlig u. Siden vinkelen i sirkelen må være $\ang{360}$ vet vi derfor at "resten" av vinkelen i sirkelen må være $\ang{360} - u$, siden da blir summen av de to vinklene lik $\ang{360}$. $\angle DCB$ spenner over buen BC, det samme gjør sentralvinkelen vi nettopp fant, $\ang{360} - u$. Vi vet at periferivinkler som spenner over samme bue som en sentralvinkel vil være halvparten så stor som sentralvinkelen. Dermed har vi $$\angle DCB = \frac{1}{2} \cdot (\ang{360} - u) \\ = \ang{180} - \frac{1}{2}u$$.
+	
+	Altså har vi vist at $\answer{\angle DCB = \ang{180} - \frac{1}{2}u}$
+	
+	# Fra oppgave a) vet vi at $\angle DCB = \ang{180} - \frac{1}{2}u$. $\angle BAD$ er en periferivinkel som spenner over samme sirkelbue som sentralvinkelen $u$, derfor vet vi at  $\angle BAD = \frac{1}{2}u$. Legger vi nå sammen disse to vinkelene får vi:
+	
+	$$\angle BAD + \angle DCB = \ang{180} - \frac{1}{2}u + \frac{1}{2}u = \ang{180}$$
+	
+	Videre er summen av vinkler i en firkant $\ang{360}$, derfor vet vi at $\angle CBA + \angle ADC = \ang{180}$
+	
+	Dermed har vi vist at $\angle BAD + \angle DCB = \angle CBA + \angle ADC = \ang{180}$.
+	
+	
+\end{easylist}
 \subsection*{Oppgave 2}
 
 \begin{easylist}[enumerate]
@@ -402,7 +418,83 @@
 
 
 \subsection*{Oppgave 3}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	
+	# For at vi i denne situasjonen skal kunne bruke en binomisk sannsynlighetsmodell må vi anta at alle delforsøkene er uavhengige. Det vil i praksis si at dersom flere reiser sammen, så vil fremdeles alle i reisefølget møte opp eller ikke uavhengig av hva de andre i gruppen gjør.
+	
+	# Her kan vi bruke sannsynlighetskalkulatoren i GeoGebra. Siden flyet har plass til maks 116 passasjerer, må vi altså undersøke hva sannsynligheten er for at 116 passasjerer eller mindre møter opp når selskapet har solgt 122 billetter. I sannsynlighetskalkulatoren legger vi da inn $n = 122$, $p = 0.94$ og $P(X \leq 116)$. Resultatet blir da:
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width = 0.85 \linewidth]{figs/del2_oppg3b.png}
+		\label{fig:del2_oppg3b}
+	\end{figure}
+	
+	\answer{Sannsynligheten for at alle som møter får plass på flyet er 74.7\%}
 
+	# Siden vi skal finne ut hvor mange billetter selskapet kan selge, er det altså $n$ i denne oppgaven vi må bestemme. Da lar vi fremdeles $p = 0.94$, $P(X \leq 116)$, og så tester vi for hvilke verdier av $n$ som gjør at sannsynligheten vi får ut blir $\geq 95\% $. Vi vet fra oppgaven over at de ikke kan selge 122 billetter, for da blir sannsynligheten for at alle får plass for liten i forhold til hva selskapet øker. Derfor kan vi prøve å sette inn for eksempel $n = 120$
+	
+	
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width = 0.85 \linewidth]{figs/del2_oppg3c1.png}
+	\end{figure}
+	
+	\newpage
+	Vi ser at dette antallet også vil gi for liten prosent. Vi prøver da med for eksempel $n = 119$
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width = 0.85 \linewidth]{figs/del2_oppg3c2.png}
+	\end{figure}
+	
+	Dette ser vi gir en bedre prosent enn ønskelig, så flyselskapet kan altså selge 119 billetter og få at sannsynligheten er minst 95 \% for at alle som møter opp får plass på flyet.	
+	
+	
+\end{easylist}
+
+\subsection*{Oppgave 4}
+
+\begin{easylist}
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	
+	# Her må vi først finne ut hvor lange sidene $s$ er som funksjon av x. Da kan vi først se på trekant ABE. Denne er likebeint, så vi vet at den rette linjen fra E ned til linjen AB vil danne $\ang{90}$ med linjen AB, og den vil dele AB i to like store deler. Vi får altså to $\ang{90}$ trekanter, og da kan vi bruke Pytagoras' setning. 
+	
+	Den ene kateten vil da være halvparten av AB $ = \frac{10}{2}$, mens den andre må vi lete litt mer etter.
+	
+	Vi ser at høyden i hele firkanten er 10, og at det er en lik trekant som ABE helt øverst i figuren også. Det vil si at vi kan dele denne trekanten opp på samme måte som ABE og få en høyde også her. Vi ser da av figuren at høydene i de to trekantene til sammen er $10-x$, og da vil høyden i hver av trekantene være $\frac{10-x}{2}$. Da har vi altså begge katetene og kan bruke Pytagoras' setning til å finne s.
+	
+	\begin{equation*}
+	\begin{aligned}
+		s^2 &= \left (\frac{10-x}{2} \right)^2	+ \left(\frac{10}{2} \right)^2 \\
+		 & = \sqrt{\left (\frac{10-x}{2} \right)^2 + \left(\frac{10}{2} \right)^2} \\
+		 & = \sqrt{\frac{(10-x)^2}{4} + \frac{10^2}{4}} \\
+		 & = \frac{1}{2} \sqrt{(10-x)^2 + 10^2} \\
+		 & = \frac{1}{2} \sqrt{(x-10)^2 + 10^2} 		
+	\end{aligned}
+	\end{equation*}
+	
+	Den totale strekningen er
+	
+	\begin{equation*}
+		\begin{aligned}
+			g(x) & = x + 4s \\
+			& = x + 4 \cdot  \frac{1}{2} \sqrt{(x-10)^2 + 10^2} \\
+			& = \answer{x + 2\sqrt{(x-10)^2 + 10^2}}
+		\end{aligned}	
+	\end{equation*}
+	
+	
+	# Denne oppgaven kan gjøres på forskjellige måter i CAS. Her har jeg valgt å først skrive inn funksjonsuttrykket for g, deretter derivere dette, og finne ut når den deriverte er $0$ ved å bruke kommandoen nullpunkt. Deretter sjekket jeg hva den andrederiverte var i dette punktet. Siden den andrederiverte var større enn $0$, vet vi at punktet vi fant er et bunnpunkt.
+	
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width = 0.85 \linewidth]{figs/del2_oppg4b.png}
+	\end{figure}
+\end{easylist}
 
 
 
