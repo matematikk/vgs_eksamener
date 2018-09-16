@@ -72,7 +72,7 @@
 	\begin{equation*}
 		\frac{1}{2x-2} + \frac{2}{x-3} - \frac{x-2}{x^2 - 4x +3}
 	\end{equation*}
-	Først faktoriserer vi nevnerene for å finne ut hva fellesnevneren til brøkene er. Nevneren i det første leddet faktoriseres slik: $2x-2 = 2(x-1)$. Nevneren i andre legg kan ikke faktoriseres, mens nevneren i det tredje leddet kan vi faktorisere for eksempel ved bruk av abc-formelen. Etter faktoriseringen ser uttrykket ut slik
+	Først faktoriserer vi nevnerene for å finne ut hva fellesnevneren til brøkene er. Nevneren i det første leddet faktoriseres slik: $2x-2 = 2(x-1)$. Nevneren i andre ledd kan ikke faktoriseres, mens nevneren i det tredje leddet kan vi faktorisere for eksempel ved bruk av abc-formelen. Etter faktoriseringen ser uttrykket ut slik
 	
 	\begin{equation*}
 		\begin{aligned}
@@ -85,10 +85,9 @@
 	\begin{equation*}
 		\begin{aligned}
 			&\frac{1(x-3)}{2(x-1)(x-3)} + \frac{2 \cdot 2(x-1)}{2(x-1)(x-3)} - \frac{2(x-3)}{2(x-1)(x-3)} \\
-			& = \frac{x - 3 +4x - 4 - 2x + 4}{2(x-1)(x-3)} \\
-													& = \frac{3x-3}{2(x-1)(x-3)}\\
-													& = \frac{3(x-1)}{2(x-1)(x-3)} \\
-													& = \frac{3}{2(x-3)}
+			& = \frac{x - 3 +4x - 4 - 2x + 6}{2(x-1)(x-3)} \\
+													& = \frac{x-1}{2(x-1)(x-3)}\\
+													& = \frac{1}{2(x-3)}
 		\end{aligned}
 	\end{equation*}
 	
@@ -189,8 +188,53 @@
 
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	
+	
+	# Vi bruker i denne oppgaven produktsetningen. Vi skal finne sannsynligheten for at laderen kommer fra leverandør A \textit{og} at den er defekt, altså sannsynligheten $P(\textnormal{fra leverandør A} \: \cap \: \textnormal{defekt})$.
+	
+	\begin{equation*}
+		\begin{aligned}
+			P(\textnormal{fra leverandør A} \: \cap \: \textnormal{defekt}) & = P(\textnormal{fra leverandør A}) \cdot P(\textnormal{defekt}  \: | \: \textnormal{fra leverandør A}) \\
+			& = 0.4 \cdot 0.03 \\
+			& = 0.012
+		\end{aligned}
+	\end{equation*}
+	
+	\answer{Sannsynligheten for at laderen er fra leverandør A og er defekt er 1.2 \%.}
+	
+	# For å bestemme sannsynligheten for at en lader som er defekt kommer fra leverandør A, kan vi bruke Bayes' setning og setningen om total sannsynlighet. 
+	
+	Bayes' setning i dette tilfellet blir 
+	
+	\begin{equation*}
+		\begin{aligned}
+			P(\textnormal{fra leverandør A} \: | \:  \textnormal{defekt}) &= \frac{P(\textnormal{fra leverandør A}) \cdot P(\textnormal{defekt} \: | \: \textnormal{fra leverandør A})}{P(\textnormal{defekt})} \\
+		\end{aligned}
+	\end{equation*}
 
-
+	Men for å kunne bruke denne formelen er vi nødt til å finne ut hva $P(defekt)$ er. Det gjør vi ved hjelp av setningen om total sannsynlighet.
+	
+	\begin{equation*}
+		\begin{aligned}
+			P(\textnormal{defekt}) & = P(\textnormal{fra leverandør A}) \cdot P(\textnormal{defekt} \: | \: \textnormal{fra leverandør A}) \\
+			& + P(\textnormal{fra leverandør B}) \cdot P(\textnormal{defekt} \: | \: \textnormal{fra leverandør B})
+			& = 0.4 \cdot 0.03 + 0.6 \cdot 0.02 \\
+			& = 0.024
+		\end{aligned}
+	\end{equation*}
+	
+	Nå setter vi dette inn i nevneren i Bayes' setning og får:
+	
+	\begin{equation*}
+		\begin{aligned}
+			P(\textnormal{fra leverandør A} \: | \:  \textnormal{defekt}) &= \frac{P(\textnormal{fra leverandør A}) \cdot P(\textnormal{defekt} \: | \: \textnormal{fra leverandør A})}{P(\textnormal{defekt})} \\
+			& = \frac{0.04 \cdot 0.03}{0.024} \\
+			& = \frac{0.012}{0.024} \\
+			& = \frac{1}{2}
+		\end{aligned}
+	\end{equation*}	
+	
+	\answer{Sannsynligheten for at en defekt lader er fra leverandør A er 50 \%}
 \end{easylist}
 
 
@@ -495,6 +539,16 @@
 		\includegraphics[width = 0.85 \linewidth]{figs/del2_oppg4b.png}
 	\end{figure}
 \end{easylist}
+
+\subsection*{Oppgave 5}
+
+\begin{easylist}
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	
+	
+	
+\end{easylist}
+
 
 
 
