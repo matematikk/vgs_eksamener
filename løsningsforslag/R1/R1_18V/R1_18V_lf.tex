@@ -546,10 +546,97 @@
 
 \subsection*{Oppgave 5}
 
-\begin{easylist}
+\begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
 	
+	# Bruker kommandoen "Kurve(Uttrykk,Utrykk, Parametervariabel, start, slutt)".
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width = 0.85\linewidth]{figs/del2_oppg5a.png}
+	\end{figure}
 	
+	# Fartsvektoren er den deriverte av posisjonsvektoren.
+	
+	\begin{equation*}
+		\begin{aligned}
+			\vec{v}(t) & = \vec{r}'(t) & = [3t^2 -2, 2t] \\
+			\vec{v}(-1) & = [3(-1)^2,2(-1)] \\
+			& = [3-2,-2] \\
+			& = [1,-2] 
+		\end{aligned}
+	\end{equation*}
+	
+	Videre har vi at banefarten er $$|\vec{v}(t)| = \sqrt{1^2 + (-2)^2} = \sqrt{1 + 4} = \sqrt{5}$$.
+	
+	For å tegne inn denne vektoren i graftegneren bruker jeg kommandoen "Vektor(startpunkt, sluttpunkt)". Jeg vet at startpunktet skal være i $\vec{r}(-1)$, og vet at sluttpunktet vil være der $\vec{v}(-1)$ slutter dersom jeg starter i dette punktet, altså i $\vec{r}(-1) + \vec{r}'(-1)$.
+
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[clip, trim= 0cm 0cm 0cm 3cm, width = 0.85\linewidth]{figs/del2_oppg5b.png}
+	\end{figure}
+	
+	\newpage
+	# Dette kan gjøres på flere måter. Her har jeg valgt å først definere formelen for banefarten. Deretter løser jeg v = 2. 
+		\begin{figure}[ht!]
+			\centering
+			\includegraphics[width = 0.85\linewidth]{figs/del2_oppg5c.png}
+		\end{figure}
+		
+		# Denne oppgaven kan også fint løses i CAS med samme tankegang som brukes under. Først finner vi akselerasjonsvektoren. Dette er den deriverte av fartsvektoren. Deretter sjekker jeg for hvilke $t$-verdier som gjør at skalarproduktet mellom de to vektorene er 0. Dette gjør vi fordi vi vet at hvis skalarproduktet mellom to vektorer er 0, må vinkelen mellom dem være $\ang{90}$. 
+		
+		$$\vec{a}(t)  = \vec{v}(t)  = [6t,2] $$
+		
+		\begin{equation*}
+			\begin{aligned}
+				\vec{a}(t) \cdot \vec{v}(t) &= 0 \\
+				[3t^2 -2,2t] \cdot [6t,2] & = 0 \\
+				(3t^2 - 2) \cdot 6t + 2t \cdot 2  & = 0\\
+				18t^3 - 12t + 4t & = 0 \\
+				18t^3 - 8t & = 0 \\
+				2t(9t^2 -4) & = 0 \\
+			\end{aligned}
+		\end{equation*}
+		
+		Da får vi enten $t = 0$ eller $9t^2 = 0$. Vi må løse siste likning også for t.
+		
+		\begin{equation*}
+			\begin{aligned}
+				9t^2 -4 & = 0 \\
+				9t^2 & = 4 \\
+				t^2 & = \frac{4}{9}\\
+				t &= \pm \sqrt{\frac{4}{9}} \\
+				t &= \pm \frac{2}{3}
+			\end{aligned}
+		\end{equation*}
+		
+		De to vektorene står altså vinkelrett på hverandre når $t = 0$ og når $t = \pm \frac{2}{3}$.
+		
+		Deretter sjekker vi når banefarten får sine ekstremalpunkter. Dette gjør vi ved å derivere banefarten og se når denne er lik 0.
+		
+		\begin{equation*}
+			\begin{aligned}
+				|\vec{v}(t)| & = \sqrt{(3t^2 - 2)^2 + (2t)^2} \\
+								 & = \sqrt{9t^4 - 12t + 4 +4t^2} \\
+								 & = \sqrt{9t^4 - 8t^2 + 4}\\
+								 & = (9t^4 - 8t^2 + 4)^{\frac{1}{2}} \\
+				|\vec{v}(t)| ' &= \frac{1}{2} \cdot (9t^4 - 8t^2 + 4)^{-\frac{1}{2}} \cdot (36t^3 -16t) \\
+								& = \frac{18t^3 - 8t}{\sqrt{9t^4 - 8t^2 + 4}} \\
+			\end{aligned}
+		\end{equation*}
+		
+		Den deriverte er 0 når telleren er 0.
+		
+		\begin{equation*}
+			\begin{aligned}
+				18t^3 - 8t & = 0 \\
+				2t(9t^2 -4) & = 0 \\
+			\end{aligned}
+		\end{equation*}
+		
+		Dette ser vi er akkurat samme likning som vi hadde lengre oppe. Dermed vil løsningene være de samme. 
+		
+		Dermed har vi vist at banefarten har sine ekstremalpunkter i de punktene der fartsvektoren står normalt på akselerasjonsvektoren.
+		
 	
 \end{easylist}
 
