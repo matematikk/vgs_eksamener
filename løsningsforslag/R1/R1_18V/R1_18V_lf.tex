@@ -43,14 +43,14 @@
 \subsection*{Oppgave 1}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# Vi skal derivere $f(x) = x^4 - x +2$. Vi bruker regelen $f(x) = x^n \Rightarrow f'(x) = nx^{n-1}$. Vi får da at $f'(x) = 4x^3 - 1$.
+	# Vi skal derivere $f(x) = x^4 - x +2$. Vi bruker regelen $f(x) = x^n \Rightarrow f'(x) = nx^{n-1}$. Vi får da at $f'(x) = \answer{4x^3 - 1}$.
 	
 	# Her ser vi at funksjonen g er sammensatt av to funksjoner som er multiplisert sammen, nemlig $x^3$ og $\ln(x)$. Vi bruker derfor produktregelen: $f(x) = uv \Rightarrow f'(x) = u'v + uv'$. Vi får da 
 	\begin{equation*}
 		\begin{aligned}
 			g'(x) &= 3x^2 \cdot \ln(x) + x^3 \cdot \frac{1}{x}\\
 					&= 3x^2\ln(x) + x^2\\
-					&= x^2(3\ln(x)+1)\\
+					&= \answer{x^2(3\ln(x)+1)}\\
 		\end{aligned}
 	\end{equation*}
 	
@@ -59,7 +59,7 @@
 		\begin{aligned}
 				h(x) = e^{u(x)} \Rightarrow h'(x) &= (e^{u(x)})' \cdot u'(x) \\
 																  &= e^{u(x)} \cdot (4x + 1) \\
-																  &= (4x +1)e^{2x^2 + x}
+																  &= \answer{(4x +1)e^{2x^2 + x}}
 		\end{aligned}
 	\end{equation*}
 \end{easylist}
@@ -84,10 +84,10 @@
 	
 	\begin{equation*}
 		\begin{aligned}
-			&\frac{1(x-3)}{2(x-1)(x-3)} + \frac{2 \cdot 2(x-1)}{2(x-1)(x-3)} - \frac{2(x-3)}{2(x-1)(x-3)} \\
-			& = \frac{x - 3 +4x - 4 - 2x + 6}{2(x-1)(x-3)} \\
-													& = \frac{x-1}{2(x-1)(x-3)}\\
-													& = \frac{1}{2(x-3)}
+			&\frac{1(x-3)}{2(x-1)(x-3)} + \frac{2 \cdot 2(x-1)}{2(x-1)(x-3)} - \frac{2(x-2)}{2(x-1)(x-3)} \\
+			& = \frac{x - 3 +4x - 4 - 2x + 4}{2(x-1)(x-3)} \\
+													& = \frac{3x-3}{2(x-1)(x-3)}\\
+													& = \answer{\frac{3}{2(x-3)}}
 		\end{aligned}
 	\end{equation*}
 	
@@ -161,7 +161,7 @@
 		f(1) = 1^3 + k \cdot 1 + 12 &= 0 \\
 		1+k+12 & =0 \\
 		k + 13 & = 0 \\
-		k & = -13 
+		k & =  -13
 		\end{aligned}
 	\end{equation*}
 	
@@ -461,7 +461,8 @@
 		\includegraphics[width = 0.85\linewidth]{figs/del2_oppg2.png}
 		\label{fig:del1_oppg7}
 	\end{figure}
-
+	
+	Så \answer{a = -6, b = 4 og c = -87}
 \end{easylist}
 
 
@@ -588,7 +589,7 @@
 		
 		# Denne oppgaven kan også fint løses i CAS med samme tankegang som brukes under. Først finner vi akselerasjonsvektoren. Dette er den deriverte av fartsvektoren. Deretter sjekker vi for hvilke $t$-verdier som gjør at skalarproduktet mellom de to vektorene er 0. Dette gjør vi fordi vi vet at hvis skalarproduktet mellom to vektorer er 0, må vinkelen mellom dem være $\ang{90}$. 
 		
-		$$\vec{a}(t)  = \vec{v}(t)  = [6t,2] $$
+		$$\vec{a}(t)  = \vec{v}'(t)  = [6t,2] $$
 		
 		\begin{equation*}
 			\begin{aligned}
