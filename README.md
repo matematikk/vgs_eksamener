@@ -1,5 +1,6 @@
 # [vgs_eksamener](https://matematikk.github.io/vgs_eksamener/)
 Eksamener med løsningsforslag for matematikkfag på VGS.
+Du finner [løsningsforslagene her](https://matematikk.github.io/vgs_eksamener/).
 
 ## Video-introduksjon til prosjektet
 
@@ -10,6 +11,7 @@ Eksamener med løsningsforslag for matematikkfag på VGS.
 - :tv: [Hvordan lage Issue (melde fra om feil)](https://www.youtube.com/watch?v=lewovyAJiKg)
 - :tv: [Intro: hvordan lage PR (bidra til prosjektet)](https://www.youtube.com/watch?v=qnRwdgOPYI0)
 - :tv: [Avansert: hvordan lage PR (bidra til prosjektet)](https://www.youtube.com/watch?v=Qyr2z7QoGaI)
+
 
 ## Rask introduksjon
 
@@ -22,14 +24,17 @@ Eksamener med løsningsforslag for matematikkfag på VGS.
 
 ## Hvor finner jeg eksamener og løsningsforslag?
 
-I dette prosjektet samarbeider vi om å lage løsningsforslag, distribusjon er nok best utført gjennom det gode nettstedet [matematikk.net](https://matematikk.net/).
+I dette prosjektet samarbeider vi om å lage løsningsforslag. 
+Distribusjon er nok best utført gjennom det gode nettstedet [matematikk.net](https://matematikk.net/).
 Se [Eksamensoppgaver](https://matematikk.net/side/Eksamensoppgaver)-siden på [matematikk.net](https://matematikk.net/) for mange løsningsforslag.
 Du kan finne alle filer knyttet til dette prosjektet i mappen [alle_pdf_filer](alle_pdf_filer/).
+
 
 ## Hvordan kan jeg bidra?
 Finner du **skrivefeil**, **matematiske feil**, **uklare setninger** eller har **andre forbedringsforslag**?
 Du kan bidra til å øke kvaliteten på løsningsforslagene, og både små og store bidrag mottas med stor takk.
-Du har to muligheter når du skal bidra: du kan lage **Issue** eller sende **Pull Request**. Du kan også bidra med å lage egne løsningsforslag, eller oppsummeringsnotater og annet som kan være nyttig for andre og er av høy kvalitet.
+Du har to muligheter når du skal bidra: du kan lage **Issue** eller sende **Pull Request**. 
+Du kan også bidra med å lage egne løsningsforslag, eller oppsummeringsnotater og annet som kan være nyttig for andre og er av god kvalitet.
 
 For mer informasjon om hvordan du kan bidra kan du:
 - Lese filen [BIDRA.md](annet/BIDRA.md).

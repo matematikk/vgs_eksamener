@@ -11,6 +11,18 @@ Kjører pdflatex på alle .tex filer som matcher følgende mønster:
 import os
 import re
 import subprocess
+import hashlib
+import time
+
+def hash_file(file_path):
+    """
+    Return the hash of a file.
+    """
+    md5 = hashlib.md5()
+    with open(file_path, 'rb') as file:
+        md5.update(file.read())
+        
+    return md5.hexdigest()
 
 if __name__ == '__main__':
     # Path of this script
@@ -35,6 +47,31 @@ if __name__ == '__main__':
             # If the filename does not match the pattern, skip it
             if not pattern.match(filename):
                 continue
+            
+            print(f'-------- {filename} --------')
+            time.sleep(0.1)
+            
+            # Print full file path
+            hashed_filename = os.path.join(dirpath, filename).replace('.tex', '.hash')
+            tex_hashed = hash_file(os.path.join(dirpath, filename))
+            try:
+                with open(hashed_filename, 'r') as hashed_file:
+                    if hashed_file.read().strip() == tex_hashed:
+                        print('Same hash - file has not been updated.')
+                        continue
+                    else:
+                        print('Different hash - file has been updated.')
+                        print('Stored hash:', hashed_file.read().strip())
+                        print('New hash:   ', tex_hashed)
+                        
+            except FileNotFoundError:
+                with open(hashed_filename, 'w') as hashed_file:
+                    print('Hash file not found. Writing.')
+                    hashed_file.write(tex_hashed)
+                    
+                    
+                    
+            print('Running PDFtex')
             
             # Change directory, run latex, delete files
             os.chdir(dirpath)    
