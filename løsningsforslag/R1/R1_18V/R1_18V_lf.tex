@@ -198,9 +198,9 @@
 	
 	#  Vi skal finne sannsynligheten for at laderen kommer fra leverandør A \emph{og} at den er defekt. 
 	Hendelsen at laderen kommer fra leverandør A kaller vi for $A$.
-	Vi skal her finne sannsynligheten $P(A \mid \textnormal{defekt})$, og bruker produktsetningen til å regne ut
+	Vi skal her finne sannsynligheten $P(A \mid \text{defekt})$, og bruker produktsetningen til å regne ut
 	\begin{align*}
-			P(A \: \cap \: \textnormal{defekt}) & = P(A) \cdot P(\textnormal{defekt}  \mid A) \\
+			P(A \: \cap \: \text{defekt}) & = P(A) \cdot P(\text{defekt}  \mid A) \\
 			& = 0.4 \cdot 0.03 \\
 			& = 0.012
 	\end{align*}
@@ -209,17 +209,17 @@
 	# For å bestemme sannsynligheten for at en lader som er defekt kommer fra leverandør A, kan vi bruke Bayes' setning og setningen om total sannsynlighet. 
 	Bayes' setning i dette tilfellet blir 
 	\begin{equation*}
-			P(A \mid  \textnormal{defekt}) = \frac{P(A) \cdot P(\textnormal{defekt} \mid A)}{P(A)},
+			P(A \mid  \text{defekt}) = \frac{P(A) \cdot P(\text{defekt} \mid A)}{P(\text{defekt})},
 	\end{equation*}
-	men for å kunne bruke denne formelen er vi nødt til å finne ut hva $P(\textnormal{defekt})$ er. 
+	men for å kunne bruke denne formelen er vi nødt til å finne ut hva $P(\text{defekt})$ er. 
 	Det gjør vi ved hjelp av setningen om total sannsynlighet, der $B$ er hendelsen at laderen kommer fra leverandør B.
 	\begin{align*}
-	P(\textnormal{defekt}) & = P(A) \cdot P(\textnormal{defekt} \mid A) + P(B) \cdot P(\textnormal{defekt} \mid B) \\
+	P(\text{defekt}) & = P(A) \cdot P(\text{defekt} \mid A) + P(B) \cdot P(\text{defekt} \mid B) \\
 	& = 0.4 \cdot 0.03 + 0.6 \cdot 0.02 = 0.024
 	\end{align*}
 	Deretter setter vi dette inn i nevneren i Bayes' setning og får:
 	\begin{align*}
-			P(A \mid  \textnormal{defekt}) &= \frac{P(A) \cdot P(\textnormal{defekt} \mid A)}{P(\textnormal{defekt})} \\
+			P(A \mid  \text{defekt}) &= \frac{P(A) \cdot P(\text{defekt} \mid A)}{P(\text{defekt})} \\
 			& = \frac{0.04 \cdot 0.03}{0.024} = \frac{0.012}{0.024} = \frac{1}{2}
 	\end{align*}	
 	\answer{Sannsynligheten for at en defekt lader er fra leverandør A er 50 \%.}
@@ -234,7 +234,7 @@
 	
 	# Vi finner nullpunktene til en funksjon ved å sette funksjonsuttrykket $f(x)$ lik $0$, og løser deretter likningen.
 	\begin{align*}
-		e^{2x} - 4e^{x} + 3 &= 0 \qquad \textnormal{vi setter $e^x = u$}\\ 
+		e^{2x} - 4e^{x} + 3 &= 0 \qquad \text{vi setter $e^x = u$}\\ 
 		u^2 - 4u + 3 &= 0
 	\end{align*}
 	Vi bruker abc-formelen for å løse denne andregradslikningen, og får at $u = 3$ og $u = 1$. Dette gir oss to likninger som vi nå kan løse for $x$.
@@ -255,7 +255,7 @@
 	\end{align*}
 	Nå løser vi likningen $f'(x) = 0$:
 	\begin{align*}
-		2e^x(e^x - 2) & = 0 \qquad \textnormal{$2e^x > 0$ alltid, så vi får}\\
+		2e^x(e^x - 2) & = 0 \qquad \text{$2e^x > 0$ alltid, så vi får}\\
 		e^x - 2 & = 0 \\
 		e^x & = 2 \\
 		x & = \ln 2
@@ -284,7 +284,7 @@
 	Deretter setter vi den dobbeltderiverte lik $0$, og lager igjen fortegnslinje som i oppgaven over.
 	\begin{align*}
 		f''(x) & = 0 \\
-		4e^x(e^x-1) & = 0 \qquad \textnormal{$4e^x > 0$ alltid, så vi får}\\ 
+		4e^x(e^x-1) & = 0 \qquad \text{$4e^x > 0$ alltid, så vi får}\\ 
 		e^x -1 & = 0 \\
 		x & = 0
 	\end{align*}
