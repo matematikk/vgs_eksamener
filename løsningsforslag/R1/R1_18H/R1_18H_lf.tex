@@ -1,0 +1,177 @@
+% ---------------------------------------------------------------------
+% HEADER
+% Formålet med å legge header til et eget dokument er å garantere at
+% oppsettet av dokumentene er likt for alle løsningsforslagene.
+% I headeren skjer følgende:
+% (1) Dokumentet blir startet
+% (2) Pakker blir importert
+% ---------------------------------------------------------------------
+\input{../../header.tex}
+
+
+% ---------------------------------------------------------------------
+% DOKUMENTVARIABLER
+% ---------------------------------------------------------------------
+\newcommand{\fagkode}{R1}
+\newcommand{\semesteraar}{høsten 2018}
+\newcommand{\forfatter}{Tommy O.}
+\newcommand{\dokumenttittel}{Løsningsforslag -- Eksamen \fagkode, \semesteraar}
+
+\usepackage{siunitx}
+
+
+% Set til 'true' og oppgi logo dersom du vil bruke en logo
+\newboolean{bruklogo}
+\setboolean{bruklogo}{false}
+\newcommand{\logonavn}{}
+
+
+
+% ---------------------------------------------------------------------
+% SETUP
+% Formålet med å legge setup til et eget dokument å garantere at headers,
+% footers, og øverste del av dokumentet er likt for alle
+% løsningsforslagene.
+% ---------------------------------------------------------------------
+\input{../../setup.tex}
+
+
+% ---------------------------------------------------------------------
+% DOKUMENTSTART - Skriv løsningsforslaget nedenfor
+% ---------------------------------------------------------------------	
+\section*{Del 1 - uten hjelpemidler}
+\subsection*{Oppgave 1}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# sdf
+	# sdf
+	# sdf
+\end{easylist}
+
+
+\subsection*{Oppgave 2}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# sdf
+	# sdf
+\end{easylist}
+
+\subsection*{Oppgave 3}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# sdf
+	# sdf
+	# sdf
+\end{easylist}
+
+
+\subsection*{Oppgave 4}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# sdf
+	# sdf
+	# sdf
+\end{easylist}
+
+
+\subsection*{Oppgave 5}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# sdf
+	# sdf
+\end{easylist}
+
+
+\subsection*{Oppgave 6}
+asdf
+
+
+\subsection*{Oppgave 7}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# sdf
+	# sdf
+	# sdf
+\end{easylist}
+
+
+\subsection*{Oppgave 8}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# sdf
+	# sdf
+	# sdf
+\end{easylist}
+
+
+
+
+
+
+
+\clearpage 
+\section*{Del 2 - med hjelpemidler}
+
+
+\subsection*{Oppgave 1}
+La $X$ være antall gule blomster.
+Da er $X$ binomisk fordelt, fordi fargen til hver blomst er uavhengig av de andre, sannsynligheten for gul er alltid $p = 0.4$, og det er kun to utfall per blomst---enten gul eller rød.
+
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# Vi lar $X$ være antall gule blomster, da er $X$ binomisk fordelt med $n=10$ og $p=0.4$. 
+	Sannsynligheten for at $X=5$ blir da
+	\begin{equation*}
+		P(X = 5) = \binom{n}{k} p^k (1-p)^{n-k} = 
+		\binom{10}{5} 0.4^5 0.6^{5} \approx 0.2007 = \answer{20.1 \, \%},
+	\end{equation*}
+	der vi henter svaret fra Geogebras sannsynlighetskalkulator i praksis.
+	# Dette er $P(X > 5)$, og fra sannsynlighetskalkulatoren i Geogebra får vi
+	\begin{equation*}
+		P(X > 5) \approx 0.1662 = \answer{16.6 \, \%} .
+	\end{equation*}
+	# Her kan det være nyttig å snu litt på problemstillingen.
+	Vi har 10 plasser $P_1, P_2, \dots, P_{10}$ totalt, og vi må trekke ut fire plasser til de gule blomstene.
+	Da er plasseringen til de andre blomstene også bestemt.
+	Rekkefølgen har ikke noe å si, fordi $\{ P_3, P_5, P_6, P_9 \}$ eksempelvis er det samme som $\{ P_6, P_5, P_3, P_9 \}$.
+	Spørsmålet er med andre ord ``På hvor mange måter kan vi velge 4 plasser for de gule blomstene, nå rekkefølgen er uviktig?''.
+	Dette er antall kombinasjoner, og svaret blir $\binom{10}{4} = \answer{210}$.
+	I Geogebra skriver man \verb|nCr(10, 4)| i CAS.
+	
+	Legg også merke til at dette spørsmålet er det samme som å spørre ``På hvor mange måter kan vi velge 6 plasser for de røde blomstene, nå rekkefølgen er uviktig?'', og at svaret da blir $\binom{10}{6} = \answer{210}$.
+\end{easylist}
+
+\subsection*{Oppgave 2}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# sdf
+	# sdf
+	# sdf
+	# sdf
+	# sdf
+\end{easylist}
+
+
+
+\subsection*{Oppgave 3}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# sdf
+	# sdf
+	# sdf
+\end{easylist}
+
+
+\subsection*{Oppgave 4}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
+	# sdf
+	# sdf
+	# sdf
+\end{easylist}
+
+
+
+
+
+\end{document}
