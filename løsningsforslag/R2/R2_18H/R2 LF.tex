@@ -16,44 +16,6 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[utf8]{inputenc}
-\usepackage{tcolorbox}
-\tcbuselibrary{theorems}
-
-\newtcbtheorem[number within=section]{boxDef}{Definisjon}%
-{colback=white!5,colframe=blue!70!black,fonttitle=\bfseries}{section}
-\newtcbtheorem[number within=section]{boxTheo}{Teorem}%
-{colback=white!5,colframe=green!75!black,fonttitle=\bfseries}{section}
-\newtcbtheorem[number within=section]{boxCol}{Korollar}%
-{colback=white!5,colframe=red!80!black,fonttitle=\bfseries}{section}
-\newtcbtheorem[number within=section]{boxLemma}{Lemma}%
-{colback=white!5,colframe=yellow!90!black,fonttitle=\bfseries}{section}
-
-\lstset{}
-
-\usepackage{hyperref}
-\hypersetup{final=true}
-\hypersetup{
-	colorlinks=true,
-	linkcolor=blue,
-	filecolor=magenta,      
-	urlcolor=cyan,
-}
-
-\urlstyle{same}
-
-
-\newtheorem{theorem}{Teorem}[section]
-\newtheorem{setning}{Setning}[section]
-\newtheorem{proposition}{Proposisjon}[section]
-\newtheorem{corollary}{Korollar}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{example}{Eksempel}[section]
-\xpatchcmd{\proof}{\itshape}{\normalfont\proofnameformat}{}{}
-
-\newcommand{\proofnameformat}{}
-\renewcommand*{\proofname}{\textbf{Bevis}} 
-\renewcommand{\contentsname}{Innholdsfortegnelse}
-\renewcommand{\qedsymbol}{$\blacksquare$}
 
 
 \lhead{R2 H18 Løsningsforslag}
