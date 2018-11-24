@@ -156,17 +156,58 @@ Da er $X$ binomisk fordelt, fordi fargen til hver blomst er uavhengig av de andr
 \subsection*{Oppgave 3}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
-	# sdf
+	# Linjen $\ell$ er gitt av
+	\begin{equation*}
+		\ell(k) = A + \vec{AB} k = (3, 0) + \left[ (5, 5) - (3, 0) \right] k = (2k+3, 5k).
+	\end{equation*}
+	# Se figur \ref{fig:del2_oppg3} for en tegning av grafen, utført med kommandoen \\
+	\verb|Kurve(<Uttrykk>, <Uttrykk>, <Parametervariabel>, <Start>, <Slutt>)|,\\
+	samt linjen $\ell(k)$.
+	# Linja fra $A$ til $B$ er gitt av $\vec{AB} = (2, 5)$.
+	Tangenten er gitt av $T(t) = r'(t) = (1, 2t)$.
+	Disse to vektorene er paraelelle dersom der finnes en $z$ slik at
+	\begin{equation*}
+		\begin{pmatrix}
+		2 \\
+		5
+		\end{pmatrix} z =
+		\begin{pmatrix}
+		1 \\
+		2t
+		\end{pmatrix}.
+	\end{equation*}
+	Dette er et likningssett med 2 ukjente og 2 likninger, og løsningen er $z = 1/2$ og $t = 5/4$.
+	Setter vi $t = 5/4$ inn i $r(t)$ får vi punktet 
+	\begin{equation*}
+		\answer{\begin{pmatrix}
+			9/4 \\
+			57/6
+			\end{pmatrix}},
+	\end{equation*}
+	og dette er punktet på $r(t)$ som er nærmest $\ell$.
 \end{easylist}
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.9\linewidth]{figs/del2_oppg3}
+\caption{Løsning på oppgave 3, del 2.}
+\label{fig:del2_oppg3}
+\end{figure}
 
 \subsection*{Oppgave 4}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
+	# Se figur \ref{fig:del2_oppg4_a}.
+	
+	\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{figs/del2_oppg4_a}
+	\caption{Løsning på oppgave 4a, del 2.}
+	\label{fig:del2_oppg4_a}
+	\end{figure}
+	
+	# Der bruker vi \verb|Mangekant(A, B, C) / Mangekant(A, B, D)| og får $2.5981 \approx \answer{2.6}$ som svar.
+
 	# sdf
 \end{easylist}
 
