@@ -7,24 +7,25 @@
 % (2) Pakker blir importert
 % ---------------------------------------------------------------------
 \input{../../header.tex}
-
+\usepackage{tikz}
 
 % ---------------------------------------------------------------------
 % DOKUMENTVARIABLER
 % ---------------------------------------------------------------------
 \newcommand{\fagkode}{R1}
 \newcommand{\semesteraar}{høsten 2018}
-\newcommand{\forfatter}{Tommy O.}
+\newcommand{\forfatter}{Sindre S.H. og Tommy O.}
 \newcommand{\dokumenttittel}{Løsningsforslag -- Eksamen \fagkode, \semesteraar}
-
-\usepackage{siunitx}
-
 
 % Set til 'true' og oppgi logo dersom du vil bruke en logo
 \newboolean{bruklogo}
 \setboolean{bruklogo}{false}
 \newcommand{\logonavn}{}
-
+\newcommand{\alg}[1]{
+\begin{align*}
+#1
+\end{align*}
+}
 
 
 % ---------------------------------------------------------------------
@@ -43,55 +44,256 @@
 \subsection*{Oppgave 1}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
-	# sdf
+	# \begin{align*}
+		f'(x) &= 2x + 2 + e^x
+	\end{align*}
+	# Vi bruker produktregelen ved derivasjon og får at:
+	 \alg{
+		g'(x) &= \left(x^2\right)'\ln x + x^2(\ln x)' 	\\
+		&= 2x \ln x + x^2 \frac{1}{x} \\
+		&= 2x \ln x + x \\
+		&= x(2\ln x + 1)
+}
+	# \textit{Alternativ 1: } \\
+	Vi omskriver $ h(x) $ ved hjelp av potensregler:
+	\alg{
+	h(x) &= (x-1)e^{-(2x+1)}
+}
+Videre merker vi oss at av kjerneregelen er:
+\[ \left(e^{-(2x+1)}\right)'=-2e^{-(2x+1)}\]
+Av produktregelen får vi da at:
+\alg{
+h'(x) &= (x-1)'e^{-(2x+1)}+(x-1)\left(e^{-(2x+1)}\right)'  \\
+&= 1\cdot e^{-(2x+1)} - 2(x-1)e^{-(2x+1)} \\
+&= (1-2(x-1))e^{-(2x+1)} \\
+&= (3-2x)e^{-(2x+1)}
+}
+\textit{Alternativ 2}\\
+Vi har at:
+\alg{
+(x-1)' &= 1\\
+\left(e^{2x+1}\right)' &= 2e^{2x+1} \tag{kjerneregelen}
+}
+Av kvotientregelen ved derivasjon har vi da at:
+\alg{
+h'(x) &= \frac{(x-1)'e^{2x+1}-(x-1)\left(e^{2x+1}\right)'}{\left(e^{2x+1}\right)^2} \\
+&= \frac{1\cdot e^{2x+1} - (x-1)2e^{2x+1}}{e^{2(2x+1)}
+} \\
+&= \frac{e^{2x+1}(1-(x-2))}{e^{2(2x+1)}}\\
+&= \frac{3-2x}{e^{2x+1}}
+} 
+
 \end{easylist}
 
 
 \subsection*{Oppgave 2}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
+	# Vi merker oss at:
+	\[ e^{2x}+7e^x -8 = \left(e^ x\right)^2 + 7e^x - 8 =0\]
+	Dette betyr at vi kan løse en andregradsligning mhp. $ e^x $. Vi viser her to måter å løse ligningen på:\\[11pt]
+	\textit{Alternativ 1} \\
+	Ved abc-formelen har vi at:
+	\alg{
+	e^x &= \frac{-7\pm \sqrt{7^2-4\cdot1\cdot(-8)}}{2\cdot1}	 \\
+	&= \frac{-7\pm \sqrt{81}}{2} \\
+	&= \frac{-7\pm 9}{2}\\
+}
+\textit{Alternativ 2}\\
+Siden $ 8(-1)=-8 $ og $ 8-1=7 $, har vi at:
+\[ (e^x +8)(e^x-1)=0 \]
+Både \textit{Alternativ 1} og \textit{Alternativ 2} gir at:
+\[ e^x = 1\quad\vee\quad e^x = -8 \]
+Siden $ e^x > 0 $, står vi bare igjen med løsningen $ e^x=1 $:
+\alg{
+\ln e^x &= \ln 1 \\
+ x &= 0 
+}
+# Ved hjelp av logaritmeregler omskriver vi ligningen til:
+\alg{\ln \left(\frac{x^2-5x-1}{3-2x}\right)=0
+}
+Videre får vi da at:
+\alg{
+e^{\ln \left(\frac{x^2-5x-1}{3-2x}\right)}=e^0 \\
+\frac{x^2-5x-1}{3-2x} &= 1 \\
+x^2-5x-1 &= 3-2x \\
+x^2-3x-4 &= 
+}
+Fordi $ (-4)1 =-4 $ og $ -4+1=-3 $ har vi at:
+\[ x^2-3x-4 = (x-4)(x+1)=0 \]
+Siden $ x=4 $ gir negativ ln-verdi i originaluttrykket til ligningen, står vi bare igjen med $ x=-1 $ som gyldig løsning.
 \end{easylist}
 
 \subsection*{Oppgave 3}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
-	# sdf
+	# \alg{
+		2\vec{b}-3\vec{a} &= 2[-5, 3] - 3[2, 3]	\\
+		&= [-10, 6]-[6, 9] \\
+		&= [-16, -3]
+} 
+	# En stump vinkel har negativ cosinusverdi, en rett vinkel har cosinusverdien 0 og en spiss vinkel har positiv cosinusverdi. Vi har at: \alg{
+|\vec{a}| &= \sqrt{2^2 + 3^2} \\
+&= \sqrt{13}	
+}
+Sidan $ \sqrt{13}<\sqrt{16}=4 $ er $ |\vec{a}| $ mindre enn 4.
+	# Vi har at:
+	\alg{\angle(\vec{a}, \vec{b}) &= \frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}
+}
+og videre at:
+\[ |\vec{a}|, \vec{b} > 0\quad,\quad\vec{a}\cdot\vec{b}=2(-5)+3\cdot3=-1\quad \Rightarrow\quad \angle(\vec{a}, \vec{b}) <0 \]
+Ergo er $ \angle(\vec{a}, \vec{b}) $ en stump vinkel.
 \end{easylist}
 
 
 \subsection*{Oppgave 4}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
-	# sdf
+	# \polylongdiv{x^3+6x^2-x-30}{x-2}
+	# Siden $ 3\cdot5 = 15 $ og $ 3+5=8 $, har vi at:
+	\[ x^2+8x+15 = (x+3)(x+5) \]
+	Dermed er:
+	\[x^3+6x^2-x-30=  (x+3)(x+5)(x-2) \]
+	# At $ -2 f(x)\geq 0 $ er ekvivalent med at $ f(x)\leq 0 $. Vi setter opp et fortegnsskjema for å løse denne ulikheten:
+		\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}[scale=2]	
+	% Start
+		\draw[color=black] (0,0.25) -- (0,-1.75);
+		
+		\node[anchor=east] at (0,0) { $(x+3)$};  
+	    \node[anchor=east] at (0,-0.5) { $(x+5)$};  		
+	  	\node[anchor=east] at (0,-1) {$(x-2)$};       	
+	  	\node[anchor=east] at (0,-1.5) {$f(x)$};   
+	
+	% Til -5
+		\node[anchor=south] at (1,0.25) { $-5$};    		
+		\draw[color=black] (1,0.25) -- (1,-1.75);	
+		
+  		\draw[dashed,color=black] (0,0) -- (1,0);
+  		\draw[dashed,color=black] (0,-0.5) -- (1,-0.5);
+  		\filldraw (1,-0.5) circle[radius=1pt] ;  
+  		\draw[dashed,color=black] (0,-1) -- (1,-1);
+  		\draw[dashed,color=black] (0,-1.5) -- (1,-1.5);
+  		\filldraw (1,-1.5) circle[radius=1pt] ;  
+
+	% Til -5
+		\node[anchor=south] at (2,0.25) { $-3$};    		
+		\draw[color=black] (2,0.25) -- (2,-1.75);	
+		
+		\draw[dashed,color=black] (1,0) -- (2,0);
+		\draw[color=black] (1,-0.5) -- (2,-0.5);
+		\filldraw (2,0) circle[radius=1pt] ;  
+		\draw[dashed,color=black] (1,-1) -- (2,-1);	
+		\draw[color=black] (1,-1.5) -- (2,-1.5);
+		\filldraw (2,-1.5) circle[radius=1pt] ;  		
+	
+	% Til 2
+		\node[anchor=south] at (3,0.25) { $2$};    		
+		\draw[color=black] (3,0.25) -- (3,-1.75);	
+		
+		\draw[color=black] (2,0) -- (3,0);
+		\draw[color=black] (2,-0.5) -- (3,-0.5);
+		\filldraw (3,-1) circle[radius=1pt] ;  
+		\draw[dashed,color=black] (2,-1) -- (3,-1);			
+		\draw[dashed, color=black] (2,-1.5) -- (3,-1.5);
+		\filldraw (3,-1.5) circle[radius=1pt] ;  			
+
+	% Slutt	
+		\draw[color=black] (4,0.25) -- (4,-1.75);	
+		\draw[color=black] (3,0) -- (4,0);
+		\draw[color=black] (3,-0.5) -- (4,-0.5);
+		\draw[color=black] (3,-1) -- (4,-1);		
+		\draw[color=black] (3,-1.5) -- (4,-1.5);
+		\filldraw (3,-1.5) circle[radius=1pt] ;  			
+		\end{tikzpicture}
+	\end{figure}
+Av figuren under ser vi at $ f(x)\leq 0 $ når:
+\[ x\leq -5 \quad \vee \quad -3\leq x \leq 2 \]
 \end{easylist}
 
-
+\newpage
 \subsection*{Oppgave 5}
 \begin{easylist}[enumerate]
+Vi definerer følgende:
+\alg{
+	A &= \text{Mann}\quad&\bar A &= \text{Kvinne}	\\
+	B &= \text{Kjøper edelgran}\quad &\bar B &= \text{Kjøper Gran}
+}
+Da har vi at: 
+\alg{
+	P(A) &= 70\% \quad&\bar P(\bar A) &= 30\%	\\
+	P(B|A) &=60\%\quad & P( B|\bar A) &= 40\% 
+}	
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
+	# 
+Av formelen for total sannsynlighet har vi at:
+\alg{
+P(B) &= P(A)P(B|A)+P(\bar A)P(B|\bar A) \\
+&= 0.7\cdot0.6 + 0.3\cdot0.4\\
+&= 0.54
+}
+Det er altså 54\% sannsynlighet for at første solgte tre er en edelgran.
+	# Spørsmålet i oppgaven er det samme som å spørre hva sannsynligheten er for at kjøperen av et tre er en kvinne, gitt at treet er en edelgran. Av Bayes' setning har vi at:
+	\alg{
+	P(\bar A|B)	&= \frac{P(B|\bar A)\cdot P(\bar A)}{P(B)} \\
+	&= \frac{0.4\cdot 0.3}{0.54} \\[5pt]
+	&= \frac{12}{54}\\[5pt]
+	&= \frac{2}{9}
+}
+Sannsynligheten er altså $ \frac{2}{9} $ for at lotterivinneren er en kvinne.
 \end{easylist}
 
 
 \subsection*{Oppgave 6}
-asdf
-
-
+Skal $ f(x) $ være kontinuerlig, må:
+\[ \lim\limits_{x^\pm\to a} f(x) =f(a)\]
+I vårt tilfelle er det tilstrekkelig å sørge for at $ f(a) $ får samme verdi ved begge tilfeller av funksjonsuttrykkene for $ f(x) $:
+\alg{
+	2a^2 - 3a - 2 &= a^2 +a + 3\\
+	a^2 -4a-5 &= 0
+}
+Siden $ (-5)1=-5 $ og $-5+1=-4 $, har vi at:
+\[ (a-5)(a+1)=0 \]
+Dette gir at $ f(x) $ er kontinuerlig når:
+\[ a = 5 \quad\vee\quad a=-1 \]
 \subsection*{Oppgave 7}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
-	# sdf
+	# Vi bruker kjerneregelen og får at:
+	\alg{
+\left(\ln(x^2+3)\right)'&= 2x\frac{1}{x^2+3}	\\
+&= \frac{2x}{x^2+3}
+}
+Videre har vi da at:
+\alg{
+g'(x) &= 1-2\cdot\frac{2x}{x^2+3} \\
+&= \frac{x^2+3-4x}{x^2+3} \\
+&= \frac{x^2-4x+3}{x^2+3}
+}
+Som var det vi skulle vise.
+	# For $ x $-verdien til toppunkt og bunnpunkt er $ g'(x)=0 $. Fordi $ (-1)(-3)=3 $ og $ -1+(-3)=-4 $ kan vi omskrive $ g'(x) $, og får da at:
+	\alg{
+	g'(x) &= 0 \\
+	\frac{(x-1)(x+3)}{x^2+3}&= 0 \\
+	(x-1)(x-3) &= 0
+}
+Ved å sette opp et fortegnsskjema (ikke vist her, se opg. 4c) finner vi at $ x=1 $ er et maksimalpunkt, mens $ x=3 $ er et minimumspunkt.
+	# I et vendepunkt må $ g''(x)=0 $. $ g''(x) $ finner vi ved å derivere $ g'(x) $ ved hjelp av kvotientregelen:
+	\alg{
+g'(x)	&= \frac{\left(x^2-4x+3\right)'\left(x^2+3\right)-\left(x^2-4x+3\right)\left(x^2+3\right)'}{\left(x^2+3\right)^2}\\
+\left(x^2+3\right)^2g''(x)&= (2x-4)(x^2+3)-2x(x^2-4x+3)\\
+&=2x^3+6x-4x^2-12-2x^3+8x^2-6x \\
+&= 4x^2 - 12
+}
+Skal $ g''(x)=0 $ må vi kreve at høyresiden i ligningen over blir 0:
+\alg{
+4x^2 - 12 &= 0 \\
+x^2 &= 3
+}
+Altså har $ g(x) $ infleksjonspunkter der hvor:
+\[ x = \sqrt{3} \quad \vee\quad x=-\sqrt{3} \]
+
 \end{easylist}
 
 
@@ -122,13 +324,13 @@ Da er $X$ binomisk fordelt, fordi fargen til hver blomst er uavhengig av de andr
 	# Vi lar $X$ være antall gule blomster, da er $X$ binomisk fordelt med $n=10$ og $p=0.4$. 
 	Sannsynligheten for at $X=5$ blir da
 	\begin{equation*}
-		P(X = 5) = \binom{n}{k} p^k (1-p)^{n-k} = 
-		\binom{10}{5} 0.4^5 0.6^{5} \approx 0.2007 = \answer{20.1 \, \%},
+	P(X = 5) = \binom{n}{k} p^k (1-p)^{n-k} = 
+	\binom{10}{5} 0.4^5 0.6^{5} \approx 0.2007 = \answer{20.1 \, \%},
 	\end{equation*}
 	der vi henter svaret fra Geogebras sannsynlighetskalkulator i praksis.
 	# Dette er $P(X > 5)$, og fra sannsynlighetskalkulatoren i Geogebra får vi
 	\begin{equation*}
-		P(X > 5) \approx 0.1662 = \answer{16.6 \, \%} .
+	P(X > 5) \approx 0.1662 = \answer{16.6 \, \%} .
 	\end{equation*}
 	# Her kan det være nyttig å snu litt på problemstillingen.
 	Vi har 10 plasser $P_1, P_2, \dots, P_{10}$ totalt, og vi må trekke ut fire plasser til de gule blomstene.
@@ -144,11 +346,26 @@ Da er $X$ binomisk fordelt, fordi fargen til hver blomst er uavhengig av de andr
 \subsection*{Oppgave 2}
 \begin{easylist}[enumerate]
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
-	# sdf
-	# sdf
-	# sdf
-	# sdf
-	# sdf
+	#  Siden $ CB|| AE $ og $ \angle BCD $ og $ \angle AED $ er på motsatt side av $ AE $, er $ \angle BCD = \angle AED $ 
+	# \begin{itemize}
+		\item Vi har forklart i oppgave a) at $  \angle BCD = \angle AED$
+		\item Siden $ \angle ADE $ og $ \angle BDC $ er på motsatt side av $ AE $, og begge vinklene deler linja $ AB $, er $ \angle BCD = \angle AED $ 
+		\item Fordi trekantene har to samsvarende vinkler, er $ \triangle DBC \sim \triangle AED $ (formlike).
+	\end{itemize}
+	# $ \triangle AEC $ består blant annet av vinklene $ ACD $ og $ AED. $ Siden $ \angle AED = \angle BCD = \alpha = ACD $, har $ \triangle AEC $ to like vinkler og er derfor likebeint.
+	# Siden $ \triangle DBC \sim \triangle AED $ er forholdet mellom to samsvarande sider i trekantene likt. $ \angle AED$ og $ \angle BCD $ utspenner respektivt linjene $ AD $ og $ DB $, mens $ \angle ADE$ og $ \angle CDB $ utspenner respektivt linjene $ AE $ og $ a$. Da har vi at:
+	\[ \frac{AD}{DB}= \frac{AE}{a}\]
+	Siden $ \triangle ACE $ er likebeint er $ AE=b $:
+	\alg{
+		\frac{AD}{DB}= \frac{b}{a}
+}
+Som var det vi skulle vise.
+	# Siden $ c=10 $, har vi at $ DB=10-AD $. Dermed kan vi bruke forholdet fra opg. d) til å løse en ligning mhp. $ AD $. Lignigen er løst i CAS:
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.6]{figs/D2opg2e}
+		\caption{Ligning for $ AD $ løst i CAS}
+	\end{figure}
 \end{easylist}
 
 
@@ -158,40 +375,40 @@ Da er $X$ binomisk fordelt, fordi fargen til hver blomst er uavhengig av de andr
 	\ListProperties(Style2*=,Numbers=a,Numbers1=l,FinalMark={)})
 	# Linjen $\ell$ er gitt av
 	\begin{equation*}
-		\ell(k) = A + \vec{AB} k = (3, 0) + \left[ (5, 5) - (3, 0) \right] k = (2k+3, 5k).
+	\ell(k) = A + \vec{AB} k = (3, 0) + \left[ (5, 5) - (3, 0) \right] k = (2k+3, 5k).
 	\end{equation*}
 	# Se figur \ref{fig:del2_oppg3} for en tegning av grafen, utført med kommandoen \\
 	\verb|Kurve(<Uttrykk>, <Uttrykk>, <Parametervariabel>, <Start>, <Slutt>)|,\\
 	samt linjen $\ell(k)$.
 	# Linja fra $A$ til $B$ er gitt av $\vec{AB} = (2, 5)$.
 	Tangenten er gitt av $T(t) = r'(t) = (1, 2t)$.
-	Disse to vektorene er paraelelle dersom der finnes en $z$ slik at
+	Disse to vektorene er parallelle dersom der finnes en $z$ slik at
 	\begin{equation*}
-		\begin{pmatrix}
-		2 \\
-		5
-		\end{pmatrix} z =
-		\begin{pmatrix}
-		1 \\
-		2t
-		\end{pmatrix}.
+	\begin{pmatrix}
+	2 \\
+	5
+	\end{pmatrix} z =
+	\begin{pmatrix}
+	1 \\
+	2t
+	\end{pmatrix}.
 	\end{equation*}
 	Dette er et likningssett med 2 ukjente og 2 likninger, og løsningen er $z = 1/2$ og $t = 5/4$.
 	Setter vi $t = 5/4$ inn i $r(t)$ får vi punktet 
 	\begin{equation*}
-		\answer{\begin{pmatrix}
-			9/4 \\
-			57/6
-			\end{pmatrix}},
+	\answer{\begin{pmatrix}
+		9/4 \\
+		57/6
+		\end{pmatrix}},
 	\end{equation*}
 	og dette er punktet på $r(t)$ som er nærmest $\ell$.
 \end{easylist}
 
 \begin{figure}[ht!]
-\centering
-\includegraphics[width=0.9\linewidth]{figs/del2_oppg3}
-\caption{Løsning på oppgave 3, del 2.}
-\label{fig:del2_oppg3}
+	\centering
+%	\includegraphics[width=0.9\linewidth]{figs/del2_oppg3}
+	\caption{Løsning på oppgave 3, del 2.}
+	\label{fig:del2_oppg3}
 \end{figure}
 
 \subsection*{Oppgave 4}
@@ -200,15 +417,24 @@ Da er $X$ binomisk fordelt, fordi fargen til hver blomst er uavhengig av de andr
 	# Se figur \ref{fig:del2_oppg4_a}.
 	
 	\begin{figure}[ht!]
-	\centering
-	\includegraphics[width=0.9\linewidth]{figs/del2_oppg4_a}
-	\caption{Løsning på oppgave 4a, del 2.}
-	\label{fig:del2_oppg4_a}
+		\centering
+%		\includegraphics[width=0.9\linewidth]{figs/del2_oppg4_a}
+		\caption{Løsning på oppgave 4a, del 2.}
+		\label{fig:del2_oppg4_a}
 	\end{figure}
 	
 	# Der bruker vi \verb|Mangekant(A, B, C) / Mangekant(A, B, D)| og får $2.5981 \approx \answer{2.6}$ som svar.
-
-	# sdf
+	
+	# \begin{itemize}
+		\item I celle 1 finner vi nullpunktene til $ g(x) $. Siden $ r>0 $, er $ x=-r $ nullpunktet lengst til venstre.
+		\item I celle 5-7 finner og definerer vi punktet $ G $.
+		\item I celle 8 finner vi ekstremalpunktene til $ g(x) $. Siden $ \left|\frac{\sqrt{3}}{3}r\right|<r$, ser vi av uttrykket til $ g(x) $ at $ x=-\frac{\sqrt{3}}{3}r $ er maksimusverdien til $ g(x) $. Denne kaller vi $ xm $ i celle 9.
+		\item I celle 10 finner vi koordinatene til $ H $.
+		\item Vi velger $ EF $ som grunnlinje for begge trekanter, som da får høydene $ t(-r) $ og $ g(xm) $. Siden grunnlinjen er den samme, er forholdet mellom arealene til trekantene det samme som forholdet mellom høydene. I celle 11 ser vi at dette forholdet er uavhengig av $ r $, som var det vi skulle vise.
+	\end{itemize}\begin{figure}
+		\centering
+		\includegraphics[scale=0.7]{figs/d2opg4c}
+	\end{figure}
 \end{easylist}
 
 
